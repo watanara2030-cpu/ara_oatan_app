@@ -1,0 +1,250 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "cities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "dolh",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sorting",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "countries",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "num_trteb",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "chat",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "date",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "user1",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "order",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "USER",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "data_order",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "chat",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "idorder",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "user1",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "ExtraHours",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "RevOrder",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "dateAdd",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "countries",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "saudi",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "num_trteb",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "ADRESSUSER",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "USER",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "VILL",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "data_add",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "support",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "RefUser",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "data",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "villages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "naim",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "villages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "cities",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "naim",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "cities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "dolh",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "naim",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "chat",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "idorder",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "PaymentMethods",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userRev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "acctev",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "dataAdd",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Paymenthistory",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "RevUser",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "DateAdd",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "fcm_tokens",
+      "fieldPath": "fcm_token",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    }
+  ]
+}
