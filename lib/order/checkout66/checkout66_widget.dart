@@ -149,7 +149,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
           elevation: 16.0,
           child: WebViewAware(
             child: Column(
-              mainAxisSize: MainAxisSize.max,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
@@ -167,7 +167,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                   child: Align(
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Row(
-                      mainAxisSize: MainAxisSize.max,
+                      mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -214,7 +214,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   ),
                             ),
                             Row(
-                              mainAxisSize: MainAxisSize.max,
+                              mainAxisSize: MainAxisSize.min,
                               children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
@@ -728,588 +728,609 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
           centerTitle: true,
           elevation: 2.0,
         ),
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 11.0, 0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (currentPhoneNumber == '')
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 16.0, 16.0, 16.0),
+                      child: AuthUserStreamWidget(
+                        builder: (context) => Container(
+                          width: double.infinity,
+                          height: 103.24,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .error,
+                            borderRadius:
+                                BorderRadius.circular(8.0),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
-                              if (currentPhoneNumber == '')
-                                Expanded(
-                                  child: Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 16.0, 16.0, 16.0),
-                                    child: AuthUserStreamWidget(
-                                      builder: (context) => Container(
-                                        width: double.infinity,
-                                        height: 103.24,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(12.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Icon(
-                                                    Icons.warning_amber_rounded,
-                                                    color: FlutterFlowTheme.of(
+                              Padding(
+                                padding:
+                                    const EdgeInsets.all(12.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.warning_amber_rounded,
+                                      color: FlutterFlowTheme.of(
+                                              context)
+                                          .secondaryBackground,
+                                      size: 18.0,
+                                    ),
+                                    Text(
+                                      FFLocalizations.of(context)
+                                          .getText(
+                                        '2n28fqm2' /* Note: Your request cannot be c... */,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(
+                                              context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme
+                                                    .of(context)
+                                                .secondaryBackground,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme
+                                                        .of(context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                  ].divide(const SizedBox(
+                                      width: 12.0)),
+                                ),
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                          UpdateProfWidget
+                                              .routeName);
+                                    },
+                                    text: FFLocalizations.of(
+                                            context)
+                                        .getText(
+                                      'vlo7yf10' /* Add your phone number */,
+                                    ),
+                                    icon: const Icon(
+                                      Icons.add_outlined,
+                                      size: 15.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      height: 32.5,
+                                      padding:
+                                          const EdgeInsetsDirectional
+                                              .fromSTEB(16.0, 0.0,
+                                              16.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional
+                                              .fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: FlutterFlowTheme.of(
+                                              context)
+                                          .warning,
+                                      textStyle:
+                                          FlutterFlowTheme.of(
+                                                  context)
+                                              .titleSmall
+                                              .override(
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(
                                                             context)
-                                                        .secondaryBackground,
-                                                    size: 18.0,
-                                                  ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '2n28fqm2' /* Note: Your request cannot be c... */,
-                                                    ),
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
+                                                        .titleSmallFamily,
+                                                color: FlutterFlowTheme
+                                                        .of(context)
+                                                    .secondaryText,
+                                                fontSize: 14.0,
+                                                letterSpacing:
+                                                    0.0,
+                                                useGoogleFonts:
+                                                    !FlutterFlowTheme.of(
                                                             context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryBackground,
-                                                          letterSpacing: 0.0,
-                                                          useGoogleFonts:
-                                                              !FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMediumIsCustom,
-                                                        ),
-                                                  ),
-                                                ].divide(const SizedBox(
-                                                    width: 12.0)),
+                                                        .titleSmallIsCustom,
                                               ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                FFButtonWidget(
-                                                  onPressed: () async {
-                                                    context.pushNamed(
-                                                        UpdateProfWidget
-                                                            .routeName);
-                                                  },
-                                                  text: FFLocalizations.of(
-                                                          context)
-                                                      .getText(
-                                                    'vlo7yf10' /* Add your phone number */,
-                                                  ),
-                                                  icon: const Icon(
-                                                    Icons.add_outlined,
-                                                    size: 15.0,
-                                                  ),
-                                                  options: FFButtonOptions(
-                                                    height: 32.5,
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(16.0, 0.0,
-                                                            16.0, 0.0),
-                                                    iconPadding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                            0.0, 0.0, 0.0, 0.0),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .warning,
-                                                    textStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .titleSmall
-                                                            .override(
-                                                              fontFamily:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmallFamily,
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .secondaryText,
-                                                              fontSize: 14.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              useGoogleFonts:
-                                                                  !FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmallIsCustom,
-                                                            ),
-                                                    elevation: 0.0,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8.0),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      elevation: 0.0,
+                                      borderRadius:
+                                          BorderRadius.circular(
+                                              8.0),
                                     ),
                                   ),
-                                ),
+                                ],
+                              ),
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 11.0, 0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              if (FFAppState().addcart >= 1)
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    await showModalBottomSheet(
-                                      isScrollControlled: true,
-                                      backgroundColor: Colors.transparent,
-                                      context: context,
-                                      builder: (context) {
-                                        return WebViewAware(
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              FocusScope.of(context).unfocus();
-                                              FocusManager.instance.primaryFocus
-                                                  ?.unfocus();
-                                            },
-                                            child: Padding(
-                                              padding: MediaQuery.viewInsetsOf(
-                                                  context),
-                                              child: const MmaappWidget(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ).then((value) => safeSetState(() {}));
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'k3s4rdw2' /* View my trip list map */,
-                                  ),
-                                  icon: const Icon(
-                                    Icons.map_outlined,
-                                    size: 15.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 0.0, 16.0, 0.0),
-                                    iconPadding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                    iconColor:
-                                        FlutterFlowTheme.of(context).primary,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmallFamily,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .titleSmallIsCustom,
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: BorderSide(
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                    if (FFAppState().AllowBooking == true)
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 9.0, 0.0, 9.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(ListCarWidget.routeName);
-                          },
-                          child: Material(
-                            color: Colors.transparent,
-                            child: ListTile(
-                              leading: Icon(
-                                Icons.directions_car,
-                                color: FlutterFlowTheme.of(context).primary,
-                              ),
-                              title: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().tebycar,
-                                  'لم يتم تحديد سيارة',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelLargeFamily,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      fontSize: 17.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelLargeIsCustom,
-                                    ),
-                              ),
-                              subtitle: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().notcar,
-                                  ' السيارة المفضلة',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
-                                      fontSize: 12.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelMediumIsCustom,
-                                    ),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_forward_ios,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 20.0,
-                              ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              dense: false,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(11.0),
-                                  bottomRight: Radius.circular(11.0),
-                                  topLeft: Radius.circular(11.0),
-                                  topRight: Radius.circular(11.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    if ((FFAppState().AllowBooking == true) &&
-                        (FFAppState().IsLnstantAddress == false))
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 9.0, 0.0, 9.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(ListAdressSelectWidget.routeName);
-                          },
-                          child: Material(
-                            color: Colors.transparent,
-                            child: ListTile(
-                              leading: Icon(
-                                Icons.location_pin,
-                                color: FlutterFlowTheme.of(context).primary,
-                              ),
-                              title: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().villtextnow,
-                                  'مكان الإلتقاء',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelLargeFamily,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      fontSize: 17.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelLargeIsCustom,
-                                    ),
-                              ),
-                              subtitle: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().adressNaim,
-                                  'يجب إختيار مكان الإلتقاء ',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
-                                      fontSize: 12.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelMediumIsCustom,
-                                    ),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_forward_ios,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 20.0,
-                              ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              dense: false,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(11.0),
-                                  bottomRight: Radius.circular(11.0),
-                                  topLeft: Radius.circular(11.0),
-                                  topRight: Radius.circular(11.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    if ((FFAppState().AllowBooking == true) &&
-                        (FFAppState().IsLnstantAddress == true))
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 9.0, 0.0, 9.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            currentUserLocationValue =
-                                await getCurrentUserLocation(
-                                    defaultLocation: const LatLng(0.0, 0.0));
-                            // تاكيد تحديث الموقع
-                            var confirmDialogResponse = await showDialog<bool>(
-                                  context: context,
-                                  builder: (alertDialogContext) {
-                                    return WebViewAware(
-                                      child: AlertDialog(
-                                        title: const Text('تحديث الموقع'),
-                                        content: const Text(
-                                            'هل أنت متأكد من تحديث موقعك الحالي؟'),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext, false),
-                                            child: const Text('لا'),
-                                          ),
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext, true),
-                                            child: const Text('نعم'),
-                                          ),
-                                        ],
-                                      ),
-                                    );
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(
+                    0.0, 8.0, 0.0, 0.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (FFAppState().addcart >= 1)
+                      FFButtonWidget(
+                        onPressed: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (context) {
+                              return WebViewAware(
+                                child: GestureDetector(
+                                  onTap: () {
+                                    FocusScope.of(context).unfocus();
+                                    FocusManager.instance.primaryFocus
+                                        ?.unfocus();
                                   },
-                                ) ??
-                                false;
-                            if (confirmDialogResponse) {
-                              // تحويل الاحداثيات الى اعداد
-                              FFAppState().LOceshtoaddAdress =
-                                  '${functions.latitudeFromLocation(currentUserLocationValue)},${functions.longFromLocation(currentUserLocationValue)}';
-                              safeSetState(() {});
-                              // تعيين عنوان سريع
-                              FFAppState().IsLnstantAddress = true;
-                              safeSetState(() {});
-                              // اتصال API لتحديد الموقع الحالي للمستخدم
-                              _model.apiResultvcchome2Copy33 =
-                                  await PENmdenhCall.call(
-                                io: FFAppState().LOceshtoaddAdress,
-                              );
-
-                              if ((_model.apiResultvcchome2Copy33?.succeeded ??
-                                  true)) {
-                                // تحديث حالة التطبيق موقع المستخدم الحالي
-                                FFAppState().mkanuserorder =
-                                    currentUserLocationValue;
-                                FFAppState().fullAdress =
-                                    PENmdenhCall.fullAdress(
-                                  (_model.apiResultvcchome2Copy33?.jsonBody ??
-                                      ''),
-                                )!;
-                                FFAppState().adressNaim = PENmdenhCall.name(
-                                  (_model.apiResultvcchome2Copy33?.jsonBody ??
-                                      ''),
-                                )!;
-                                safeSetState(() {});
-                                // جلب المدينة من Villages
-                                _model.vil = await queryVillagesRecordOnce(
-                                  queryBuilder: (villagesRecord) =>
-                                      villagesRecord.where(
-                                    'naim',
-                                    isEqualTo: PENmdenhCall.name(
-                                      (_model.apiResultvcchome2Copy33
-                                              ?.jsonBody ??
-                                          ''),
-                                    ),
+                                  child: Padding(
+                                    padding: MediaQuery.viewInsetsOf(
+                                        context),
+                                    child: const MmaappWidget(),
                                   ),
-                                  singleRecord: true,
-                                ).then((s) => s.firstOrNull);
-                                // تعيين متغيرات التطبيق الضرورية
-                                FFAppState().villa = _model.vil?.reference;
-                                FFAppState().villnow = _model.vil?.reference;
-                                FFAppState().villtextnow = PENmdenhCall.name(
-                                  (_model.apiResultvcchome2Copy33?.jsonBody ??
-                                      ''),
-                                )!;
-                                safeSetState(() {});
-                              } else {
-                                // إشعار خطا
-                                await showDialog(
-                                  context: context,
-                                  builder: (alertDialogContext) {
-                                    return WebViewAware(
-                                      child: AlertDialog(
-                                        title: const Text('خطا'),
-                                        content: const Text(
-                                            'لم نتمكن من العثور على موقعك الحالي ، يرجى تفعيل الموقع'),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext),
-                                            child: const Text('Ok'),
-                                          ),
-                                        ],
-                                      ),
-                                    );
-                                  },
-                                );
-                              }
-                            }
-
-                            safeSetState(() {});
-                          },
-                          child: Material(
-                            color: Colors.transparent,
-                            child: ListTile(
-                              leading: Icon(
-                                Icons.location_pin,
-                                color: FlutterFlowTheme.of(context).primary,
-                              ),
-                              title: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().villtextnow,
-                                  'مكان الإلتقاء',
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelLargeFamily,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      fontSize: 17.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelLargeIsCustom,
-                                    ),
+                              );
+                            },
+                          ).then((value) => safeSetState(() {}));
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'k3s4rdw2' /* View my trip list map */,
+                        ),
+                        icon: const Icon(
+                          Icons.map_outlined,
+                          size: 15.0,
+                        ),
+                        options: FFButtonOptions(
+                          height: 40.0,
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 16.0, 0.0),
+                          iconPadding:
+                              const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                          iconColor:
+                              FlutterFlowTheme.of(context).primary,
+                          color: FlutterFlowTheme.of(context)
+                              .secondaryBackground,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .titleSmall
+                              .override(
+                                fontFamily:
+                                    FlutterFlowTheme.of(context)
+                                        .titleSmallFamily,
+                                color: FlutterFlowTheme.of(context)
+                                    .primary,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .titleSmallIsCustom,
                               ),
-                              subtitle: Text(
-                                FFAppState().fullAdress,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
-                                      fontSize: 12.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelMediumIsCustom,
-                                    ),
+                          elevation: 0.0,
+                          borderSide: BorderSide(
+                            color:
+                                FlutterFlowTheme.of(context).primary,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+              if (FFAppState().AllowBooking == true)
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 9.0, 0.0, 9.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed(ListCarWidget.routeName);
+                    },
+                    child: Material(
+                      color: Colors.transparent,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.directions_car,
+                          color: FlutterFlowTheme.of(context).primary,
+                        ),
+                        title: Text(
+                          valueOrDefault<String>(
+                            FFAppState().tebycar,
+                            'لم يتم تحديد سيارة',
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                color:
+                                    FlutterFlowTheme.of(context).primary,
+                                fontSize: 17.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelLargeIsCustom,
                               ),
-                              trailing: Icon(
-                                Icons.settings_backup_restore,
-                                color: FlutterFlowTheme.of(context).error,
-                                size: 20.0,
+                        ),
+                        subtitle: Text(
+                          valueOrDefault<String>(
+                            FFAppState().notcar,
+                            ' السيارة المفضلة',
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelMediumFamily,
+                                fontSize: 12.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelMediumIsCustom,
                               ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              dense: false,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(11.0),
-                                  bottomRight: Radius.circular(11.0),
-                                  topLeft: Radius.circular(11.0),
-                                  topRight: Radius.circular(11.0),
-                                ),
-                              ),
-                            ),
+                        ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          size: 20.0,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context)
+                            .secondaryBackground,
+                        dense: false,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(11.0),
+                            bottomRight: Radius.circular(11.0),
+                            topLeft: Radius.circular(11.0),
+                            topRight: Radius.circular(11.0),
                           ),
                         ),
                       ),
-                    if (FFAppState().AllowBooking == true)
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 9.0, 0.0, 9.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            final datePickedDate = await showDatePicker(
-                              context: context,
-                              initialDate: getCurrentTimestamp,
-                              firstDate: getCurrentTimestamp,
-                              lastDate: DateTime(2050),
-                              builder: (context, child) {
-                                return wrapInMaterialDatePickerTheme(
-                                  context,
-                                  child!,
-                                  headerBackgroundColor:
-                                      FlutterFlowTheme.of(context).primary,
-                                  headerForegroundColor:
-                                      FlutterFlowTheme.of(context).info,
-                                  headerTextStyle: FlutterFlowTheme.of(context)
+                    ),
+                  ),
+                ),
+              if ((FFAppState().AllowBooking == true) &&
+                  (FFAppState().IsLnstantAddress == false))
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 9.0, 0.0, 9.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed(ListAdressSelectWidget.routeName);
+                    },
+                    child: Material(
+                      color: Colors.transparent,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.location_pin,
+                          color: FlutterFlowTheme.of(context).primary,
+                        ),
+                        title: Text(
+                          valueOrDefault<String>(
+                            FFAppState().villtextnow,
+                            'مكان الإلتقاء',
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                color:
+                                    FlutterFlowTheme.of(context).primary,
+                                fontSize: 17.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelLargeIsCustom,
+                              ),
+                        ),
+                        subtitle: Text(
+                          valueOrDefault<String>(
+                            FFAppState().adressNaim,
+                            'يجب إختيار مكان الإلتقاء ',
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelMediumFamily,
+                                fontSize: 12.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelMediumIsCustom,
+                              ),
+                        ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          size: 20.0,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context)
+                            .secondaryBackground,
+                        dense: false,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(11.0),
+                            bottomRight: Radius.circular(11.0),
+                            topLeft: Radius.circular(11.0),
+                            topRight: Radius.circular(11.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              if ((FFAppState().AllowBooking == true) &&
+                  (FFAppState().IsLnstantAddress == true))
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 9.0, 0.0, 9.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      currentUserLocationValue =
+                          await getCurrentUserLocation(
+                              defaultLocation: const LatLng(0.0, 0.0));
+                      // تاكيد تحديث الموقع
+                      var confirmDialogResponse = await showDialog<bool>(
+                            context: context,
+                            builder: (alertDialogContext) {
+                              return WebViewAware(
+                                child: AlertDialog(
+                                  title: const Text('تحديث الموقع'),
+                                  content: const Text(
+                                      'هل أنت متأكد من تحديث موقعك الحالي؟'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(
+                                          alertDialogContext, false),
+                                      child: const Text('لا'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(
+                                          alertDialogContext, true),
+                                      child: const Text('نعم'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ) ??
+                          false;
+                      if (confirmDialogResponse) {
+                        // تحويل الاحداثيات الى اعداد
+                        FFAppState().LOceshtoaddAdress =
+                            '${functions.latitudeFromLocation(currentUserLocationValue)},${functions.longFromLocation(currentUserLocationValue)}';
+                        safeSetState(() {});
+                        // تعيين عنوان سريع
+                        FFAppState().IsLnstantAddress = true;
+                        safeSetState(() {});
+                        // اتصال API لتحديد الموقع الحالي للمستخدم
+                        _model.apiResultvcchome2Copy33 =
+                            await PENmdenhCall.call(
+                          io: FFAppState().LOceshtoaddAdress,
+                        );
+                          
+                        if ((_model.apiResultvcchome2Copy33?.succeeded ??
+                            true)) {
+                          // تحديث حالة التطبيق موقع المستخدم الحالي
+                          FFAppState().mkanuserorder =
+                              currentUserLocationValue;
+                          FFAppState().fullAdress =
+                              PENmdenhCall.fullAdress(
+                            (_model.apiResultvcchome2Copy33?.jsonBody ??
+                                ''),
+                          )!;
+                          FFAppState().adressNaim = PENmdenhCall.name(
+                            (_model.apiResultvcchome2Copy33?.jsonBody ??
+                                ''),
+                          )!;
+                          safeSetState(() {});
+                          // جلب المدينة من Villages
+                          _model.vil = await queryVillagesRecordOnce(
+                            queryBuilder: (villagesRecord) =>
+                                villagesRecord.where(
+                              'naim',
+                              isEqualTo: PENmdenhCall.name(
+                                (_model.apiResultvcchome2Copy33
+                                        ?.jsonBody ??
+                                    ''),
+                              ),
+                            ),
+                            singleRecord: true,
+                          ).then((s) => s.firstOrNull);
+                          // تعيين متغيرات التطبيق الضرورية
+                          FFAppState().villa = _model.vil?.reference;
+                          FFAppState().villnow = _model.vil?.reference;
+                          FFAppState().villtextnow = PENmdenhCall.name(
+                            (_model.apiResultvcchome2Copy33?.jsonBody ??
+                                ''),
+                          )!;
+                          safeSetState(() {});
+                        } else {
+                          // إشعار خطا
+                          await showDialog(
+                            context: context,
+                            builder: (alertDialogContext) {
+                              return WebViewAware(
+                                child: AlertDialog(
+                                  title: const Text('خطا'),
+                                  content: const Text(
+                                      'لم نتمكن من العثور على موقعك الحالي ، يرجى تفعيل الموقع'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(
+                                          alertDialogContext),
+                                      child: const Text('Ok'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
+                        }
+                      }
+                          
+                      safeSetState(() {});
+                    },
+                    child: Material(
+                      color: Colors.transparent,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.location_pin,
+                          color: FlutterFlowTheme.of(context).primary,
+                        ),
+                        title: Text(
+                          valueOrDefault<String>(
+                            FFAppState().villtextnow,
+                            'مكان الإلتقاء',
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                color:
+                                    FlutterFlowTheme.of(context).primary,
+                                fontSize: 17.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelLargeIsCustom,
+                              ),
+                        ),
+                        subtitle: Text(
+                          FFAppState().fullAdress,
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelMediumFamily,
+                                fontSize: 12.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelMediumIsCustom,
+                              ),
+                        ),
+                        trailing: Icon(
+                          Icons.settings_backup_restore,
+                          color: FlutterFlowTheme.of(context).error,
+                          size: 20.0,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context)
+                            .secondaryBackground,
+                        dense: false,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(11.0),
+                            bottomRight: Radius.circular(11.0),
+                            topLeft: Radius.circular(11.0),
+                            topRight: Radius.circular(11.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              if (FFAppState().AllowBooking == true)
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 9.0, 0.0, 9.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      final datePickedDate = await showDatePicker(
+                        context: context,
+                        initialDate: getCurrentTimestamp,
+                        firstDate: getCurrentTimestamp,
+                        lastDate: DateTime(2050),
+                        builder: (context, child) {
+                          return wrapInMaterialDatePickerTheme(
+                            context,
+                            child!,
+                            headerBackgroundColor:
+                                FlutterFlowTheme.of(context).primary,
+                            headerForegroundColor:
+                                FlutterFlowTheme.of(context).info,
+                            headerTextStyle: FlutterFlowTheme.of(context)
+                                .headlineLarge
+                                .override(
+                                  fontFamily: 'cairo',
+                                  fontSize: 32.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                            pickerBackgroundColor:
+                                FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                            pickerForegroundColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            selectedDateTimeBackgroundColor:
+                                FlutterFlowTheme.of(context).primary,
+                            selectedDateTimeForegroundColor:
+                                FlutterFlowTheme.of(context).info,
+                            actionButtonForegroundColor:
+                                FlutterFlowTheme.of(context).error,
+                            iconSize: 24.0,
+                          );
+                        },
+                      );
+                          
+                      TimeOfDay? datePickedTime;
+                      if (datePickedDate != null) {
+                        datePickedTime = await showTimePicker(
+                          context: context,
+                          initialTime:
+                              TimeOfDay.fromDateTime(getCurrentTimestamp),
+                          builder: (context, child) {
+                            return wrapInMaterialTimePickerTheme(
+                              context,
+                              child!,
+                              headerBackgroundColor:
+                                  FlutterFlowTheme.of(context).primary,
+                              headerForegroundColor:
+                                  FlutterFlowTheme.of(context).info,
+                              headerTextStyle:
+                                  FlutterFlowTheme.of(context)
                                       .headlineLarge
                                       .override(
                                         fontFamily: 'cairo',
@@ -1317,1981 +1338,3035 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  pickerBackgroundColor:
-                                      FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                  pickerForegroundColor:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  selectedDateTimeBackgroundColor:
-                                      FlutterFlowTheme.of(context).primary,
-                                  selectedDateTimeForegroundColor:
-                                      FlutterFlowTheme.of(context).info,
-                                  actionButtonForegroundColor:
-                                      FlutterFlowTheme.of(context).error,
-                                  iconSize: 24.0,
-                                );
-                              },
+                              pickerBackgroundColor:
+                                  FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                              pickerForegroundColor:
+                                  FlutterFlowTheme.of(context)
+                                      .primaryText,
+                              selectedDateTimeBackgroundColor:
+                                  FlutterFlowTheme.of(context).primary,
+                              selectedDateTimeForegroundColor:
+                                  FlutterFlowTheme.of(context).info,
+                              actionButtonForegroundColor:
+                                  FlutterFlowTheme.of(context).error,
+                              iconSize: 24.0,
                             );
-
-                            TimeOfDay? datePickedTime;
-                            if (datePickedDate != null) {
-                              datePickedTime = await showTimePicker(
-                                context: context,
-                                initialTime:
-                                    TimeOfDay.fromDateTime(getCurrentTimestamp),
-                                builder: (context, child) {
-                                  return wrapInMaterialTimePickerTheme(
-                                    context,
-                                    child!,
-                                    headerBackgroundColor:
-                                        FlutterFlowTheme.of(context).primary,
-                                    headerForegroundColor:
-                                        FlutterFlowTheme.of(context).info,
-                                    headerTextStyle:
-                                        FlutterFlowTheme.of(context)
-                                            .headlineLarge
-                                            .override(
-                                              fontFamily: 'cairo',
-                                              fontSize: 32.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                    pickerBackgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                    pickerForegroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                    selectedDateTimeBackgroundColor:
-                                        FlutterFlowTheme.of(context).primary,
-                                    selectedDateTimeForegroundColor:
-                                        FlutterFlowTheme.of(context).info,
-                                    actionButtonForegroundColor:
-                                        FlutterFlowTheme.of(context).error,
-                                    iconSize: 24.0,
-                                  );
-                                },
-                              );
-                            }
-
-                            if (datePickedDate != null &&
-                                datePickedTime != null) {
-                              safeSetState(() {
-                                _model.datePicked = DateTime(
-                                  datePickedDate.year,
-                                  datePickedDate.month,
-                                  datePickedDate.day,
-                                  datePickedTime!.hour,
-                                  datePickedTime.minute,
-                                );
-                              });
-                            } else if (_model.datePicked != null) {
-                              safeSetState(() {
-                                _model.datePicked = getCurrentTimestamp;
-                              });
-                            }
-                            if (_model.datePicked != null) {
-                              FFAppState().dataSchedule = _model.datePicked;
-                              FFAppState().fulltextSchedule =
-                                  _model.datePicked!.toString();
-                              safeSetState(() {});
-                            }
                           },
-                          child: Material(
-                            color: Colors.transparent,
-                            child: ListTile(
-                              leading: Icon(
-                                Icons.schedule_rounded,
-                                color: FlutterFlowTheme.of(context).primary,
-                              ),
-                              title: Text(
-                                FFLocalizations.of(context).getText(
-                                  '04e2w4m3' /* Trip scheduling */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelLargeFamily,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      fontSize: 17.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelLargeIsCustom,
-                                    ),
-                              ),
-                              subtitle: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().fulltextSchedule,
-                                  'اختياريا، يمكنك اختيار تاريخ ووقت بدء الرحلة',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
-                                      fontSize: 12.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelMediumIsCustom,
-                                    ),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_forward_ios,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 20.0,
-                              ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              dense: false,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(11.0),
-                                  bottomRight: Radius.circular(11.0),
-                                  topLeft: Radius.circular(11.0),
-                                  topRight: Radius.circular(11.0),
-                                ),
-                              ),
-                            ),
-                          ),
+                        );
+                      }
+                          
+                      if (datePickedDate != null &&
+                          datePickedTime != null) {
+                        safeSetState(() {
+                          _model.datePicked = DateTime(
+                            datePickedDate.year,
+                            datePickedDate.month,
+                            datePickedDate.day,
+                            datePickedTime!.hour,
+                            datePickedTime.minute,
+                          );
+                        });
+                      } else if (_model.datePicked != null) {
+                        safeSetState(() {
+                          _model.datePicked = getCurrentTimestamp;
+                        });
+                      }
+                      if (_model.datePicked != null) {
+                        FFAppState().dataSchedule = _model.datePicked;
+                        FFAppState().fulltextSchedule =
+                            _model.datePicked!.toString();
+                        safeSetState(() {});
+                      }
+                    },
+                    child: Material(
+                      color: Colors.transparent,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.schedule_rounded,
+                          color: FlutterFlowTheme.of(context).primary,
                         ),
-                      ),
-                    if (FFAppState().AllowBooking == true)
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 9.0, 0.0, 9.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            await showModalBottomSheet(
-                              isScrollControlled: true,
-                              backgroundColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              context: context,
-                              builder: (context) {
-                                return WebViewAware(
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      FocusScope.of(context).unfocus();
-                                      FocusManager.instance.primaryFocus
-                                          ?.unfocus();
-                                    },
-                                    child: Padding(
-                                      padding: MediaQuery.viewInsetsOf(context),
-                                      child: SizedBox(
-                                        height:
-                                            MediaQuery.sizeOf(context).height *
-                                                0.77,
-                                        child: const PaymentMethods2Widget(),
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              },
-                            ).then((value) => safeSetState(() {}));
-                          },
-                          child: Material(
-                            color: Colors.transparent,
-                            child: ListTile(
-                              leading: Icon(
-                                Icons.payment_sharp,
-                                color: FlutterFlowTheme.of(context).primary,
-                              ),
-                              title: Text(
-                                FFLocalizations.of(context).getText(
-                                  '97gi9omv' /* Payment method. */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelLargeFamily,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      fontSize: 17.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelLargeIsCustom,
-                                    ),
-                              ),
-                              subtitle: Text(
-                                valueOrDefault<String>(
-                                  FFAppState().payth,
-                                  'حدد طريقة الدفع',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
-                                      fontSize: 12.0,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .labelMediumIsCustom,
-                                    ),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_forward_ios,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 20.0,
-                              ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              dense: false,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(11.0),
-                                  bottomRight: Radius.circular(11.0),
-                                  topLeft: Radius.circular(11.0),
-                                  topRight: Radius.circular(11.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    if ((FFAppState().villnow != null) &&
-                        (FFAppState().typecarRev != null))
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              7.0, 8.0, 7.0, 8.0),
-                          child: Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(
-                                color: FlutterFlowTheme.of(context).alternate,
-                                width: 1.0,
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 12.0, 12.0, 12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'xwem2m5v' /* Need extra hours? */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .headlineSmall
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineSmallFamily,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          fontSize: 18.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .headlineSmallIsCustom,
-                                        ),
-                                  ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '1zxsuzzb' /* Planning for a longer trip? Ad... */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
-                                  ),
-                                  if (FFAppState().Minimumhours >= 2)
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Expanded(
-                                          child: Flex(
-                                            direction: Axis.vertical,
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        4.0, 0.0, 4.0, 0.0),
-                                                child: Icon(
-                                                  Icons.sim_card_alert,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .error,
-                                                  size: 9.0,
-                                                ),
-                                              ),
-                                              Text(
-                                                FFLocalizations.of(context)
-                                                    .getVariableText(
-                                                  enText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                  arText:
-                                                      'بناءً على الجولات التي تم تحديدها، فإن الحدّ الأدنى للساعات هو${FFAppState().Minimumhours.toString()} ساعة',
-                                                  zh_HansText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                  trText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                  urText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                  ruText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                  azText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                  kaText:
-                                                      'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
-                                                ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumFamily,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .error,
-                                                      fontSize: 11.0,
-                                                      letterSpacing: 0.0,
-                                                      useGoogleFonts:
-                                                          !FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumIsCustom,
-                                                    ),
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'textOnPageLoadAnimation']!),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '3wz9h8sg' /* Current Hours */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodySmallFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                    fontSize: 11.0,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodySmallIsCustom,
-                                                  ),
-                                            ),
-                                            Text(
-                                              '${FFAppState().saatcar.toString()} ساعة  ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyLarge
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyLargeFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primary,
-                                                    fontSize: 11.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyLargeIsCustom,
-                                                  ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                      22.0, 0.0, 22.0, 0.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '2c08i4up' /* Additional Hours? */,
-                                                ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodySmall
-                                                    .override(
-                                                      fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodySmallFamily,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      fontSize: 11.0,
-                                                      letterSpacing: 0.0,
-                                                      useGoogleFonts:
-                                                          !FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodySmallIsCustom,
-                                                    ),
-                                              ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  width: 120.0,
-                                                  height: 40.0,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryBackground,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8.0),
-                                                    shape: BoxShape.rectangle,
-                                                  ),
-                                                  child:
-                                                      FlutterFlowCountController(
-                                                    decrementIconBuilder:
-                                                        (enabled) => Icon(
-                                                      Icons.remove_rounded,
-                                                      color: enabled
-                                                          ? FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText
-                                                          : FlutterFlowTheme.of(
-                                                                  context)
-                                                              .alternate,
-                                                      size: 18.0,
-                                                    ),
-                                                    incrementIconBuilder:
-                                                        (enabled) => Icon(
-                                                      Icons.add_rounded,
-                                                      color: enabled
-                                                          ? FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary
-                                                          : FlutterFlowTheme.of(
-                                                                  context)
-                                                              .alternate,
-                                                      size: 18.0,
-                                                    ),
-                                                    countBuilder: (count) =>
-                                                        Text(
-                                                      count.toString(),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleLargeFamily,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            fontSize: 18.0,
-                                                            letterSpacing: 0.0,
-                                                            shadows: [
-                                                              Shadow(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .alternate,
-                                                                offset:
-                                                                    const Offset(
-                                                                        2.0,
-                                                                        2.0),
-                                                                blurRadius: 2.0,
-                                                              )
-                                                            ],
-                                                            useGoogleFonts:
-                                                                !FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleLargeIsCustom,
-                                                          ),
-                                                    ),
-                                                    count: _model
-                                                        .countControllerValue ??= 0,
-                                                    updateCount: (count) async {
-                                                      safeSetState(() => _model
-                                                              .countControllerValue =
-                                                          count); // تحديث حالة التطبيق
-                                                      FFAppState()
-                                                          .totalKsm2 = _model
-                                                              .countControllerValue!
-                                                              .toDouble() *
-                                                          FFAppState()
-                                                              .srtypecar
-                                                              .toDouble() *
-                                                          FFAppState().NsbhKsm /
-                                                          100;
-                                                      safeSetState(() {});
-                                                      if (FFAppState()
-                                                              .totalKsm2 <
-                                                          FFAppState()
-                                                              .UbKsm
-                                                              .toDouble()) {
-                                                        // تحديث الساعات
-                                                        FFAppState().addhors =
-                                                            _model
-                                                                .countControllerValue!;
-                                                        FFAppState().totalsaat =
-                                                            FFAppState()
-                                                                    .saatcar +
-                                                                FFAppState()
-                                                                    .addhors;
-                                                        FFAppState()
-                                                            .totalAllNew = 0.0;
-                                                        FFAppState()
-                                                            .totalAllnowPrent = '';
-                                                        FFAppState()
-                                                            .TOTALmndob2 = 0;
-                                                        FFAppState().totalapp2 =
-                                                            0;
-                                                        FFAppState().vat2 = 0;
-                                                        FFAppState()
-                                                            .totalAllNow2 = 0;
-                                                        FFAppState().totalKsm2 =
-                                                            0.0;
-                                                        safeSetState(() {});
-                                                        // خصم متغير
-                                                        FFAppState()
-                                                            .totalKsm2 = _model
-                                                                .countControllerValue!
-                                                                .toDouble() *
-                                                            FFAppState()
-                                                                .srtypecar
-                                                                .toDouble() *
-                                                            FFAppState()
-                                                                .NsbhKsm /
-                                                            100;
-                                                        safeSetState(() {});
-                                                        // إجراء عملية محاسبية ( حدف القيم السابقة
-                                                        FFAppState()
-                                                            .TOTALmndob2 = 0;
-                                                        FFAppState().totalapp2 =
-                                                            0;
-                                                        FFAppState().vat2 = 0;
-                                                        FFAppState()
-                                                            .totalAllNow2 = 0;
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        // تعيين قيم جديدة محاسبية
-                                                        FFAppState()
-                                                                .TOTALmndob2 =
-                                                            functions.total(
-                                                                FFAppState()
-                                                                    .srtypecar,
-                                                                FFAppState()
-                                                                    .totalsaat
-                                                                    .toDouble())!;
-                                                        FFAppState().totalapp2 =
-                                                            functions.vat(
-                                                                15.0,
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState().vat2 =
-                                                            functions.vat(
-                                                                FFAppState()
-                                                                    .VatDolh
-                                                                    .toDouble(),
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState()
-                                                                .totalAllNow2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            functions
-                                                                .total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble())!
-                                                                .toDouble();
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        // تحديث الحسابات متغير حالة التطبيق
-                                                        FFAppState()
-                                                                .TOTALmndob2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 -
-                                                                FFAppState()
-                                                                    .totalapp2 -
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                                .totalAllNow2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 -
-                                                                FFAppState()
-                                                                    .totalapp2 -
-                                                                FFAppState()
-                                                                    .vat2 -
-                                                                FFAppState()
-                                                                    .totalKsm2;
-                                                        FFAppState().totalAllnow3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2 -
-                                                                FFAppState()
-                                                                    .totalKsm2;
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        FFAppState()
-                                                                .TOTALmndob2 =
-                                                            functions.total(
-                                                                FFAppState()
-                                                                    .srtypecar,
-                                                                FFAppState()
-                                                                    .totalsaat
-                                                                    .toDouble())!;
-                                                        FFAppState().totalapp2 =
-                                                            functions.vat(
-                                                                15.0,
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState().vat2 =
-                                                            functions.vat(
-                                                                FFAppState()
-                                                                    .VatDolh
-                                                                    .toDouble(),
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState()
-                                                                .totalAllNow2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            functions
-                                                                .total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble())!
-                                                                .toDouble();
-                                                        FFAppState()
-                                                                .totalAllnow3 =
-                                                            (FFAppState()
-                                                                        .TOTALmndob2 +
-                                                                    FFAppState()
-                                                                        .totalapp2 +
-                                                                    FFAppState()
-                                                                        .vat2)
-                                                                .toDouble();
-                                                        safeSetState(() {});
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 -
-                                                                FFAppState()
-                                                                    .totalapp2
-                                                                    .toDouble() -
-                                                                FFAppState()
-                                                                    .vat2
-                                                                    .toDouble();
-                                                        FFAppState()
-                                                                .totalAllnow3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 +
-                                                                FFAppState()
-                                                                    .totalapp2
-                                                                    .toDouble() +
-                                                                FFAppState()
-                                                                    .vat2
-                                                                    .toDouble() -
-                                                                FFAppState()
-                                                                    .totalKsm2;
-                                                        safeSetState(() {});
-                                                      } else {
-                                                        FFAppState().addhors =
-                                                            _model
-                                                                .countControllerValue!;
-                                                        FFAppState().totalsaat =
-                                                            FFAppState()
-                                                                    .saatcar +
-                                                                FFAppState()
-                                                                    .addhors;
-                                                        FFAppState()
-                                                            .totalAllNew = 0.0;
-                                                        FFAppState()
-                                                            .totalAllnowPrent = '';
-                                                        FFAppState()
-                                                            .TOTALmndob2 = 0;
-                                                        FFAppState().totalapp2 =
-                                                            0;
-                                                        FFAppState().vat2 = 0;
-                                                        FFAppState()
-                                                            .totalAllNow2 = 0;
-                                                        FFAppState().totalKsm2 =
-                                                            0.0;
-                                                        safeSetState(() {});
-                                                        // خصم ثابت
-                                                        FFAppState().totalKsm2 =
-                                                            FFAppState()
-                                                                .UbKsm
-                                                                .toDouble();
-                                                        safeSetState(() {});
-                                                        FFAppState()
-                                                            .TOTALmndob2 = 0;
-                                                        FFAppState().totalapp2 =
-                                                            0;
-                                                        FFAppState().vat2 = 0;
-                                                        FFAppState()
-                                                            .totalAllNow2 = 0;
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        FFAppState()
-                                                                .TOTALmndob2 =
-                                                            functions.total(
-                                                                FFAppState()
-                                                                    .srtypecar,
-                                                                FFAppState()
-                                                                    .totalsaat
-                                                                    .toDouble())!;
-                                                        FFAppState().totalapp2 =
-                                                            functions.vat(
-                                                                15.0,
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState().vat2 =
-                                                            functions.vat(
-                                                                FFAppState()
-                                                                    .VatDolh
-                                                                    .toDouble(),
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState()
-                                                                .totalAllNow2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            functions
-                                                                .total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble())!
-                                                                .toDouble();
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        FFAppState()
-                                                                .TOTALmndob2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 -
-                                                                FFAppState()
-                                                                    .totalapp2 -
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                                .totalAllNow2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 -
-                                                                FFAppState()
-                                                                    .totalapp2 -
-                                                                FFAppState()
-                                                                    .vat2 -
-                                                                FFAppState()
-                                                                    .totalKsm2;
-                                                        FFAppState().totalAllnow3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2 -
-                                                                FFAppState()
-                                                                    .totalKsm2;
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        FFAppState()
-                                                                .TOTALmndob2 =
-                                                            functions.total(
-                                                                FFAppState()
-                                                                    .srtypecar,
-                                                                FFAppState()
-                                                                    .totalsaat
-                                                                    .toDouble())!;
-                                                        FFAppState().totalapp2 =
-                                                            functions.vat(
-                                                                15.0,
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState().vat2 =
-                                                            functions.vat(
-                                                                FFAppState()
-                                                                    .VatDolh
-                                                                    .toDouble(),
-                                                                functions.total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble()))!;
-                                                        FFAppState()
-                                                                .totalAllNow2 =
-                                                            FFAppState()
-                                                                    .TOTALmndob2 +
-                                                                FFAppState()
-                                                                    .totalapp2 +
-                                                                FFAppState()
-                                                                    .vat2;
-                                                        FFAppState()
-                                                            .update(() {});
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            functions
-                                                                .total(
-                                                                    FFAppState()
-                                                                        .srtypecar,
-                                                                    FFAppState()
-                                                                        .totalsaat
-                                                                        .toDouble())!
-                                                                .toDouble();
-                                                        FFAppState()
-                                                                .totalAllnow3 =
-                                                            (FFAppState()
-                                                                        .TOTALmndob2 +
-                                                                    FFAppState()
-                                                                        .totalapp2 +
-                                                                    FFAppState()
-                                                                        .vat2)
-                                                                .toDouble();
-                                                        safeSetState(() {});
-                                                        FFAppState()
-                                                                .totalmndob3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 -
-                                                                FFAppState()
-                                                                    .totalapp2
-                                                                    .toDouble() -
-                                                                FFAppState()
-                                                                    .vat2
-                                                                    .toDouble();
-                                                        FFAppState()
-                                                                .totalAllnow3 =
-                                                            FFAppState()
-                                                                    .totalmndob3 +
-                                                                FFAppState()
-                                                                    .totalapp2
-                                                                    .toDouble() +
-                                                                FFAppState()
-                                                                    .vat2
-                                                                    .toDouble() -
-                                                                FFAppState()
-                                                                    .totalKsm2;
-                                                        safeSetState(() {});
-                                                      }
-                                                    },
-                                                    stepSize: 1,
-                                                    minimum: 0,
-                                                    maximum: 300,
-                                                    contentPadding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(12.0, 0.0,
-                                                            12.0, 0.0),
-                                                  ),
-                                                ),
-                                              ].divide(
-                                                  const SizedBox(width: 8.0)),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ].divide(const SizedBox(width: 12.0)),
-                                  ),
-                                  if (FFAppState().NsbhKsm >= 1.0)
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional
-                                              .fromSTEB(4.0, 0.0, 4.0, 0.0),
-                                          child: Icon(
-                                            Icons.local_offer,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            size: 10.0,
-                                          ),
-                                        ),
-                                        Text(
-                                          FFLocalizations.of(context)
-                                              .getVariableText(
-                                            enText: 'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            arText:
-                                                'تحصل على خصم ${FFAppState().NsbhKsm.toString()} % لكل ساعة إضافية تضيفها، بحد أقصى ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            zh_HansText:
-                                                'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            trText: 'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            urText: 'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            ruText: 'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            azText: 'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                            kaText: 'You get a  ${formatNumber(
-                                              FFAppState().NsbhKsm,
-                                              formatType: FormatType.percent,
-                                            )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                fontSize: 10.0,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMediumIsCustom,
-                                              ),
-                                        ),
-                                      ],
-                                    ),
-                                  Divider(
-                                    thickness: 1.0,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
-                                  ),
-                                ].divide(const SizedBox(height: 12.0)),
-                              ),
-                            ),
-                          ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation1']!),
-                        ),
-                      ),
-                    if (FFAppState().addcart >= 1)
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 10.0, 0.0, 0.0),
-                        child: Text(
+                        title: Text(
                           FFLocalizations.of(context).getText(
-                            '3im46sag' /* List of added locations. */,
+                            '04e2w4m3' /* Trip scheduling */,
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                color:
+                                    FlutterFlowTheme.of(context).primary,
+                                fontSize: 17.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelLargeIsCustom,
+                              ),
+                        ),
+                        subtitle: Text(
+                          valueOrDefault<String>(
+                            FFAppState().fulltextSchedule,
+                            'اختياريا، يمكنك اختيار تاريخ ووقت بدء الرحلة',
                           ),
                           style: FlutterFlowTheme.of(context)
                               .labelMedium
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelMediumFamily,
+                                fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .labelMediumIsCustom,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelMediumIsCustom,
                               ),
                         ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          size: 20.0,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context)
+                            .secondaryBackground,
+                        dense: false,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(11.0),
+                            bottomRight: Radius.circular(11.0),
+                            topLeft: Radius.circular(11.0),
+                            topRight: Radius.circular(11.0),
+                          ),
+                        ),
                       ),
-                    if ((FFAppState().addcart <= 0) &&
-                        (FFAppState().typeHgz == 1))
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 22.0, 0.0, 0.0),
-                              child: Container(
-                                width: 100.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).primary,
+                    ),
+                  ),
+                ),
+              if (FFAppState().AllowBooking == true)
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 9.0, 0.0, 9.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: FlutterFlowTheme.of(context)
+                            .secondaryBackground,
+                        context: context,
+                        builder: (context) {
+                          return WebViewAware(
+                            child: GestureDetector(
+                              onTap: () {
+                                FocusScope.of(context).unfocus();
+                                FocusManager.instance.primaryFocus
+                                    ?.unfocus();
+                              },
+                              child: Padding(
+                                padding: MediaQuery.viewInsetsOf(context),
+                                child: SizedBox(
+                                  height:
+                                      MediaQuery.sizeOf(context).height *
+                                          0.77,
+                                  child: const PaymentMethods2Widget(),
                                 ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
+                              ),
+                            ),
+                          );
+                        },
+                      ).then((value) => safeSetState(() {}));
+                    },
+                    child: Material(
+                      color: Colors.transparent,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.payment_sharp,
+                          color: FlutterFlowTheme.of(context).primary,
+                        ),
+                        title: Text(
+                          FFLocalizations.of(context).getText(
+                            '97gi9omv' /* Payment method. */,
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                color:
+                                    FlutterFlowTheme.of(context).primary,
+                                fontSize: 17.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelLargeIsCustom,
+                              ),
+                        ),
+                        subtitle: Text(
+                          valueOrDefault<String>(
+                            FFAppState().payth,
+                            'حدد طريقة الدفع',
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelMediumFamily,
+                                fontSize: 12.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts:
+                                    !FlutterFlowTheme.of(context)
+                                        .labelMediumIsCustom,
+                              ),
+                        ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          size: 20.0,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context)
+                            .secondaryBackground,
+                        dense: false,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(11.0),
+                            bottomRight: Radius.circular(11.0),
+                            topLeft: Radius.circular(11.0),
+                            topRight: Radius.circular(11.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              if ((FFAppState().villnow != null) &&
+                  (FFAppState().typecarRev != null))
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      7.0, 8.0, 7.0, 8.0),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context)
+                          .secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).alternate,
+                        width: 1.0,
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          12.0, 12.0, 12.0, 12.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'xwem2m5v' /* Need extra hours? */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .override(
+                                  fontFamily:
+                                      FlutterFlowTheme.of(context)
+                                          .headlineSmallFamily,
+                                  color: FlutterFlowTheme.of(context)
+                                      .primary,
+                                  fontSize: 18.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts:
+                                      !FlutterFlowTheme.of(context)
+                                          .headlineSmallIsCustom,
+                                ),
+                          ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              '1zxsuzzb' /* Planning for a longer trip? Ad... */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily:
+                                      FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  fontSize: 13.0,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts:
+                                      !FlutterFlowTheme.of(context)
+                                          .bodyMediumIsCustom,
+                                ),
+                          ),
+                          if (FFAppState().Minimumhours >= 2)
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                              children: [
+                                Flex(
+                                  direction: Axis.vertical,
+                                  mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional
-                                              .fromSTEB(0.0, 33.0, 0.0, 0.0),
-                                          child: Icon(
-                                            Icons.sentiment_dissatisfied,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
-                                            size: 33.0,
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional
+                                              .fromSTEB(
+                                              4.0, 0.0, 4.0, 0.0),
+                                      child: Icon(
+                                        Icons.sim_card_alert,
+                                        color: FlutterFlowTheme.of(
+                                                context)
+                                            .error,
+                                        size: 9.0,
+                                      ),
+                                    ),
+                                    Text(
+                                      FFLocalizations.of(context)
+                                          .getVariableText(
+                                        enText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                        arText:
+                                            'بناءً على الجولات التي تم تحديدها، فإن الحدّ الأدنى للساعات هو${FFAppState().Minimumhours.toString()} ساعة',
+                                        zh_HansText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                        trText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                        urText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                        ruText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                        azText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                        kaText:
+                                            'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
+                                      ),
+                                      style: FlutterFlowTheme.of(
+                                              context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .error,
+                                            fontSize: 11.0,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
                                           ),
-                                        ),
-                                        if (FFAppState().addcart <= 0)
-                                          Padding(
-                                            padding: const EdgeInsetsDirectional
-                                                .fromSTEB(0.0, 33.0, 18.0, 0.0),
-                                            child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'vbjndb7s' /* No tours have been added! */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style: FlutterFlowTheme.of(
+                                    ).animateOnPageLoad(animationsMap[
+                                        'textOnPageLoadAnimation']!),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment:
+                                MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    FFLocalizations.of(context)
+                                        .getText(
+                                      '3wz9h8sg' /* Current Hours */,
+                                    ),
+                                    style: FlutterFlowTheme.of(
+                                            context)
+                                        .bodySmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(
                                                       context)
-                                                  .bodyMedium
+                                                  .bodySmallFamily,
+                                          color: FlutterFlowTheme.of(
+                                                  context)
+                                              .secondaryText,
+                                          fontSize: 11.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodySmallIsCustom,
+                                        ),
+                                  ),
+                                  Text(
+                                    '${FFAppState().saatcar.toString()} ساعة  ',
+                                    style: FlutterFlowTheme.of(
+                                            context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyLargeFamily,
+                                          color: FlutterFlowTheme.of(
+                                                  context)
+                                              .primary,
+                                          fontSize: 11.0,
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w600,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyLargeIsCustom,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsetsDirectional
+                                            .fromSTEB(
+                                            22.0, 0.0, 22.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context)
+                                          .getText(
+                                        '2c08i4up' /* Additional Hours? */,
+                                      ),
+                                      style: FlutterFlowTheme.of(
+                                              context)
+                                          .bodySmall
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmallFamily,
+                                            color:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .secondaryText,
+                                            fontSize: 11.0,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmallIsCustom,
+                                          ),
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 120.0,
+                                        height: 40.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(
+                                                  context)
+                                              .secondaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(
+                                                  8.0),
+                                          shape: BoxShape.rectangle,
+                                        ),
+                                        child:
+                                            FlutterFlowCountController(
+                                          decrementIconBuilder:
+                                              (enabled) => Icon(
+                                            Icons.remove_rounded,
+                                            color: enabled
+                                                ? FlutterFlowTheme.of(
+                                                        context)
+                                                    .secondaryText
+                                                : FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate,
+                                            size: 18.0,
+                                          ),
+                                          incrementIconBuilder:
+                                              (enabled) => Icon(
+                                            Icons.add_rounded,
+                                            color: enabled
+                                                ? FlutterFlowTheme.of(
+                                                        context)
+                                                    .primary
+                                                : FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate,
+                                            size: 18.0,
+                                          ),
+                                          countBuilder: (count) =>
+                                              Text(
+                                            count.toString(),
+                                            style: FlutterFlowTheme
+                                                    .of(context)
+                                                .titleLarge
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLargeFamily,
+                                                  color: FlutterFlowTheme
+                                                          .of(context)
+                                                      .primary,
+                                                  fontSize: 18.0,
+                                                  letterSpacing: 0.0,
+                                                  shadows: [
+                                                    Shadow(
+                                                      color: FlutterFlowTheme.of(
+                                                              context)
+                                                          .alternate,
+                                                      offset:
+                                                          const Offset(
+                                                              2.0,
+                                                              2.0),
+                                                      blurRadius: 2.0,
+                                                    )
+                                                  ],
+                                                  useGoogleFonts:
+                                                      !FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLargeIsCustom,
+                                                ),
+                                          ),
+                                          count: _model
+                                              .countControllerValue ??= 0,
+                                          updateCount: (count) async {
+                                            safeSetState(() => _model
+                                                    .countControllerValue =
+                                                count); // تحديث حالة التطبيق
+                                            FFAppState()
+                                                .totalKsm2 = _model
+                                                    .countControllerValue!
+                                                    .toDouble() *
+                                                FFAppState()
+                                                    .srtypecar
+                                                    .toDouble() *
+                                                FFAppState().NsbhKsm /
+                                                100;
+                                            safeSetState(() {});
+                                            if (FFAppState()
+                                                    .totalKsm2 <
+                                                FFAppState()
+                                                    .UbKsm
+                                                    .toDouble()) {
+                                              // تحديث الساعات
+                                              FFAppState().addhors =
+                                                  _model
+                                                      .countControllerValue!;
+                                              FFAppState().totalsaat =
+                                                  FFAppState()
+                                                          .saatcar +
+                                                      FFAppState()
+                                                          .addhors;
+                                              FFAppState()
+                                                  .totalAllNew = 0.0;
+                                              FFAppState()
+                                                  .totalAllnowPrent = '';
+                                              FFAppState()
+                                                  .TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 =
+                                                  0;
+                                              FFAppState().vat2 = 0;
+                                              FFAppState()
+                                                  .totalAllNow2 = 0;
+                                              FFAppState().totalKsm2 =
+                                                  0.0;
+                                              safeSetState(() {});
+                                              // خصم متغير
+                                              FFAppState()
+                                                  .totalKsm2 = _model
+                                                      .countControllerValue!
+                                                      .toDouble() *
+                                                  FFAppState()
+                                                      .srtypecar
+                                                      .toDouble() *
+                                                  FFAppState()
+                                                      .NsbhKsm /
+                                                  100;
+                                              safeSetState(() {});
+                                              // إجراء عملية محاسبية ( حدف القيم السابقة
+                                              FFAppState()
+                                                  .TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 =
+                                                  0;
+                                              FFAppState().vat2 = 0;
+                                              FFAppState()
+                                                  .totalAllNow2 = 0;
+                                              FFAppState()
+                                                  .update(() {});
+                                              // تعيين قيم جديدة محاسبية
+                                              FFAppState()
+                                                      .TOTALmndob2 =
+                                                  functions.total(
+                                                      FFAppState()
+                                                          .srtypecar,
+                                                      FFAppState()
+                                                          .totalsaat
+                                                          .toDouble())!;
+                                              FFAppState().totalapp2 =
+                                                  functions.vat(
+                                                      15.0,
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState().vat2 =
+                                                  functions.vat(
+                                                      FFAppState()
+                                                          .VatDolh
+                                                          .toDouble(),
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState()
+                                                      .totalAllNow2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  functions
+                                                      .total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble())!
+                                                      .toDouble();
+                                              FFAppState()
+                                                  .update(() {});
+                                              // تحديث الحسابات متغير حالة التطبيق
+                                              FFAppState()
+                                                      .TOTALmndob2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 -
+                                                      FFAppState()
+                                                          .totalapp2 -
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                      .totalAllNow2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  FFAppState()
+                                                          .totalmndob3 -
+                                                      FFAppState()
+                                                          .totalapp2 -
+                                                      FFAppState()
+                                                          .vat2 -
+                                                      FFAppState()
+                                                          .totalKsm2;
+                                              FFAppState().totalAllnow3 =
+                                                  FFAppState()
+                                                          .totalmndob3 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2 -
+                                                      FFAppState()
+                                                          .totalKsm2;
+                                              FFAppState()
+                                                  .update(() {});
+                                              FFAppState()
+                                                      .TOTALmndob2 =
+                                                  functions.total(
+                                                      FFAppState()
+                                                          .srtypecar,
+                                                      FFAppState()
+                                                          .totalsaat
+                                                          .toDouble())!;
+                                              FFAppState().totalapp2 =
+                                                  functions.vat(
+                                                      15.0,
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState().vat2 =
+                                                  functions.vat(
+                                                      FFAppState()
+                                                          .VatDolh
+                                                          .toDouble(),
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState()
+                                                      .totalAllNow2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                  .update(() {});
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  functions
+                                                      .total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble())!
+                                                      .toDouble();
+                                              FFAppState()
+                                                      .totalAllnow3 =
+                                                  (FFAppState()
+                                                              .TOTALmndob2 +
+                                                          FFAppState()
+                                                              .totalapp2 +
+                                                          FFAppState()
+                                                              .vat2)
+                                                      .toDouble();
+                                              safeSetState(() {});
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  FFAppState()
+                                                          .totalmndob3 -
+                                                      FFAppState()
+                                                          .totalapp2
+                                                          .toDouble() -
+                                                      FFAppState()
+                                                          .vat2
+                                                          .toDouble();
+                                              FFAppState()
+                                                      .totalAllnow3 =
+                                                  FFAppState()
+                                                          .totalmndob3 +
+                                                      FFAppState()
+                                                          .totalapp2
+                                                          .toDouble() +
+                                                      FFAppState()
+                                                          .vat2
+                                                          .toDouble() -
+                                                      FFAppState()
+                                                          .totalKsm2;
+                                              safeSetState(() {});
+                                            } else {
+                                              FFAppState().addhors =
+                                                  _model
+                                                      .countControllerValue!;
+                                              FFAppState().totalsaat =
+                                                  FFAppState()
+                                                          .saatcar +
+                                                      FFAppState()
+                                                          .addhors;
+                                              FFAppState()
+                                                  .totalAllNew = 0.0;
+                                              FFAppState()
+                                                  .totalAllnowPrent = '';
+                                              FFAppState()
+                                                  .TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 =
+                                                  0;
+                                              FFAppState().vat2 = 0;
+                                              FFAppState()
+                                                  .totalAllNow2 = 0;
+                                              FFAppState().totalKsm2 =
+                                                  0.0;
+                                              safeSetState(() {});
+                                              // خصم ثابت
+                                              FFAppState().totalKsm2 =
+                                                  FFAppState()
+                                                      .UbKsm
+                                                      .toDouble();
+                                              safeSetState(() {});
+                                              FFAppState()
+                                                  .TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 =
+                                                  0;
+                                              FFAppState().vat2 = 0;
+                                              FFAppState()
+                                                  .totalAllNow2 = 0;
+                                              FFAppState()
+                                                  .update(() {});
+                                              FFAppState()
+                                                      .TOTALmndob2 =
+                                                  functions.total(
+                                                      FFAppState()
+                                                          .srtypecar,
+                                                      FFAppState()
+                                                          .totalsaat
+                                                          .toDouble())!;
+                                              FFAppState().totalapp2 =
+                                                  functions.vat(
+                                                      15.0,
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState().vat2 =
+                                                  functions.vat(
+                                                      FFAppState()
+                                                          .VatDolh
+                                                          .toDouble(),
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState()
+                                                      .totalAllNow2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  functions
+                                                      .total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble())!
+                                                      .toDouble();
+                                              FFAppState()
+                                                  .update(() {});
+                                              FFAppState()
+                                                      .TOTALmndob2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 -
+                                                      FFAppState()
+                                                          .totalapp2 -
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                      .totalAllNow2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  FFAppState()
+                                                          .totalmndob3 -
+                                                      FFAppState()
+                                                          .totalapp2 -
+                                                      FFAppState()
+                                                          .vat2 -
+                                                      FFAppState()
+                                                          .totalKsm2;
+                                              FFAppState().totalAllnow3 =
+                                                  FFAppState()
+                                                          .totalmndob3 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2 -
+                                                      FFAppState()
+                                                          .totalKsm2;
+                                              FFAppState()
+                                                  .update(() {});
+                                              FFAppState()
+                                                      .TOTALmndob2 =
+                                                  functions.total(
+                                                      FFAppState()
+                                                          .srtypecar,
+                                                      FFAppState()
+                                                          .totalsaat
+                                                          .toDouble())!;
+                                              FFAppState().totalapp2 =
+                                                  functions.vat(
+                                                      15.0,
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState().vat2 =
+                                                  functions.vat(
+                                                      FFAppState()
+                                                          .VatDolh
+                                                          .toDouble(),
+                                                      functions.total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble()))!;
+                                              FFAppState()
+                                                      .totalAllNow2 =
+                                                  FFAppState()
+                                                          .TOTALmndob2 +
+                                                      FFAppState()
+                                                          .totalapp2 +
+                                                      FFAppState()
+                                                          .vat2;
+                                              FFAppState()
+                                                  .update(() {});
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  functions
+                                                      .total(
+                                                          FFAppState()
+                                                              .srtypecar,
+                                                          FFAppState()
+                                                              .totalsaat
+                                                              .toDouble())!
+                                                      .toDouble();
+                                              FFAppState()
+                                                      .totalAllnow3 =
+                                                  (FFAppState()
+                                                              .TOTALmndob2 +
+                                                          FFAppState()
+                                                              .totalapp2 +
+                                                          FFAppState()
+                                                              .vat2)
+                                                      .toDouble();
+                                              safeSetState(() {});
+                                              FFAppState()
+                                                      .totalmndob3 =
+                                                  FFAppState()
+                                                          .totalmndob3 -
+                                                      FFAppState()
+                                                          .totalapp2
+                                                          .toDouble() -
+                                                      FFAppState()
+                                                          .vat2
+                                                          .toDouble();
+                                              FFAppState()
+                                                      .totalAllnow3 =
+                                                  FFAppState()
+                                                          .totalmndob3 +
+                                                      FFAppState()
+                                                          .totalapp2
+                                                          .toDouble() +
+                                                      FFAppState()
+                                                          .vat2
+                                                          .toDouble() -
+                                                      FFAppState()
+                                                          .totalKsm2;
+                                              safeSetState(() {});
+                                            }
+                                          },
+                                          stepSize: 1,
+                                          minimum: 0,
+                                          maximum: 300,
+                                          contentPadding:
+                                              const EdgeInsetsDirectional
+                                                  .fromSTEB(12.0, 0.0,
+                                                  12.0, 0.0),
+                                        ),
+                                      ),
+                                    ].divide(
+                                        const SizedBox(width: 8.0)),
+                                  ),
+                                ],
+                              ),
+                            ].divide(const SizedBox(width: 12.0)),
+                          ),
+                          if (FFAppState().NsbhKsm >= 1.0)
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional
+                                      .fromSTEB(4.0, 0.0, 4.0, 0.0),
+                                  child: Icon(
+                                    Icons.local_offer,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primary,
+                                    size: 10.0,
+                                  ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context)
+                                      .getVariableText(
+                                    enText: 'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    arText:
+                                        'تحصل على خصم ${FFAppState().NsbhKsm.toString()} % لكل ساعة إضافية تضيفها، بحد أقصى ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    zh_HansText:
+                                        'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    trText: 'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    urText: 'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    ruText: 'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    azText: 'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    kaText: 'You get a  ${formatNumber(
+                                      FFAppState().NsbhKsm,
+                                      formatType: FormatType.percent,
+                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily:
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily,
+                                        color:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                        fontSize: 10.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(
+                                                    context)
+                                                .bodyMediumIsCustom,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          Divider(
+                            thickness: 1.0,
+                            color:
+                                FlutterFlowTheme.of(context).alternate,
+                          ),
+                        ].divide(const SizedBox(height: 12.0)),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation1']!),
+                ),
+              if (FFAppState().addcart >= 1)
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      16.0, 10.0, 0.0, 0.0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      '3im46sag' /* List of added locations. */,
+                    ),
+                    style: FlutterFlowTheme.of(context)
+                        .labelMedium
+                        .override(
+                          fontFamily: FlutterFlowTheme.of(context)
+                              .labelMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: !FlutterFlowTheme.of(context)
+                              .labelMediumIsCustom,
+                        ),
+                  ),
+                ),
+              if ((FFAppState().addcart <= 0) &&
+                  (FFAppState().typeHgz == 1))
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 22.0, 0.0, 0.0),
+                      child: Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).primary,
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional
+                                      .fromSTEB(0.0, 33.0, 0.0, 0.0),
+                                  child: Icon(
+                                    Icons.sentiment_dissatisfied,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    size: 33.0,
+                                  ),
+                                ),
+                                if (FFAppState().addcart <= 0)
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional
+                                        .fromSTEB(0.0, 33.0, 18.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context)
+                                          .getText(
+                                        'vbjndb7s' /* No tours have been added! */,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(
+                                              context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryBackground,
+                                            fontSize: 22.0,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              if (FFAppState().typeHgz == 2)
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 22.0, 0.0, 0.0),
+                      child: Container(
+                        width: 100.0,
+                        height: 77.84,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).primary,
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(0.0),
+                            bottomRight: Radius.circular(0.0),
+                            topLeft: Radius.circular(44.0),
+                            topRight: Radius.circular(44.0),
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional
+                                      .fromSTEB(0.0, 33.0, 0.0, 0.0),
+                                  child: Icon(
+                                    Icons.drive_eta_sharp,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    size: 22.0,
+                                  ),
+                                ),
+                                if (FFAppState().addcart <= 0)
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional
+                                        .fromSTEB(0.0, 11.0, 18.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context)
+                                          .getText(
+                                        'un9qx6mz' /* The driver has been assigned,
+                        ... */
+                                        ,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(
+                                              context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryBackground,
+                                            fontSize: 12.0,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              if (FFAppState().typeHgz == 1)
+                Builder(
+                  builder: (context) {
+                    final mkss = FFAppState().cartmkss.toList();
+                          
+                    return SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: List.generate(mkss.length, (mkssIndex) {
+                          final mkssItem = mkss[mkssIndex];
+                          return ListView(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 8.0, 8.0, 8.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional
+                                              .fromSTEB(
+                                              12.0, 0.0, 0.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                    0.0, 0.0, 0.0, 8.0),
+                                            child: Text(
+                                              mkssItem.naim,
+                                              style: FlutterFlowTheme
+                                                      .of(context)
+                                                  .labelLarge
                                                   .override(
                                                     fontFamily:
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryBackground,
-                                                    fontSize: 22.0,
+                                                            .labelLargeFamily,
+                                                    fontSize: 15.0,
                                                     letterSpacing: 0.0,
                                                     useGoogleFonts:
                                                         !FlutterFlowTheme.of(
                                                                 context)
-                                                            .bodyMediumIsCustom,
+                                                            .labelLargeIsCustom,
                                                   ),
                                             ),
                                           ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    if (FFAppState().typeHgz == 2)
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 22.0, 0.0, 0.0),
-                              child: Container(
-                                width: 100.0,
-                                height: 77.84,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  borderRadius: const BorderRadius.only(
-                                    bottomLeft: Radius.circular(0.0),
-                                    bottomRight: Radius.circular(0.0),
-                                    topLeft: Radius.circular(44.0),
-                                    topRight: Radius.circular(44.0),
-                                  ),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional
-                                              .fromSTEB(0.0, 33.0, 0.0, 0.0),
-                                          child: Icon(
-                                            Icons.drive_eta_sharp,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
-                                            size: 22.0,
-                                          ),
-                                        ),
-                                        if (FFAppState().addcart <= 0)
                                           Padding(
-                                            padding: const EdgeInsetsDirectional
-                                                .fromSTEB(0.0, 11.0, 18.0, 0.0),
+                                            padding:
+                                                const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                    0.0, 0.0, 0.0, 8.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'un9qx6mz' /* The driver has been assigned,
-... */
-                                                ,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
+                                              mkssItem.textivill,
+                                              style: FlutterFlowTheme
+                                                      .of(context)
+                                                  .labelLarge
                                                   .override(
                                                     fontFamily:
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryBackground,
+                                                            .labelLargeFamily,
                                                     fontSize: 12.0,
                                                     letterSpacing: 0.0,
                                                     useGoogleFonts:
                                                         !FlutterFlowTheme.of(
                                                                 context)
-                                                            .bodyMediumIsCustom,
+                                                            .labelLargeIsCustom,
                                                   ),
                                             ),
-                                          ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    if (FFAppState().typeHgz == 1)
-                      Builder(
-                        builder: (context) {
-                          final mkss = FFAppState().cartmkss.toList();
-
-                          return SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: List.generate(mkss.length, (mkssIndex) {
-                                final mkssItem = mkss[mkssIndex];
-                                return ListView(
-                                  padding: EdgeInsets.zero,
-                                  shrinkWrap: true,
-                                  scrollDirection: Axis.vertical,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              12.0, 8.0, 8.0, 8.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Expanded(
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                      12.0, 0.0, 0.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                            0.0, 0.0, 0.0, 8.0),
-                                                    child: Text(
-                                                      mkssItem.naim,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelLargeFamily,
-                                                            fontSize: 15.0,
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                !FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelLargeIsCustom,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                            0.0, 0.0, 0.0, 8.0),
-                                                    child: Text(
-                                                      mkssItem.textivill,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelLargeFamily,
-                                                            fontSize: 12.0,
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                !FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelLargeIsCustom,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          FlutterFlowIconButton(
-                                            borderColor: Colors.transparent,
-                                            borderRadius: 30.0,
-                                            borderWidth: 1.0,
-                                            buttonSize: 40.0,
-                                            icon: Icon(
-                                              Icons.delete_outline_rounded,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              size: 20.0,
-                                            ),
-                                            onPressed: () async {
-                                              FFAppState()
-                                                  .removeFromCartmkss(mkssItem);
-                                              FFAppState().addcart =
-                                                  FFAppState().addcart + -1;
-                                              FFAppState().Minimumhours =
-                                                  (FFAppState().addcart / 2)
-                                                      .toInt();
-                                              FFAppState().removeFromMkan(
-                                                  mkssItem.revmkan!);
-                                              FFAppState().update(() {});
-                                            },
                                           ),
                                         ],
                                       ),
                                     ),
+                                    FlutterFlowIconButton(
+                                      borderColor: Colors.transparent,
+                                      borderRadius: 30.0,
+                                      borderWidth: 1.0,
+                                      buttonSize: 40.0,
+                                      icon: Icon(
+                                        Icons.delete_outline_rounded,
+                                        color:
+                                            FlutterFlowTheme.of(context)
+                                                .error,
+                                        size: 20.0,
+                                      ),
+                                      onPressed: () async {
+                                        FFAppState()
+                                            .removeFromCartmkss(mkssItem);
+                                        FFAppState().addcart =
+                                            FFAppState().addcart + -1;
+                                        FFAppState().Minimumhours =
+                                            (FFAppState().addcart / 2)
+                                                .toInt();
+                                        FFAppState().removeFromMkan(
+                                            mkssItem.revmkan!);
+                                        FFAppState().update(() {});
+                                      },
+                                    ),
                                   ],
-                                );
-                              }),
-                            ),
+                                ),
+                              ),
+                            ],
                           );
-                        },
+                        }),
                       ),
-                    if (FFAppState().addcart >= 1)
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          if ((valueOrDefault<bool>(
-                                      currentUserDocument?.actevMndob, false) ==
-                                  true) &&
-                              (currentUserUid == '00900'))
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 19.0, 0.0, 11.0),
-                                child: AuthUserStreamWidget(
-                                  builder: (context) => SizedBox(
-                                    width: 200.0,
-                                    child: TextFormField(
-                                      controller: _model.textController,
-                                      focusNode: _model.textFieldFocusNode,
-                                      autofocus: false,
-                                      readOnly: true,
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        isDense: true,
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'njvlci0g' /* عدد الساعات المطلوبة */,
-                                        ),
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMediumFamily,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
-                                                      .labelMediumIsCustom,
-                                            ),
-                                        hintText:
-                                            FFLocalizations.of(context).getText(
-                                          'lxw2tgd1' /* TextField */,
-                                        ),
-                                        hintStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMediumFamily,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
-                                                      .labelMediumIsCustom,
-                                            ),
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
-                                            color: Color(0x00000000),
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
-                                            color: Color(0x00000000),
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        filled: true,
-                                        fillColor: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
+                    );
+                  },
+                ),
+              if (FFAppState().addcart >= 1)
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if ((valueOrDefault<bool>(
+                                currentUserDocument?.actevMndob, false) ==
+                            true) &&
+                        (currentUserUid == '00900'))
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 19.0, 0.0, 11.0),
+                        child: AuthUserStreamWidget(
+                          builder: (context) => SizedBox(
+                            width: 200.0,
+                            child: TextFormField(
+                              controller: _model.textController,
+                              focusNode: _model.textFieldFocusNode,
+                              autofocus: false,
+                              readOnly: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                isDense: true,
+                                labelText:
+                                    FFLocalizations.of(context).getText(
+                                  'njvlci0g' /* عدد الساعات المطلوبة */,
+                                ),
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily:
+                                          FlutterFlowTheme.of(context)
+                                              .labelMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .labelMediumIsCustom,
+                                    ),
+                                hintText:
+                                    FFLocalizations.of(context).getText(
+                                  'lxw2tgd1' /* TextField */,
+                                ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily:
+                                          FlutterFlowTheme.of(context)
+                                              .labelMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .labelMediumIsCustom,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.circular(8.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.circular(8.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context)
+                                        .error,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.circular(8.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context)
+                                        .error,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.circular(8.0),
+                                ),
+                                filled: true,
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily:
+                                        FlutterFlowTheme.of(context)
+                                            .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts:
+                                        !FlutterFlowTheme.of(context)
+                                            .bodyMediumIsCustom,
+                                  ),
+                              keyboardType: TextInputType.number,
+                              cursorColor: FlutterFlowTheme.of(context)
+                                  .primaryText,
+                              validator: _model.textControllerValidator
+                                  .asValidator(context),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if ((FFAppState().villnow != null) &&
+                        (FFAppState().typecarRev != null))
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            3.0, 0.0, 3.0, 8.0),
+                        child: Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).alternate,
+                              width: 1.0,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                12.0, 12.0, 12.0, 12.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'uo4b66pm' /*  Price Summary */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
+                                        fontFamily:
+                                            FlutterFlowTheme.of(context)
+                                                .headlineSmallFamily,
+                                        color:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(context)
+                                                .headlineSmallIsCustom,
+                                      ),
+                                ),
+                                Divider(
+                                  thickness: 1.0,
+                                  color: FlutterFlowTheme.of(context)
+                                      .alternate,
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'ar2wbkyv' /* Total Booking Hours: */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                FlutterFlowTheme.of(
+                                                        context)
                                                     .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryText,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !FlutterFlowTheme.of(
+                                                        context)
                                                     .bodyMediumIsCustom,
                                           ),
-                                      keyboardType: TextInputType.number,
-                                      cursorColor: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      validator: _model.textControllerValidator
-                                          .asValidator(context),
                                     ),
-                                  ),
+                                    Text(
+                                      valueOrDefault<String>(
+                                        '${FFAppState().totalsaat.toString()} ساعات',
+                                        '0',
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .primaryText,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ),
-                        ],
-                      ),
-                    SingleChildScrollView(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          if ((FFAppState().villnow != null) &&
-                              (FFAppState().typecarRev != null))
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 0.0, 3.0, 8.0),
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
-                                    width: 1.0,
-                                  ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        '0oiiec0x' /* Driver Fee: */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryText,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                    Text(
+                                      '${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .primaryText,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                  ],
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 12.0),
-                                  child: Column(
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'dwq00wue' /* App Fee  (15%): */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryText,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                    Text(
+                                      '${FFAppState().totalapp2.toString()}${FFAppState().RMZCurrency}',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .primaryText,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                                if (FFAppState().isVat == true)
+                                  Row(
                                     mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'uo4b66pm' /*  Price Summary */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineSmall
+                                        'VAT  ضريبة القيمة المضافة  ${FFAppState().VatDolh.toString()}% :',
+                                        style: FlutterFlowTheme.of(
+                                                context)
+                                            .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineSmallFamily,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                                  FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: FlutterFlowTheme.of(
+                                                      context)
+                                                  .secondaryText,
                                               letterSpacing: 0.0,
-                                              fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w600,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
-                                                      .headlineSmallIsCustom,
+                                                  !FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
                                             ),
                                       ),
-                                      Divider(
-                                        thickness: 1.0,
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'ar2wbkyv' /* Total Booking Hours: */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
+                                      Text(
+                                        '${FFAppState().vat2.toString()}${FFAppState().RMZCurrency}',
+                                        style: FlutterFlowTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(
                                                           context)
-                                                      .secondaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          ),
-                                          Text(
-                                            valueOrDefault<String>(
-                                              '${FFAppState().totalsaat.toString()} ساعات',
-                                              '0',
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              '0oiiec0x' /* Driver Fee: */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          ),
-                                          Text(
-                                            '${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'dwq00wue' /* App Fee  (15%): */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          ),
-                                          Text(
-                                            '${FFAppState().totalapp2.toString()}${FFAppState().RMZCurrency}',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                      if (FFAppState().isVat == true)
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              'VAT  ضريبة القيمة المضافة  ${FFAppState().VatDolh.toString()}% :',
-                                              style: FlutterFlowTheme.of(
+                                                      .bodyMediumFamily,
+                                              color: FlutterFlowTheme.of(
                                                       context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
-                                                  ),
+                                                  .primaryText,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
                                             ),
-                                            Text(
-                                              '${FFAppState().vat2.toString()}${FFAppState().RMZCurrency}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
-                                                  ),
-                                            ),
-                                          ],
+                                      ),
+                                    ],
+                                  ),
+                                if ((FFAppState().addhors >= 1) &&
+                                    (FFAppState().NsbhKsm >= 1.0))
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        FFLocalizations.of(context)
+                                            .getText(
+                                          'fy9yp6wj' /* Total Deductions: */,
                                         ),
-                                      if ((FFAppState().addhors >= 1) &&
-                                          (FFAppState().NsbhKsm >= 1.0))
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'fy9yp6wj' /* Total Deductions: */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
+                                        style: FlutterFlowTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: FlutterFlowTheme.of(
                                                       context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
-                                                  ),
+                                                  .error,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts:
+                                                  !FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
                                             ),
-                                            Text(
-                                              '${FFAppState().totalKsm2.toString()} ${FFAppState().RMZCurrency}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
-                                                  ),
-                                            ),
-                                          ],
-                                        ),
-                                      Divider(
-                                        thickness: 1.0,
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
                                       ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'jdq5i83p' /* Total Amount: */,
+                                      Text(
+                                        '${FFAppState().totalKsm2.toString()} ${FFAppState().RMZCurrency}',
+                                        style: FlutterFlowTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: FlutterFlowTheme.of(
+                                                      context)
+                                                  .error,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
                                             ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily:
+                                      ),
+                                    ],
+                                  ),
+                                Divider(
+                                  thickness: 1.0,
+                                  color: FlutterFlowTheme.of(context)
+                                      .alternate,
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'jdq5i83p' /* Total Amount: */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .headlineSmallFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .primary,
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.bold,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .headlineSmallIsCustom,
+                                          ),
+                                    ),
+                                    Text(
+                                      '${FFAppState().totalAllnow3.toString()}${FFAppState().RMZCurrency}',
+                                      style: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .headlineSmallFamily,
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .primary,
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.bold,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(
+                                                        context)
+                                                    .headlineSmallIsCustom,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                                if ((FFAppState().payth != 'نقدآ') &&
+                                    (FFAppState().payth != ''))
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional
+                                        .fromSTEB(0.0, 7.0, 0.0, 22.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        FFButtonWidget(
+                                          onPressed: () async {
+                                            if ((FFAppState()
+                                                        .Minimumhours >=
+                                                    2) &&
+                                                (FFAppState().totalsaat <
+                                                    FFAppState()
+                                                        .Minimumhours)) {
+                                              ScaffoldMessenger.of(
+                                                      context)
+                                                  .showSnackBar(
+                                                SnackBar(
+                                                  content: Text(
+                                                    'بناءً على الجولات التي تم تحديدها، فإن الحدّ الأدنى للساعات هو  ${FFAppState().Minimumhours.toString()} ساعات',
+                                                    style: TextStyle(
+                                                      fontFamily: 'cairo',
+                                                      color: FlutterFlowTheme
+                                                              .of(context)
+                                                          .secondaryBackground,
+                                                    ),
+                                                  ),
+                                                  duration:
+                                                      const Duration(
+                                                          milliseconds:
+                                                              4000),
+                                                  backgroundColor:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .headlineSmallFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  fontSize: 20.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.bold,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .headlineSmallIsCustom,
+                                                          .error,
                                                 ),
-                                          ),
-                                          Text(
-                                            '${FFAppState().totalAllnow3.toString()}${FFAppState().RMZCurrency}',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .headlineSmallFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  fontSize: 20.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.bold,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .headlineSmallIsCustom,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                      if ((FFAppState().payth != 'نقدآ') &&
-                                          (FFAppState().payth != ''))
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional
-                                              .fromSTEB(0.0, 7.0, 0.0, 22.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              FFButtonWidget(
-                                                onPressed: () async {
-                                                  if ((FFAppState()
-                                                              .Minimumhours >=
-                                                          2) &&
-                                                      (FFAppState().totalsaat <
-                                                          FFAppState()
-                                                              .Minimumhours)) {
-                                                    ScaffoldMessenger.of(
-                                                            context)
-                                                        .showSnackBar(
-                                                      SnackBar(
-                                                        content: Text(
-                                                          'بناءً على الجولات التي تم تحديدها، فإن الحدّ الأدنى للساعات هو  ${FFAppState().Minimumhours.toString()} ساعات',
-                                                          style: TextStyle(
-                                                            fontFamily: 'cairo',
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                        ),
-                                                        duration:
-                                                            const Duration(
-                                                                milliseconds:
-                                                                    4000),
-                                                        backgroundColor:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .error,
-                                                      ),
-                                                    );
-                                                  } else {
-                                                    _model.apiResultr5n =
-                                                        await MyserCall.call(
-                                                      description:
-                                                          '$currentUserDisplayName/ حجز رحلة  ${FFAppState().totalsaat.toString()} ساعات - ${FFAppState().naimvillatext}',
-                                                      amount: (FFAppState()
-                                                                  .totalAllnow3 *
-                                                              100)
-                                                          .round(),
-                                                      name: FFAppState()
-                                                          .CardData
-                                                          .name,
-                                                      number: FFAppState()
-                                                          .CardData
-                                                          .number,
-                                                      month: FFAppState()
-                                                          .CardData
-                                                          .month,
-                                                      year: FFAppState()
-                                                          .CardData
-                                                          .year,
-                                                      cvc: FFAppState()
-                                                          .CardData
-                                                          .cvc,
-                                                    );
-
-                                                    if ((_model.apiResultr5n
-                                                            ?.succeeded ??
-                                                        true)) {
-                                                      FFAppState().PayMyserid =
-                                                          MyserCall.id(
+                                              );
+                                            } else {
+                                              _model.apiResultr5n =
+                                                  await MyserCall.call(
+                                                description:
+                                                    '$currentUserDisplayName/ حجز رحلة  ${FFAppState().totalsaat.toString()} ساعات - ${FFAppState().naimvillatext}',
+                                                amount: (FFAppState()
+                                                            .totalAllnow3 *
+                                                        100)
+                                                    .round(),
+                                                name: FFAppState()
+                                                    .CardData
+                                                    .name,
+                                                number: FFAppState()
+                                                    .CardData
+                                                    .number,
+                                                month: FFAppState()
+                                                    .CardData
+                                                    .month,
+                                                year: FFAppState()
+                                                    .CardData
+                                                    .year,
+                                                cvc: FFAppState()
+                                                    .CardData
+                                                    .cvc,
+                                              );
+                          
+                                              if ((_model.apiResultr5n
+                                                      ?.succeeded ??
+                                                  true)) {
+                                                FFAppState().PayMyserid =
+                                                    MyserCall.id(
+                                                  (_model.apiResultr5n
+                                                          ?.jsonBody ??
+                                                      ''),
+                                                )!;
+                                                FFAppState()
+                                                    .MyserStartPay = true;
+                                                FFAppState().DonePay =
+                                                    false;
+                                                FFAppState()
+                                                        .TypeHgzPAYMOYSER =
+                                                    TypeHgz.Rhlh;
+                                                FFAppState()
+                                                    .update(() {});
+                          
+                                                context.pushNamed(
+                                                  WebviewWidget.routeName,
+                                                  queryParameters: {
+                                                    'url': serializeParam(
+                                                      MyserCall.url(
                                                         (_model.apiResultr5n
                                                                 ?.jsonBody ??
                                                             ''),
-                                                      )!;
+                                                      ),
+                                                      ParamType.String,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              } else {
+                                                ScaffoldMessenger.of(
+                                                        context)
+                                                    .showSnackBar(
+                                                  SnackBar(
+                                                    content: Text(
+                                                      'خطا في معلومات الدفع او البطاقة',
+                                                      style: TextStyle(
+                                                        fontFamily:
+                                                            'cairo',
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                      ),
+                                                    ),
+                                                    duration:
+                                                        const Duration(
+                                                            milliseconds:
+                                                                4000),
+                                                    backgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .error,
+                                                  ),
+                                                );
+                                              }
+                                            }
+                          
+                                            safeSetState(() {});
+                                          },
+                                          text:
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                            'hgw4quay' /* Pay Now */,
+                                          ),
+                                          icon: const Icon(
+                                            Icons.payment_outlined,
+                                            size: 15.0,
+                                          ),
+                                          options: FFButtonOptions(
+                                            width:
+                                                MediaQuery.sizeOf(context)
+                                                        .width *
+                                                    0.92,
+                                            height: 53.0,
+                                            padding:
+                                                const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                    16.0, 0.0, 16.0, 0.0),
+                                            iconPadding:
+                                                const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .primary,
+                                            textStyle:
+                                                FlutterFlowTheme.of(
+                                                        context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'cairo',
+                                                      color: Colors.white,
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                            elevation: 0.0,
+                                            borderRadius:
+                                                BorderRadius.circular(
+                                                    8.0),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                if ((valueOrDefault(
+                                                currentUserDocument
+                                                    ?.phoneN,
+                                                0)
+                                            .toString() !=
+                                        '') &&
+                                    (FFAppState().payth == 'نقدآ') &&
+                                    (FFAppState().DriverGuideState ==
+                                        true))
+                                  AuthUserStreamWidget(
+                                    builder: (context) => Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 388.6,
+                                          height: 64.1,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryBackground,
+                                          ),
+                                          child: Visibility(
+                                            visible: (valueOrDefault(
+                                                            currentUserDocument
+                                                                ?.phoneN,
+                                                            0)
+                                                        .toString() !=
+                                                    '') &&
+                                                (FFAppState().payth ==
+                                                    'نقدآ'),
+                                            child: FFButtonWidget(
+                                              onPressed: () async {
+                                                await Future.wait([
+                                                  Future(() async {
+                                                    if ((FFAppState()
+                                                                .tebycar !=
+                                                            '') &&
+                                                        (FFAppState()
+                                                                .mkanuserorder !=
+                                                            null)) {
+                                                      _model.conOrder =
+                                                          await queryOrderRecordCount();
+                                                      _model.ngl =
+                                                          await querySettingsRecordOnce(
+                                                        queryBuilder:
+                                                            (settingsRecord) =>
+                                                                settingsRecord
+                                                                    .where(
+                                                          'id',
+                                                          isNotEqualTo: 1,
+                                                        ),
+                                                        singleRecord:
+                                                            true,
+                                                      ).then((s) => s
+                                                              .firstOrNull);
+                                                      if (FFAppState()
+                                                              .DriverGuideState ==
+                                                          true) {
+                                                        await OrderRecord
+                                                            .collection
+                                                            .doc()
+                                                            .set({
+                                                          ...createOrderRecordData(
+                                                            total: FFAppState()
+                                                                .totalAllnow3,
+                                                            user:
+                                                                currentUserReference,
+                                                            lokeshn:
+                                                                FFAppState()
+                                                                    .mkanuserorder,
+                                                            dataOrder:
+                                                                getCurrentTimestamp,
+                                                            cartext:
+                                                                FFAppState()
+                                                                    .tebycar,
+                                                            carRev: FFAppState()
+                                                                .typecarRev,
+                                                            naimUserText:
+                                                                currentUserDisplayName,
+                                                            phoneNumper:
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.phoneN,
+                                                                    0),
+                                                            addCartNumer:
+                                                                FFAppState()
+                                                                    .addcart,
+                                                            villText:
+                                                                FFAppState()
+                                                                    .villtextnow,
+                                                            citiesUserNow:
+                                                                FFAppState()
+                                                                    .villnow,
+                                                            totalTaim:
+                                                                FFAppState()
+                                                                    .totalsaat,
+                                                            vill: FFAppState()
+                                                                .villnow,
+                                                            iDorder: ((_model
+                                                                        .conOrder!) +
+                                                                    1)
+                                                                .toString(),
+                                                            halhOrder: Halh
+                                                                .Pending,
+                                                            schedule:
+                                                                FFAppState()
+                                                                    .dataSchedule,
+                                                            fullSchedule:
+                                                                FFAppState()
+                                                                    .fulltextSchedule,
+                                                            halhText:
+                                                                'بإنتظار قبول المندوب',
+                                                            totalApp:
+                                                                FFAppState()
+                                                                    .totalapp2,
+                                                            totalVat:
+                                                                FFAppState()
+                                                                    .vat2,
+                                                            halh:
+                                                                'بإنتظار قبول المندوب',
+                                                            imgProfileClent:
+                                                                currentUserPhoto,
+                                                            loceshStreng:
+                                                                FFAppState()
+                                                                    .mkanuserorder
+                                                                    ?.toString(),
+                                                            allnow: true,
+                                                            activeOrder:
+                                                                false,
+                                                            totalMndob2:
+                                                                FFAppState()
+                                                                    .totalmndob3,
+                                                            ksm: FFAppState()
+                                                                .totalKsm2,
+                                                            driverGuide:
+                                                                true,
+                                                            reviewMndonsend:
+                                                                false,
+                                                            retengUser:
+                                                                valueOrDefault<
+                                                                    double>(
+                                                              functions
+                                                                  .averageRating((currentUserDocument?.reteng.toList() ??
+                                                                          [])
+                                                                      .toList())
+                                                                  ?.toDouble(),
+                                                              0.0,
+                                                            ),
+                                                            srSAAH: FFAppState()
+                                                                .srtypecar
+                                                                .toDouble(),
+                                                            paymentMethod:
+                                                                PaymentMethod
+                                                                    .Cash,
+                                                          ),
+                                                          ...mapToFirestore(
+                                                            {
+                                                              'listAmakn':
+                                                                  getAmaknCostmListFirestoreData(
+                                                                FFAppState()
+                                                                    .cartmkss,
+                                                              ),
+                                                            },
+                                                          ),
+                                                        });
+                                                      } else {
+                                                        await OrderRecord
+                                                            .collection
+                                                            .doc()
+                                                            .set({
+                                                          ...createOrderRecordData(
+                                                            total: FFAppState()
+                                                                .totalAllnow3,
+                                                            user:
+                                                                currentUserReference,
+                                                            lokeshn:
+                                                                FFAppState()
+                                                                    .mkanuserorder,
+                                                            dataOrder:
+                                                                getCurrentTimestamp,
+                                                            cartext:
+                                                                FFAppState()
+                                                                    .tebycar,
+                                                            carRev: FFAppState()
+                                                                .typecarRev,
+                                                            naimUserText:
+                                                                currentUserDisplayName,
+                                                            phoneNumper:
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.phoneN,
+                                                                    0),
+                                                            addCartNumer:
+                                                                FFAppState()
+                                                                    .addcart,
+                                                            villText:
+                                                                FFAppState()
+                                                                    .villtextnow,
+                                                            citiesUserNow:
+                                                                FFAppState()
+                                                                    .villnow,
+                                                            totalTaim:
+                                                                FFAppState()
+                                                                    .totalsaat,
+                                                            vill: FFAppState()
+                                                                .villnow,
+                                                            iDorder: ((_model
+                                                                        .conOrder!) +
+                                                                    1)
+                                                                .toString(),
+                                                            halhOrder: Halh
+                                                                .Pending,
+                                                            schedule:
+                                                                FFAppState()
+                                                                    .dataSchedule,
+                                                            fullSchedule:
+                                                                FFAppState()
+                                                                    .fulltextSchedule,
+                                                            halhText:
+                                                                'بإنتظار قبول المندوب',
+                                                            totalApp:
+                                                                FFAppState()
+                                                                    .totalapp2,
+                                                            totalVat:
+                                                                FFAppState()
+                                                                    .vat2,
+                                                            halh:
+                                                                'بإنتظار قبول المندوب',
+                                                            imgProfileClent:
+                                                                currentUserPhoto,
+                                                            loceshStreng:
+                                                                FFAppState()
+                                                                    .mkanuserorder
+                                                                    ?.toString(),
+                                                            allnow: true,
+                                                            activeOrder:
+                                                                false,
+                                                            totalMndob2:
+                                                                FFAppState()
+                                                                    .totalmndob3,
+                                                            ksm: FFAppState()
+                                                                .totalKsm2,
+                                                            driverGuide:
+                                                                false,
+                                                            reviewMndonsend:
+                                                                false,
+                                                            srSAAH: FFAppState()
+                                                                .srtypecar
+                                                                .toDouble(),
+                                                            paymentMethod:
+                                                                PaymentMethod
+                                                                    .Cash,
+                                                          ),
+                                                          ...mapToFirestore(
+                                                            {
+                                                              'listAmakn':
+                                                                  getAmaknCostmListFirestoreData(
+                                                                FFAppState()
+                                                                    .cartmkss,
+                                                              ),
+                                                            },
+                                                          ),
+                                                        });
+                                                      }
+                          
+                                                      _model.mnadebList =
+                                                          await queryUserRecordOnce(
+                                                        queryBuilder:
+                                                            (userRecord) =>
+                                                                userRecord
+                                                                    .where(
+                                                                      'mndob_vill',
+                                                                      isEqualTo:
+                                                                          FFAppState().villnow,
+                                                                    )
+                                                                    .where(
+                                                                      'actev_mndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndom',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'mndob_type_car',
+                                                                      isEqualTo:
+                                                                          FFAppState().typecarRev,
+                                                                    )
+                                                                    .where(
+                                                                      'ngl',
+                                                                      isEqualTo:
+                                                                          _model.ngl?.ngl,
+                                                                    ),
+                                                      );
+                                                      _model.mnadebListcon =
+                                                          await queryUserRecordCount(
+                                                        queryBuilder:
+                                                            (userRecord) =>
+                                                                userRecord
+                                                                    .where(
+                                                                      'mndob_vill',
+                                                                      isEqualTo:
+                                                                          FFAppState().villnow,
+                                                                    )
+                                                                    .where(
+                                                                      'actev_mndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndom',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'mndob_type_car',
+                                                                      isEqualTo:
+                                                                          FFAppState().typecarRev,
+                                                                    )
+                                                                    .where(
+                                                                      'ngl',
+                                                                      isEqualTo:
+                                                                          _model.ngl?.ngl,
+                                                                    ),
+                                                      );
+                                                      _model.nmndob = _model
+                                                          .mnadebListcon;
+                                                      safeSetState(() {});
+                                                      // مسح الخصومات
                                                       FFAppState()
-                                                          .MyserStartPay = true;
-                                                      FFAppState().DonePay =
+                                                          .typeHgz = 0;
+                                                      FFAppState()
+                                                              .AllowBooking =
                                                           false;
                                                       FFAppState()
-                                                              .TypeHgzPAYMOYSER =
-                                                          TypeHgz.Rhlh;
+                                                              .DriverGuideState =
+                                                          false;
                                                       FFAppState()
-                                                          .update(() {});
-
+                                                          .NsbhKsm = 0.0;
+                                                      FFAppState()
+                                                          .totalKsm = 0;
+                                                      FFAppState().UbKsm =
+                                                          0;
+                                                      FFAppState()
+                                                              .totalKsm2 =
+                                                          0.0;
+                                                      FFAppState()
+                                                              .totalAllnow3 =
+                                                          0.0;
+                                                      safeSetState(() {});
+                          
                                                       context.pushNamed(
-                                                        WebviewWidget.routeName,
-                                                        queryParameters: {
-                                                          'url': serializeParam(
-                                                            MyserCall.url(
-                                                              (_model.apiResultr5n
-                                                                      ?.jsonBody ??
-                                                                  ''),
-                                                            ),
-                                                            ParamType.String,
-                                                          ),
-                                                        }.withoutNulls,
-                                                      );
+                                                          OksendWidget
+                                                              .routeName);
+                          
+                                                      FFAppState()
+                                                              .typecarRev =
+                                                          null;
+                                                      FFAppState()
+                                                          .addcart = 0;
+                                                      FFAppState()
+                                                          .cartItems = [];
+                                                      FFAppState()
+                                                          .cartmkss = [];
+                                                      FFAppState()
+                                                          .cartPriceSummary = [];
+                                                      FFAppState()
+                                                          .saatcar = 0;
+                                                      FFAppState()
+                                                          .totalsaatandcar = 0;
+                                                      FFAppState()
+                                                          .srtypecar = 0;
+                                                      FFAppState()
+                                                          .tebycar = '';
+                                                      FFAppState()
+                                                          .notcar = '';
+                                                      FFAppState()
+                                                          .adressNaim = '';
+                                                      FFAppState()
+                                                              .adressSelection =
+                                                          null;
+                                                      FFAppState()
+                                                          .fulltextSchedule = '';
+                                                      FFAppState()
+                                                          .taimSchedule = '';
+                                                      FFAppState()
+                                                          .TOTALmndob2 = 0;
+                                                      FFAppState()
+                                                          .totalapp2 = 0;
+                                                      FFAppState().vat2 =
+                                                          0;
+                                                      FFAppState()
+                                                          .totalAllNow2 = 0;
+                                                      safeSetState(() {});
+                                                      for (int loop1Index =
+                                                              0;
+                                                          loop1Index <=
+                                                              _model
+                                                                  .mnadebList!
+                                                                  .length;
+                                                          loop1Index++) {
+                                                        final currentLoop1Item = _model
+                                                                .mnadebList!
+                                                                .map((e) => e)
+                                                                .toList()[
+                                                            loop1Index];
+                                                        if (_model
+                                                                .nmndob ==
+                                                            0) {
+                                                          break;
+                                                        } else {
+                                                          _model.apiResultdy8 =
+                                                              await WatcCall
+                                                                  .call(
+                                                            to: currentLoop1Item
+                                                                .phoneNumber,
+                                                            msg:
+                                                                'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
+                                                          );
+                          
+                                                          triggerPushNotification(
+                                                            notificationTitle:
+                                                                'طلب جديد',
+                                                            notificationText:
+                                                                'نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"',
+                                                            userRefs: [
+                                                              currentLoop1Item
+                                                                  .reference
+                                                            ],
+                                                            initialPageName:
+                                                                'List',
+                                                            parameterData: {},
+                                                          );
+                                                          _model.nmndob =
+                                                              (_model.nmndob!) -
+                                                                  1;
+                                                          safeSetState(
+                                                              () {});
+                                                        }
+                                                      }
+                                                      FFAppState()
+                                                              .totalmndob3 =
+                                                          0.0;
+                                                      safeSetState(() {});
                                                     } else {
-                                                      ScaffoldMessenger.of(
+                                                      await showDialog(
+                                                        context: context,
+                                                        builder:
+                                                            (alertDialogContext) {
+                                                          return WebViewAware(
+                                                            child:
+                                                                AlertDialog(
+                                                              title: const Text(
+                                                                  'خطا'),
+                                                              content:
+                                                                  const Text(
+                                                                      'يرجى تحديد كل الخيارات'),
+                                                              actions: [
+                                                                TextButton(
+                                                                  onPressed:
+                                                                      () =>
+                                                                          Navigator.pop(alertDialogContext),
+                                                                  child: const Text(
+                                                                      'Ok'),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          );
+                                                        },
+                                                      );
+                                                    }
+                                                  }),
+                                                  Future(() async {}),
+                                                ]);
+                          
+                                                safeSetState(() {});
+                                              },
+                                              text: FFLocalizations.of(
+                                                      context)
+                                                  .getText(
+                                                '4pp7yghj' /* Book now */,
+                                              ),
+                                              icon: const Icon(
+                                                Icons.send,
+                                                size: 22.0,
+                                              ),
+                                              options: FFButtonOptions(
+                                                height: 25.3,
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(24.0,
+                                                        0.0, 24.0, 0.0),
+                                                iconPadding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(0.0,
+                                                        0.0, 0.0, 0.0),
+                                                color: FlutterFlowTheme
+                                                        .of(context)
+                                                    .secondaryBackground,
+                                                textStyle:
+                                                    FlutterFlowTheme.of(
+                                                            context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily: FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily,
+                                                          color: FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                          fontSize: 22.0,
+                                                          letterSpacing:
+                                                              0.0,
+                                                          useGoogleFonts:
+                                                              !FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleSmallIsCustom,
+                                                        ),
+                                                elevation: 3.0,
+                                                borderSide: BorderSide(
+                                                  color:
+                                                      FlutterFlowTheme.of(
                                                               context)
+                                                          .primary,
+                                                  width: 1.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        8.0),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                if ((valueOrDefault(
+                                                currentUserDocument
+                                                    ?.phoneN,
+                                                0)
+                                            .toString() !=
+                                        '') &&
+                                    (FFAppState().payth == 'نقدآ') &&
+                                    (FFAppState().DriverGuideState ==
+                                        false))
+                                  AuthUserStreamWidget(
+                                    builder: (context) => Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 388.6,
+                                          height: 64.1,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(
+                                                    context)
+                                                .secondaryBackground,
+                                          ),
+                                          child: Visibility(
+                                            visible: (valueOrDefault(
+                                                            currentUserDocument
+                                                                ?.phoneN,
+                                                            0)
+                                                        .toString() !=
+                                                    '') &&
+                                                (FFAppState().payth ==
+                                                    'نقدآ'),
+                                            child: FFButtonWidget(
+                                              onPressed: () async {
+                                                await Future.wait([
+                                                  Future(() async {
+                                                    if ((FFAppState()
+                                                                .tebycar !=
+                                                            '') &&
+                                                        (FFAppState()
+                                                                .mkanuserorder !=
+                                                            null) &&
+                                                        (FFAppState()
+                                                                .totalsaat >=
+                                                            FFAppState()
+                                                                .Minimumhours)) {
+                                                      _model.conOrder2 =
+                                                          await queryOrderRecordCount();
+                                                      _model.ngl2 =
+                                                          await querySettingsRecordOnce(
+                                                        queryBuilder:
+                                                            (settingsRecord) =>
+                                                                settingsRecord
+                                                                    .where(
+                                                          'id',
+                                                          isNotEqualTo: 1,
+                                                        ),
+                                                        singleRecord:
+                                                            true,
+                                                      ).then((s) => s
+                                                              .firstOrNull);
+                                                      if (FFAppState()
+                                                              .DriverGuideState ==
+                                                          true) {
+                                                        await OrderRecord
+                                                            .collection
+                                                            .doc()
+                                                            .set({
+                                                          ...createOrderRecordData(
+                                                            total: FFAppState()
+                                                                .totalAllnow3,
+                                                            user:
+                                                                currentUserReference,
+                                                            lokeshn:
+                                                                FFAppState()
+                                                                    .mkanuserorder,
+                                                            dataOrder:
+                                                                getCurrentTimestamp,
+                                                            cartext:
+                                                                FFAppState()
+                                                                    .tebycar,
+                                                            carRev: FFAppState()
+                                                                .typecarRev,
+                                                            naimUserText:
+                                                                currentUserDisplayName,
+                                                            phoneNumper:
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.phoneN,
+                                                                    0),
+                                                            addCartNumer:
+                                                                FFAppState()
+                                                                    .addcart,
+                                                            villText:
+                                                                FFAppState()
+                                                                    .villtextnow,
+                                                            citiesUserNow:
+                                                                FFAppState()
+                                                                    .villnow,
+                                                            totalTaim:
+                                                                FFAppState()
+                                                                    .totalsaat,
+                                                            vill: FFAppState()
+                                                                .villnow,
+                                                            iDorder: ((_model
+                                                                        .conOrder!) +
+                                                                    1)
+                                                                .toString(),
+                                                            halhOrder: Halh
+                                                                .Pending,
+                                                            schedule:
+                                                                FFAppState()
+                                                                    .dataSchedule,
+                                                            fullSchedule:
+                                                                FFAppState()
+                                                                    .fulltextSchedule,
+                                                            halhText:
+                                                                'بإنتظار قبول المندوب',
+                                                            totalApp:
+                                                                FFAppState()
+                                                                    .totalapp2,
+                                                            totalVat:
+                                                                FFAppState()
+                                                                    .vat2,
+                                                            halh:
+                                                                'بإنتظار قبول المندوب',
+                                                            imgProfileClent:
+                                                                currentUserPhoto,
+                                                            loceshStreng:
+                                                                FFAppState()
+                                                                    .mkanuserorder
+                                                                    ?.toString(),
+                                                            allnow: true,
+                                                            activeOrder:
+                                                                false,
+                                                            totalMndob2:
+                                                                FFAppState()
+                                                                    .totalmndob3,
+                                                            ksm: FFAppState()
+                                                                .totalKsm2,
+                                                            driverGuide:
+                                                                true,
+                                                            reviewMndonsend:
+                                                                false,
+                                                            retengUser:
+                                                                valueOrDefault<
+                                                                    double>(
+                                                              functions
+                                                                  .averageRating((currentUserDocument?.reteng.toList() ??
+                                                                          [])
+                                                                      .toList())
+                                                                  ?.toDouble(),
+                                                              0.0,
+                                                            ),
+                                                            srSAAH: FFAppState()
+                                                                .srtypecar
+                                                                .toDouble(),
+                                                            paymentMethod:
+                                                                PaymentMethod
+                                                                    .Cash,
+                                                          ),
+                                                          ...mapToFirestore(
+                                                            {
+                                                              'listAmakn':
+                                                                  getAmaknCostmListFirestoreData(
+                                                                FFAppState()
+                                                                    .cartmkss,
+                                                              ),
+                                                            },
+                                                          ),
+                                                        });
+                                                      } else {
+                                                        await OrderRecord
+                                                            .collection
+                                                            .doc()
+                                                            .set({
+                                                          ...createOrderRecordData(
+                                                            total: FFAppState()
+                                                                .totalAllnow3,
+                                                            user:
+                                                                currentUserReference,
+                                                            lokeshn:
+                                                                FFAppState()
+                                                                    .mkanuserorder,
+                                                            dataOrder:
+                                                                getCurrentTimestamp,
+                                                            cartext:
+                                                                FFAppState()
+                                                                    .tebycar,
+                                                            carRev: FFAppState()
+                                                                .typecarRev,
+                                                            naimUserText:
+                                                                currentUserDisplayName,
+                                                            phoneNumper:
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.phoneN,
+                                                                    0),
+                                                            addCartNumer:
+                                                                FFAppState()
+                                                                    .addcart,
+                                                            villText:
+                                                                FFAppState()
+                                                                    .villtextnow,
+                                                            citiesUserNow:
+                                                                FFAppState()
+                                                                    .villnow,
+                                                            totalTaim:
+                                                                FFAppState()
+                                                                    .totalsaat,
+                                                            vill: FFAppState()
+                                                                .villnow,
+                                                            iDorder: ((_model
+                                                                        .conOrder2!) +
+                                                                    1)
+                                                                .toString(),
+                                                            halhOrder: Halh
+                                                                .Pending,
+                                                            schedule:
+                                                                FFAppState()
+                                                                    .dataSchedule,
+                                                            fullSchedule:
+                                                                FFAppState()
+                                                                    .fulltextSchedule,
+                                                            halhText:
+                                                                'بإنتظار قبول المندوب',
+                                                            totalApp:
+                                                                FFAppState()
+                                                                    .totalapp2,
+                                                            totalVat:
+                                                                FFAppState()
+                                                                    .vat2,
+                                                            halh:
+                                                                'بإنتظار قبول المندوب',
+                                                            imgProfileClent:
+                                                                currentUserPhoto,
+                                                            loceshStreng:
+                                                                FFAppState()
+                                                                    .mkanuserorder
+                                                                    ?.toString(),
+                                                            allnow: true,
+                                                            activeOrder:
+                                                                false,
+                                                            totalMndob2:
+                                                                FFAppState()
+                                                                    .totalmndob3,
+                                                            ksm: FFAppState()
+                                                                .totalKsm2,
+                                                            driverGuide:
+                                                                false,
+                                                            reviewMndonsend:
+                                                                false,
+                                                            srSAAH: FFAppState()
+                                                                .srtypecar
+                                                                .toDouble(),
+                                                            paymentMethod:
+                                                                PaymentMethod
+                                                                    .Cash,
+                                                          ),
+                                                          ...mapToFirestore(
+                                                            {
+                                                              'listAmakn':
+                                                                  getAmaknCostmListFirestoreData(
+                                                                FFAppState()
+                                                                    .cartmkss,
+                                                              ),
+                                                            },
+                                                          ),
+                                                        });
+                                                      }
+                          
+                                                      _model.mnadebList2 =
+                                                          await queryUserRecordOnce(
+                                                        queryBuilder:
+                                                            (userRecord) =>
+                                                                userRecord
+                                                                    .where(
+                                                                      'mndob_vill',
+                                                                      isEqualTo:
+                                                                          FFAppState().villnow,
+                                                                    )
+                                                                    .where(
+                                                                      'actev_mndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndom',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'mndob_type_car',
+                                                                      isEqualTo:
+                                                                          FFAppState().typecarRev,
+                                                                    )
+                                                                    .where(
+                                                                      'ngl',
+                                                                      isEqualTo:
+                                                                          _model.ngl2?.ngl,
+                                                                    ),
+                                                      );
+                                                      _model.mnadebListcon2 =
+                                                          await queryUserRecordCount(
+                                                        queryBuilder:
+                                                            (userRecord) =>
+                                                                userRecord
+                                                                    .where(
+                                                                      'mndob_vill',
+                                                                      isEqualTo:
+                                                                          FFAppState().villnow,
+                                                                    )
+                                                                    .where(
+                                                                      'actev_mndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndom',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'ismndob',
+                                                                      isEqualTo:
+                                                                          true,
+                                                                    )
+                                                                    .where(
+                                                                      'mndob_type_car',
+                                                                      isEqualTo:
+                                                                          FFAppState().typecarRev,
+                                                                    )
+                                                                    .where(
+                                                                      'ngl',
+                                                                      isEqualTo:
+                                                                          _model.ngl2?.ngl,
+                                                                    ),
+                                                      );
+                                                      _model.nmndob = _model
+                                                          .mnadebListcon2;
+                                                      safeSetState(() {});
+                                                      // مسح الخصومات
+                                                      FFAppState()
+                                                          .typeHgz = 0;
+                                                      FFAppState()
+                                                              .AllowBooking =
+                                                          false;
+                                                      FFAppState()
+                                                              .DriverGuideState =
+                                                          false;
+                                                      FFAppState()
+                                                          .NsbhKsm = 0.0;
+                                                      FFAppState()
+                                                          .totalKsm = 0;
+                                                      FFAppState().UbKsm =
+                                                          0;
+                                                      FFAppState()
+                                                              .totalKsm2 =
+                                                          0.0;
+                                                      FFAppState()
+                                                              .totalAllnow3 =
+                                                          0.0;
+                                                      safeSetState(() {});
+                          
+                                                      context.pushNamed(
+                                                          OksendWidget
+                                                              .routeName);
+                          
+                                                      FFAppState()
+                                                              .typecarRev =
+                                                          null;
+                                                      FFAppState()
+                                                          .addcart = 0;
+                                                      FFAppState()
+                                                          .cartItems = [];
+                                                      FFAppState()
+                                                          .cartmkss = [];
+                                                      FFAppState()
+                                                          .cartPriceSummary = [];
+                                                      FFAppState()
+                                                          .saatcar = 0;
+                                                      FFAppState()
+                                                          .totalsaatandcar = 0;
+                                                      FFAppState()
+                                                          .srtypecar = 0;
+                                                      FFAppState()
+                                                          .tebycar = '';
+                                                      FFAppState()
+                                                          .notcar = '';
+                                                      FFAppState()
+                                                          .adressNaim = '';
+                                                      FFAppState()
+                                                              .adressSelection =
+                                                          null;
+                                                      FFAppState()
+                                                          .fulltextSchedule = '';
+                                                      FFAppState()
+                                                          .taimSchedule = '';
+                                                      FFAppState()
+                                                          .TOTALmndob2 = 0;
+                                                      FFAppState()
+                                                          .totalapp2 = 0;
+                                                      FFAppState().vat2 =
+                                                          0;
+                                                      FFAppState()
+                                                          .totalAllNow2 = 0;
+                                                      safeSetState(() {});
+                                                      FFAppState()
+                                                              .totalmndob3 =
+                                                          0.0;
+                                                      safeSetState(() {});
+                                                      for (int loop1Index =
+                                                              0;
+                                                          loop1Index <=
+                                                              _model
+                                                                  .mnadebList2!
+                                                                  .length;
+                                                          loop1Index++) {
+                                                        final currentLoop1Item = _model
+                                                                .mnadebList2!
+                                                                .map((e) => e)
+                                                                .toList()[
+                                                            loop1Index];
+                                                        if (_model
+                                                                .nmndob ==
+                                                            0) {
+                                                          break;
+                                                        } else {
+                                                          _model.apiResultdy88 =
+                                                              await WatcCall
+                                                                  .call(
+                                                            to: currentLoop1Item
+                                                                .phoneNumber,
+                                                            msg:
+                                                                'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
+                                                          );
+                          
+                                                          _model.nmndob =
+                                                              (_model.nmndob!) -
+                                                                  1;
+                                                          safeSetState(
+                                                              () {});
+                                                          triggerPushNotification(
+                                                            notificationTitle:
+                                                                'طلب جديد',
+                                                            notificationText:
+                                                                'نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"',
+                                                            userRefs: [
+                                                              currentLoop1Item
+                                                                  .reference
+                                                            ],
+                                                            initialPageName:
+                                                                'List',
+                                                            parameterData: {},
+                                                          );
+                                                        }
+                                                      }
+                                                      FFAppState()
+                                                              .totalmndob3 =
+                                                          0.0;
+                                                      safeSetState(() {});
+                                                    } else {
+                                                      ScaffoldMessenger
+                                                              .of(context)
                                                           .showSnackBar(
                                                         SnackBar(
                                                           content: Text(
-                                                            'خطا في معلومات الدفع او البطاقة',
-                                                            style: TextStyle(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getVariableText(
+                                                              enText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                              arText:
+                                                                  'يرجى استكمال الخيارات أو زيادة الساعات الإضافية لتتوافق مع الرحلة.',
+                                                              zh_HansText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                              trText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                              urText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                              ruText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                              azText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                              kaText:
+                                                                  'Please select all options or add extra hours to match the trip requirements.',
+                                                            ),
+                                                            style:
+                                                                TextStyle(
                                                               fontFamily:
                                                                   'cairo',
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
+                                                              color: FlutterFlowTheme.of(
+                                                                      context)
                                                                   .secondaryBackground,
                                                             ),
                                                           ),
-                                                          duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      4000),
+                                                          duration: const Duration(
+                                                              milliseconds:
+                                                                  4000),
                                                           backgroundColor:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -3299,1194 +4374,82 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                         ),
                                                       );
                                                     }
-                                                  }
-
-                                                  safeSetState(() {});
-                                                },
-                                                text:
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                  'hgw4quay' /* Pay Now */,
-                                                ),
-                                                icon: const Icon(
-                                                  Icons.payment_outlined,
-                                                  size: 15.0,
-                                                ),
-                                                options: FFButtonOptions(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.92,
-                                                  height: 53.0,
-                                                  padding:
-                                                      const EdgeInsetsDirectional
-                                                          .fromSTEB(
-                                                          16.0, 0.0, 16.0, 0.0),
-                                                  iconPadding:
-                                                      const EdgeInsetsDirectional
-                                                          .fromSTEB(
-                                                          0.0, 0.0, 0.0, 0.0),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  textStyle:
+                                                  }),
+                                                  Future(() async {}),
+                                                ]);
+                          
+                                                safeSetState(() {});
+                                              },
+                                              text: FFLocalizations.of(
+                                                      context)
+                                                  .getText(
+                                                '6o9re56s' /* Book now */,
+                                              ),
+                                              icon: const Icon(
+                                                Icons.send,
+                                                size: 22.0,
+                                              ),
+                                              options: FFButtonOptions(
+                                                height: 25.3,
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(24.0,
+                                                        0.0, 24.0, 0.0),
+                                                iconPadding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(0.0,
+                                                        0.0, 0.0, 0.0),
+                                                color: FlutterFlowTheme
+                                                        .of(context)
+                                                    .secondaryBackground,
+                                                textStyle:
+                                                    FlutterFlowTheme.of(
+                                                            context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily: FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily,
+                                                          color: FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                          fontSize: 22.0,
+                                                          letterSpacing:
+                                                              0.0,
+                                                          useGoogleFonts:
+                                                              !FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleSmallIsCustom,
+                                                        ),
+                                                elevation: 3.0,
+                                                borderSide: BorderSide(
+                                                  color:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .titleSmall
-                                                          .override(
-                                                            fontFamily: 'cairo',
-                                                            color: Colors.white,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                  elevation: 0.0,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
+                                                          .primary,
+                                                  width: 1.0,
                                                 ),
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        8.0),
                                               ),
-                                            ],
+                                            ),
                                           ),
                                         ),
-                                      if ((valueOrDefault(
-                                                      currentUserDocument
-                                                          ?.phoneN,
-                                                      0)
-                                                  .toString() !=
-                                              '') &&
-                                          (FFAppState().payth == 'نقدآ') &&
-                                          (FFAppState().DriverGuideState ==
-                                              true))
-                                        AuthUserStreamWidget(
-                                          builder: (context) => Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                width: 388.6,
-                                                height: 64.1,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                ),
-                                                child: Visibility(
-                                                  visible: (valueOrDefault(
-                                                                  currentUserDocument
-                                                                      ?.phoneN,
-                                                                  0)
-                                                              .toString() !=
-                                                          '') &&
-                                                      (FFAppState().payth ==
-                                                          'نقدآ'),
-                                                  child: FFButtonWidget(
-                                                    onPressed: () async {
-                                                      await Future.wait([
-                                                        Future(() async {
-                                                          if ((FFAppState()
-                                                                      .tebycar !=
-                                                                  '') &&
-                                                              (FFAppState()
-                                                                      .mkanuserorder !=
-                                                                  null)) {
-                                                            _model.conOrder =
-                                                                await queryOrderRecordCount();
-                                                            _model.ngl =
-                                                                await querySettingsRecordOnce(
-                                                              queryBuilder:
-                                                                  (settingsRecord) =>
-                                                                      settingsRecord
-                                                                          .where(
-                                                                'id',
-                                                                isNotEqualTo: 1,
-                                                              ),
-                                                              singleRecord:
-                                                                  true,
-                                                            ).then((s) => s
-                                                                    .firstOrNull);
-                                                            if (FFAppState()
-                                                                    .DriverGuideState ==
-                                                                true) {
-                                                              await OrderRecord
-                                                                  .collection
-                                                                  .doc()
-                                                                  .set({
-                                                                ...createOrderRecordData(
-                                                                  total: FFAppState()
-                                                                      .totalAllnow3,
-                                                                  user:
-                                                                      currentUserReference,
-                                                                  lokeshn:
-                                                                      FFAppState()
-                                                                          .mkanuserorder,
-                                                                  dataOrder:
-                                                                      getCurrentTimestamp,
-                                                                  cartext:
-                                                                      FFAppState()
-                                                                          .tebycar,
-                                                                  carRev: FFAppState()
-                                                                      .typecarRev,
-                                                                  naimUserText:
-                                                                      currentUserDisplayName,
-                                                                  phoneNumper:
-                                                                      valueOrDefault(
-                                                                          currentUserDocument
-                                                                              ?.phoneN,
-                                                                          0),
-                                                                  addCartNumer:
-                                                                      FFAppState()
-                                                                          .addcart,
-                                                                  villText:
-                                                                      FFAppState()
-                                                                          .villtextnow,
-                                                                  citiesUserNow:
-                                                                      FFAppState()
-                                                                          .villnow,
-                                                                  totalTaim:
-                                                                      FFAppState()
-                                                                          .totalsaat,
-                                                                  vill: FFAppState()
-                                                                      .villnow,
-                                                                  iDorder: ((_model
-                                                                              .conOrder!) +
-                                                                          1)
-                                                                      .toString(),
-                                                                  halhOrder: Halh
-                                                                      .Pending,
-                                                                  schedule:
-                                                                      FFAppState()
-                                                                          .dataSchedule,
-                                                                  fullSchedule:
-                                                                      FFAppState()
-                                                                          .fulltextSchedule,
-                                                                  halhText:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  totalApp:
-                                                                      FFAppState()
-                                                                          .totalapp2,
-                                                                  totalVat:
-                                                                      FFAppState()
-                                                                          .vat2,
-                                                                  halh:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  imgProfileClent:
-                                                                      currentUserPhoto,
-                                                                  loceshStreng:
-                                                                      FFAppState()
-                                                                          .mkanuserorder
-                                                                          ?.toString(),
-                                                                  allnow: true,
-                                                                  activeOrder:
-                                                                      false,
-                                                                  totalMndob2:
-                                                                      FFAppState()
-                                                                          .totalmndob3,
-                                                                  ksm: FFAppState()
-                                                                      .totalKsm2,
-                                                                  driverGuide:
-                                                                      true,
-                                                                  reviewMndonsend:
-                                                                      false,
-                                                                  retengUser:
-                                                                      valueOrDefault<
-                                                                          double>(
-                                                                    functions
-                                                                        .averageRating((currentUserDocument?.reteng.toList() ??
-                                                                                [])
-                                                                            .toList())
-                                                                        ?.toDouble(),
-                                                                    0.0,
-                                                                  ),
-                                                                  srSAAH: FFAppState()
-                                                                      .srtypecar
-                                                                      .toDouble(),
-                                                                  paymentMethod:
-                                                                      PaymentMethod
-                                                                          .Cash,
-                                                                ),
-                                                                ...mapToFirestore(
-                                                                  {
-                                                                    'listAmakn':
-                                                                        getAmaknCostmListFirestoreData(
-                                                                      FFAppState()
-                                                                          .cartmkss,
-                                                                    ),
-                                                                  },
-                                                                ),
-                                                              });
-                                                            } else {
-                                                              await OrderRecord
-                                                                  .collection
-                                                                  .doc()
-                                                                  .set({
-                                                                ...createOrderRecordData(
-                                                                  total: FFAppState()
-                                                                      .totalAllnow3,
-                                                                  user:
-                                                                      currentUserReference,
-                                                                  lokeshn:
-                                                                      FFAppState()
-                                                                          .mkanuserorder,
-                                                                  dataOrder:
-                                                                      getCurrentTimestamp,
-                                                                  cartext:
-                                                                      FFAppState()
-                                                                          .tebycar,
-                                                                  carRev: FFAppState()
-                                                                      .typecarRev,
-                                                                  naimUserText:
-                                                                      currentUserDisplayName,
-                                                                  phoneNumper:
-                                                                      valueOrDefault(
-                                                                          currentUserDocument
-                                                                              ?.phoneN,
-                                                                          0),
-                                                                  addCartNumer:
-                                                                      FFAppState()
-                                                                          .addcart,
-                                                                  villText:
-                                                                      FFAppState()
-                                                                          .villtextnow,
-                                                                  citiesUserNow:
-                                                                      FFAppState()
-                                                                          .villnow,
-                                                                  totalTaim:
-                                                                      FFAppState()
-                                                                          .totalsaat,
-                                                                  vill: FFAppState()
-                                                                      .villnow,
-                                                                  iDorder: ((_model
-                                                                              .conOrder!) +
-                                                                          1)
-                                                                      .toString(),
-                                                                  halhOrder: Halh
-                                                                      .Pending,
-                                                                  schedule:
-                                                                      FFAppState()
-                                                                          .dataSchedule,
-                                                                  fullSchedule:
-                                                                      FFAppState()
-                                                                          .fulltextSchedule,
-                                                                  halhText:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  totalApp:
-                                                                      FFAppState()
-                                                                          .totalapp2,
-                                                                  totalVat:
-                                                                      FFAppState()
-                                                                          .vat2,
-                                                                  halh:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  imgProfileClent:
-                                                                      currentUserPhoto,
-                                                                  loceshStreng:
-                                                                      FFAppState()
-                                                                          .mkanuserorder
-                                                                          ?.toString(),
-                                                                  allnow: true,
-                                                                  activeOrder:
-                                                                      false,
-                                                                  totalMndob2:
-                                                                      FFAppState()
-                                                                          .totalmndob3,
-                                                                  ksm: FFAppState()
-                                                                      .totalKsm2,
-                                                                  driverGuide:
-                                                                      false,
-                                                                  reviewMndonsend:
-                                                                      false,
-                                                                  srSAAH: FFAppState()
-                                                                      .srtypecar
-                                                                      .toDouble(),
-                                                                  paymentMethod:
-                                                                      PaymentMethod
-                                                                          .Cash,
-                                                                ),
-                                                                ...mapToFirestore(
-                                                                  {
-                                                                    'listAmakn':
-                                                                        getAmaknCostmListFirestoreData(
-                                                                      FFAppState()
-                                                                          .cartmkss,
-                                                                    ),
-                                                                  },
-                                                                ),
-                                                              });
-                                                            }
-
-                                                            _model.mnadebList =
-                                                                await queryUserRecordOnce(
-                                                              queryBuilder:
-                                                                  (userRecord) =>
-                                                                      userRecord
-                                                                          .where(
-                                                                            'mndob_vill',
-                                                                            isEqualTo:
-                                                                                FFAppState().villnow,
-                                                                          )
-                                                                          .where(
-                                                                            'actev_mndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndom',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'mndob_type_car',
-                                                                            isEqualTo:
-                                                                                FFAppState().typecarRev,
-                                                                          )
-                                                                          .where(
-                                                                            'ngl',
-                                                                            isEqualTo:
-                                                                                _model.ngl?.ngl,
-                                                                          ),
-                                                            );
-                                                            _model.mnadebListcon =
-                                                                await queryUserRecordCount(
-                                                              queryBuilder:
-                                                                  (userRecord) =>
-                                                                      userRecord
-                                                                          .where(
-                                                                            'mndob_vill',
-                                                                            isEqualTo:
-                                                                                FFAppState().villnow,
-                                                                          )
-                                                                          .where(
-                                                                            'actev_mndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndom',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'mndob_type_car',
-                                                                            isEqualTo:
-                                                                                FFAppState().typecarRev,
-                                                                          )
-                                                                          .where(
-                                                                            'ngl',
-                                                                            isEqualTo:
-                                                                                _model.ngl?.ngl,
-                                                                          ),
-                                                            );
-                                                            _model.nmndob = _model
-                                                                .mnadebListcon;
-                                                            safeSetState(() {});
-                                                            // مسح الخصومات
-                                                            FFAppState()
-                                                                .typeHgz = 0;
-                                                            FFAppState()
-                                                                    .AllowBooking =
-                                                                false;
-                                                            FFAppState()
-                                                                    .DriverGuideState =
-                                                                false;
-                                                            FFAppState()
-                                                                .NsbhKsm = 0.0;
-                                                            FFAppState()
-                                                                .totalKsm = 0;
-                                                            FFAppState().UbKsm =
-                                                                0;
-                                                            FFAppState()
-                                                                    .totalKsm2 =
-                                                                0.0;
-                                                            FFAppState()
-                                                                    .totalAllnow3 =
-                                                                0.0;
-                                                            safeSetState(() {});
-
-                                                            context.pushNamed(
-                                                                OksendWidget
-                                                                    .routeName);
-
-                                                            FFAppState()
-                                                                    .typecarRev =
-                                                                null;
-                                                            FFAppState()
-                                                                .addcart = 0;
-                                                            FFAppState()
-                                                                .cartItems = [];
-                                                            FFAppState()
-                                                                .cartmkss = [];
-                                                            FFAppState()
-                                                                .cartPriceSummary = [];
-                                                            FFAppState()
-                                                                .saatcar = 0;
-                                                            FFAppState()
-                                                                .totalsaatandcar = 0;
-                                                            FFAppState()
-                                                                .srtypecar = 0;
-                                                            FFAppState()
-                                                                .tebycar = '';
-                                                            FFAppState()
-                                                                .notcar = '';
-                                                            FFAppState()
-                                                                .adressNaim = '';
-                                                            FFAppState()
-                                                                    .adressSelection =
-                                                                null;
-                                                            FFAppState()
-                                                                .fulltextSchedule = '';
-                                                            FFAppState()
-                                                                .taimSchedule = '';
-                                                            FFAppState()
-                                                                .TOTALmndob2 = 0;
-                                                            FFAppState()
-                                                                .totalapp2 = 0;
-                                                            FFAppState().vat2 =
-                                                                0;
-                                                            FFAppState()
-                                                                .totalAllNow2 = 0;
-                                                            safeSetState(() {});
-                                                            for (int loop1Index =
-                                                                    0;
-                                                                loop1Index <=
-                                                                    _model
-                                                                        .mnadebList!
-                                                                        .length;
-                                                                loop1Index++) {
-                                                              final currentLoop1Item = _model
-                                                                      .mnadebList!
-                                                                      .map((e) => e)
-                                                                      .toList()[
-                                                                  loop1Index];
-                                                              if (_model
-                                                                      .nmndob ==
-                                                                  0) {
-                                                                break;
-                                                              } else {
-                                                                _model.apiResultdy8 =
-                                                                    await WatcCall
-                                                                        .call(
-                                                                  to: currentLoop1Item
-                                                                      .phoneNumber,
-                                                                  msg:
-                                                                      'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
-                                                                );
-
-                                                                triggerPushNotification(
-                                                                  notificationTitle:
-                                                                      'طلب جديد',
-                                                                  notificationText:
-                                                                      'نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"',
-                                                                  userRefs: [
-                                                                    currentLoop1Item
-                                                                        .reference
-                                                                  ],
-                                                                  initialPageName:
-                                                                      'List',
-                                                                  parameterData: {},
-                                                                );
-                                                                _model.nmndob =
-                                                                    (_model.nmndob!) -
-                                                                        1;
-                                                                safeSetState(
-                                                                    () {});
-                                                              }
-                                                            }
-                                                            FFAppState()
-                                                                    .totalmndob3 =
-                                                                0.0;
-                                                            safeSetState(() {});
-                                                          } else {
-                                                            await showDialog(
-                                                              context: context,
-                                                              builder:
-                                                                  (alertDialogContext) {
-                                                                return WebViewAware(
-                                                                  child:
-                                                                      AlertDialog(
-                                                                    title: const Text(
-                                                                        'خطا'),
-                                                                    content:
-                                                                        const Text(
-                                                                            'يرجى تحديد كل الخيارات'),
-                                                                    actions: [
-                                                                      TextButton(
-                                                                        onPressed:
-                                                                            () =>
-                                                                                Navigator.pop(alertDialogContext),
-                                                                        child: const Text(
-                                                                            'Ok'),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                );
-                                                              },
-                                                            );
-                                                          }
-                                                        }),
-                                                        Future(() async {}),
-                                                      ]);
-
-                                                      safeSetState(() {});
-                                                    },
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '4pp7yghj' /* Book now */,
-                                                    ),
-                                                    icon: const Icon(
-                                                      Icons.send,
-                                                      size: 22.0,
-                                                    ),
-                                                    options: FFButtonOptions(
-                                                      height: 25.3,
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(24.0,
-                                                              0.0, 24.0, 0.0),
-                                                      iconPadding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(0.0,
-                                                              0.0, 0.0, 0.0),
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmallFamily,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                fontSize: 22.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts:
-                                                                    !FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .titleSmallIsCustom,
-                                                              ),
-                                                      elevation: 3.0,
-                                                      borderSide: BorderSide(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                        width: 1.0,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      if ((valueOrDefault(
-                                                      currentUserDocument
-                                                          ?.phoneN,
-                                                      0)
-                                                  .toString() !=
-                                              '') &&
-                                          (FFAppState().payth == 'نقدآ') &&
-                                          (FFAppState().DriverGuideState ==
-                                              false))
-                                        AuthUserStreamWidget(
-                                          builder: (context) => Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                width: 388.6,
-                                                height: 64.1,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                ),
-                                                child: Visibility(
-                                                  visible: (valueOrDefault(
-                                                                  currentUserDocument
-                                                                      ?.phoneN,
-                                                                  0)
-                                                              .toString() !=
-                                                          '') &&
-                                                      (FFAppState().payth ==
-                                                          'نقدآ'),
-                                                  child: FFButtonWidget(
-                                                    onPressed: () async {
-                                                      await Future.wait([
-                                                        Future(() async {
-                                                          if ((FFAppState()
-                                                                      .tebycar !=
-                                                                  '') &&
-                                                              (FFAppState()
-                                                                      .mkanuserorder !=
-                                                                  null) &&
-                                                              (FFAppState()
-                                                                      .totalsaat >=
-                                                                  FFAppState()
-                                                                      .Minimumhours)) {
-                                                            _model.conOrder2 =
-                                                                await queryOrderRecordCount();
-                                                            _model.ngl2 =
-                                                                await querySettingsRecordOnce(
-                                                              queryBuilder:
-                                                                  (settingsRecord) =>
-                                                                      settingsRecord
-                                                                          .where(
-                                                                'id',
-                                                                isNotEqualTo: 1,
-                                                              ),
-                                                              singleRecord:
-                                                                  true,
-                                                            ).then((s) => s
-                                                                    .firstOrNull);
-                                                            if (FFAppState()
-                                                                    .DriverGuideState ==
-                                                                true) {
-                                                              await OrderRecord
-                                                                  .collection
-                                                                  .doc()
-                                                                  .set({
-                                                                ...createOrderRecordData(
-                                                                  total: FFAppState()
-                                                                      .totalAllnow3,
-                                                                  user:
-                                                                      currentUserReference,
-                                                                  lokeshn:
-                                                                      FFAppState()
-                                                                          .mkanuserorder,
-                                                                  dataOrder:
-                                                                      getCurrentTimestamp,
-                                                                  cartext:
-                                                                      FFAppState()
-                                                                          .tebycar,
-                                                                  carRev: FFAppState()
-                                                                      .typecarRev,
-                                                                  naimUserText:
-                                                                      currentUserDisplayName,
-                                                                  phoneNumper:
-                                                                      valueOrDefault(
-                                                                          currentUserDocument
-                                                                              ?.phoneN,
-                                                                          0),
-                                                                  addCartNumer:
-                                                                      FFAppState()
-                                                                          .addcart,
-                                                                  villText:
-                                                                      FFAppState()
-                                                                          .villtextnow,
-                                                                  citiesUserNow:
-                                                                      FFAppState()
-                                                                          .villnow,
-                                                                  totalTaim:
-                                                                      FFAppState()
-                                                                          .totalsaat,
-                                                                  vill: FFAppState()
-                                                                      .villnow,
-                                                                  iDorder: ((_model
-                                                                              .conOrder!) +
-                                                                          1)
-                                                                      .toString(),
-                                                                  halhOrder: Halh
-                                                                      .Pending,
-                                                                  schedule:
-                                                                      FFAppState()
-                                                                          .dataSchedule,
-                                                                  fullSchedule:
-                                                                      FFAppState()
-                                                                          .fulltextSchedule,
-                                                                  halhText:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  totalApp:
-                                                                      FFAppState()
-                                                                          .totalapp2,
-                                                                  totalVat:
-                                                                      FFAppState()
-                                                                          .vat2,
-                                                                  halh:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  imgProfileClent:
-                                                                      currentUserPhoto,
-                                                                  loceshStreng:
-                                                                      FFAppState()
-                                                                          .mkanuserorder
-                                                                          ?.toString(),
-                                                                  allnow: true,
-                                                                  activeOrder:
-                                                                      false,
-                                                                  totalMndob2:
-                                                                      FFAppState()
-                                                                          .totalmndob3,
-                                                                  ksm: FFAppState()
-                                                                      .totalKsm2,
-                                                                  driverGuide:
-                                                                      true,
-                                                                  reviewMndonsend:
-                                                                      false,
-                                                                  retengUser:
-                                                                      valueOrDefault<
-                                                                          double>(
-                                                                    functions
-                                                                        .averageRating((currentUserDocument?.reteng.toList() ??
-                                                                                [])
-                                                                            .toList())
-                                                                        ?.toDouble(),
-                                                                    0.0,
-                                                                  ),
-                                                                  srSAAH: FFAppState()
-                                                                      .srtypecar
-                                                                      .toDouble(),
-                                                                  paymentMethod:
-                                                                      PaymentMethod
-                                                                          .Cash,
-                                                                ),
-                                                                ...mapToFirestore(
-                                                                  {
-                                                                    'listAmakn':
-                                                                        getAmaknCostmListFirestoreData(
-                                                                      FFAppState()
-                                                                          .cartmkss,
-                                                                    ),
-                                                                  },
-                                                                ),
-                                                              });
-                                                            } else {
-                                                              await OrderRecord
-                                                                  .collection
-                                                                  .doc()
-                                                                  .set({
-                                                                ...createOrderRecordData(
-                                                                  total: FFAppState()
-                                                                      .totalAllnow3,
-                                                                  user:
-                                                                      currentUserReference,
-                                                                  lokeshn:
-                                                                      FFAppState()
-                                                                          .mkanuserorder,
-                                                                  dataOrder:
-                                                                      getCurrentTimestamp,
-                                                                  cartext:
-                                                                      FFAppState()
-                                                                          .tebycar,
-                                                                  carRev: FFAppState()
-                                                                      .typecarRev,
-                                                                  naimUserText:
-                                                                      currentUserDisplayName,
-                                                                  phoneNumper:
-                                                                      valueOrDefault(
-                                                                          currentUserDocument
-                                                                              ?.phoneN,
-                                                                          0),
-                                                                  addCartNumer:
-                                                                      FFAppState()
-                                                                          .addcart,
-                                                                  villText:
-                                                                      FFAppState()
-                                                                          .villtextnow,
-                                                                  citiesUserNow:
-                                                                      FFAppState()
-                                                                          .villnow,
-                                                                  totalTaim:
-                                                                      FFAppState()
-                                                                          .totalsaat,
-                                                                  vill: FFAppState()
-                                                                      .villnow,
-                                                                  iDorder: ((_model
-                                                                              .conOrder2!) +
-                                                                          1)
-                                                                      .toString(),
-                                                                  halhOrder: Halh
-                                                                      .Pending,
-                                                                  schedule:
-                                                                      FFAppState()
-                                                                          .dataSchedule,
-                                                                  fullSchedule:
-                                                                      FFAppState()
-                                                                          .fulltextSchedule,
-                                                                  halhText:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  totalApp:
-                                                                      FFAppState()
-                                                                          .totalapp2,
-                                                                  totalVat:
-                                                                      FFAppState()
-                                                                          .vat2,
-                                                                  halh:
-                                                                      'بإنتظار قبول المندوب',
-                                                                  imgProfileClent:
-                                                                      currentUserPhoto,
-                                                                  loceshStreng:
-                                                                      FFAppState()
-                                                                          .mkanuserorder
-                                                                          ?.toString(),
-                                                                  allnow: true,
-                                                                  activeOrder:
-                                                                      false,
-                                                                  totalMndob2:
-                                                                      FFAppState()
-                                                                          .totalmndob3,
-                                                                  ksm: FFAppState()
-                                                                      .totalKsm2,
-                                                                  driverGuide:
-                                                                      false,
-                                                                  reviewMndonsend:
-                                                                      false,
-                                                                  srSAAH: FFAppState()
-                                                                      .srtypecar
-                                                                      .toDouble(),
-                                                                  paymentMethod:
-                                                                      PaymentMethod
-                                                                          .Cash,
-                                                                ),
-                                                                ...mapToFirestore(
-                                                                  {
-                                                                    'listAmakn':
-                                                                        getAmaknCostmListFirestoreData(
-                                                                      FFAppState()
-                                                                          .cartmkss,
-                                                                    ),
-                                                                  },
-                                                                ),
-                                                              });
-                                                            }
-
-                                                            _model.mnadebList2 =
-                                                                await queryUserRecordOnce(
-                                                              queryBuilder:
-                                                                  (userRecord) =>
-                                                                      userRecord
-                                                                          .where(
-                                                                            'mndob_vill',
-                                                                            isEqualTo:
-                                                                                FFAppState().villnow,
-                                                                          )
-                                                                          .where(
-                                                                            'actev_mndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndom',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'mndob_type_car',
-                                                                            isEqualTo:
-                                                                                FFAppState().typecarRev,
-                                                                          )
-                                                                          .where(
-                                                                            'ngl',
-                                                                            isEqualTo:
-                                                                                _model.ngl2?.ngl,
-                                                                          ),
-                                                            );
-                                                            _model.mnadebListcon2 =
-                                                                await queryUserRecordCount(
-                                                              queryBuilder:
-                                                                  (userRecord) =>
-                                                                      userRecord
-                                                                          .where(
-                                                                            'mndob_vill',
-                                                                            isEqualTo:
-                                                                                FFAppState().villnow,
-                                                                          )
-                                                                          .where(
-                                                                            'actev_mndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndom',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'ismndob',
-                                                                            isEqualTo:
-                                                                                true,
-                                                                          )
-                                                                          .where(
-                                                                            'mndob_type_car',
-                                                                            isEqualTo:
-                                                                                FFAppState().typecarRev,
-                                                                          )
-                                                                          .where(
-                                                                            'ngl',
-                                                                            isEqualTo:
-                                                                                _model.ngl2?.ngl,
-                                                                          ),
-                                                            );
-                                                            _model.nmndob = _model
-                                                                .mnadebListcon2;
-                                                            safeSetState(() {});
-                                                            // مسح الخصومات
-                                                            FFAppState()
-                                                                .typeHgz = 0;
-                                                            FFAppState()
-                                                                    .AllowBooking =
-                                                                false;
-                                                            FFAppState()
-                                                                    .DriverGuideState =
-                                                                false;
-                                                            FFAppState()
-                                                                .NsbhKsm = 0.0;
-                                                            FFAppState()
-                                                                .totalKsm = 0;
-                                                            FFAppState().UbKsm =
-                                                                0;
-                                                            FFAppState()
-                                                                    .totalKsm2 =
-                                                                0.0;
-                                                            FFAppState()
-                                                                    .totalAllnow3 =
-                                                                0.0;
-                                                            safeSetState(() {});
-
-                                                            context.pushNamed(
-                                                                OksendWidget
-                                                                    .routeName);
-
-                                                            FFAppState()
-                                                                    .typecarRev =
-                                                                null;
-                                                            FFAppState()
-                                                                .addcart = 0;
-                                                            FFAppState()
-                                                                .cartItems = [];
-                                                            FFAppState()
-                                                                .cartmkss = [];
-                                                            FFAppState()
-                                                                .cartPriceSummary = [];
-                                                            FFAppState()
-                                                                .saatcar = 0;
-                                                            FFAppState()
-                                                                .totalsaatandcar = 0;
-                                                            FFAppState()
-                                                                .srtypecar = 0;
-                                                            FFAppState()
-                                                                .tebycar = '';
-                                                            FFAppState()
-                                                                .notcar = '';
-                                                            FFAppState()
-                                                                .adressNaim = '';
-                                                            FFAppState()
-                                                                    .adressSelection =
-                                                                null;
-                                                            FFAppState()
-                                                                .fulltextSchedule = '';
-                                                            FFAppState()
-                                                                .taimSchedule = '';
-                                                            FFAppState()
-                                                                .TOTALmndob2 = 0;
-                                                            FFAppState()
-                                                                .totalapp2 = 0;
-                                                            FFAppState().vat2 =
-                                                                0;
-                                                            FFAppState()
-                                                                .totalAllNow2 = 0;
-                                                            safeSetState(() {});
-                                                            FFAppState()
-                                                                    .totalmndob3 =
-                                                                0.0;
-                                                            safeSetState(() {});
-                                                            for (int loop1Index =
-                                                                    0;
-                                                                loop1Index <=
-                                                                    _model
-                                                                        .mnadebList2!
-                                                                        .length;
-                                                                loop1Index++) {
-                                                              final currentLoop1Item = _model
-                                                                      .mnadebList2!
-                                                                      .map((e) => e)
-                                                                      .toList()[
-                                                                  loop1Index];
-                                                              if (_model
-                                                                      .nmndob ==
-                                                                  0) {
-                                                                break;
-                                                              } else {
-                                                                _model.apiResultdy88 =
-                                                                    await WatcCall
-                                                                        .call(
-                                                                  to: currentLoop1Item
-                                                                      .phoneNumber,
-                                                                  msg:
-                                                                      'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
-                                                                );
-
-                                                                _model.nmndob =
-                                                                    (_model.nmndob!) -
-                                                                        1;
-                                                                safeSetState(
-                                                                    () {});
-                                                                triggerPushNotification(
-                                                                  notificationTitle:
-                                                                      'طلب جديد',
-                                                                  notificationText:
-                                                                      'نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"',
-                                                                  userRefs: [
-                                                                    currentLoop1Item
-                                                                        .reference
-                                                                  ],
-                                                                  initialPageName:
-                                                                      'List',
-                                                                  parameterData: {},
-                                                                );
-                                                              }
-                                                            }
-                                                            FFAppState()
-                                                                    .totalmndob3 =
-                                                                0.0;
-                                                            safeSetState(() {});
-                                                          } else {
-                                                            ScaffoldMessenger
-                                                                    .of(context)
-                                                                .showSnackBar(
-                                                              SnackBar(
-                                                                content: Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getVariableText(
-                                                                    enText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                    arText:
-                                                                        'يرجى استكمال الخيارات أو زيادة الساعات الإضافية لتتوافق مع الرحلة.',
-                                                                    zh_HansText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                    trText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                    urText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                    ruText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                    azText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                    kaText:
-                                                                        'Please select all options or add extra hours to match the trip requirements.',
-                                                                  ),
-                                                                  style:
-                                                                      TextStyle(
-                                                                    fontFamily:
-                                                                        'cairo',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryBackground,
-                                                                  ),
-                                                                ),
-                                                                duration: const Duration(
-                                                                    milliseconds:
-                                                                        4000),
-                                                                backgroundColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .error,
-                                                              ),
-                                                            );
-                                                          }
-                                                        }),
-                                                        Future(() async {}),
-                                                      ]);
-
-                                                      safeSetState(() {});
-                                                    },
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '6o9re56s' /* Book now */,
-                                                    ),
-                                                    icon: const Icon(
-                                                      Icons.send,
-                                                      size: 22.0,
-                                                    ),
-                                                    options: FFButtonOptions(
-                                                      height: 25.3,
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(24.0,
-                                                              0.0, 24.0, 0.0),
-                                                      iconPadding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(0.0,
-                                                              0.0, 0.0, 0.0),
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmallFamily,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                fontSize: 22.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts:
-                                                                    !FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .titleSmallIsCustom,
-                                                              ),
-                                                      elevation: 3.0,
-                                                      borderSide: BorderSide(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                        width: 1.0,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                    ].divide(const SizedBox(height: 12.0)),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ).animateOnPageLoad(animationsMap[
-                                  'containerOnPageLoadAnimation2']!),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
-                        ],
+                          ),
+                        ).animateOnPageLoad(animationsMap[
+                            'containerOnPageLoadAnimation2']!),
                       ),
-                    ),
                   ],
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

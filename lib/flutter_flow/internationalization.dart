@@ -14,7 +14,7 @@ class FFLocalizations {
       Localizations.of<FFLocalizations>(context, FFLocalizations)!;
 
   static List<String> languages() =>
-      ['en', 'ar', 'zh_Hans', 'tr', 'ur', 'ru', 'az', 'ka'];
+      ['en', 'ar', 'zh_Hans', 'tr', 'ur', 'ru', 'az', 'ka','ky'];
 
   static late SharedPreferences _prefs;
   static Future initialize() async =>
@@ -47,6 +47,8 @@ class FFLocalizations {
     String? ruText = '',
     String? azText = '',
     String? kaText = '',
+    String? kyText = '',
+
   }) =>
       [
         enText,
@@ -56,7 +58,9 @@ class FFLocalizations {
         urText,
         ruText,
         azText,
-        kaText
+        kaText,
+        kyText
+
       ][languageIndex] ??
       '';
 
@@ -91,6 +95,7 @@ class FFLocalizations {
     'th',
     'uk',
     'vi',
+    'ky',
   };
 }
 
@@ -172,6 +177,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Giriş yapmak',
       'ur': 'لاگ ان',
       'zh_Hans': '登录',
+      'ky': 'Кирүү',
+
     },
     '8gngx8fm': {
       'en': 'Email Address',

@@ -169,324 +169,319 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                                     .secondaryBackground,
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    12.0, 12.0, 12.0, 12.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius: const BorderRadius.only(
-                                            bottomLeft: Radius.circular(17.0),
-                                            bottomRight: Radius.circular(17.0),
-                                            topLeft: Radius.circular(17.0),
-                                            topRight: Radius.circular(17.0),
-                                          ),
-                                          child: Image.network(
-                                            listViewTypeCarRecord.img,
-                                            width: 100.0,
-                                            height: 80.0,
-                                            fit: BoxFit.cover,
-                                          ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.only(
+                                          bottomLeft: Radius.circular(17.0),
+                                          bottomRight: Radius.circular(17.0),
+                                          topLeft: Radius.circular(17.0),
+                                          topRight: Radius.circular(17.0),
                                         ),
-                                        Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              listViewTypeCarRecord.naim,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyLarge
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyLargeFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyLargeIsCustom,
-                                                  ),
-                                            ),
-                                            Text(
-                                              '${formatNumber(
+                                        child: Image.network(
+                                          listViewTypeCarRecord.img,
+                                          width: 100.0,
+                                          height: 80.0,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            listViewTypeCarRecord.naim,
+                                            style: FlutterFlowTheme.of(
+                                                    context)
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLargeFamily,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts:
+                                                      !FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLargeIsCustom,
+                                                ),
+                                          ),
+                                          Text(
+                                            '${formatNumber(
+                                              listViewTypeCarRecord.sr,
+                                              formatType: FormatType.decimal,
+                                              decimalType:
+                                                  DecimalType.automatic,
+                                            )}/للساعة الواحدة',
+                                            style: FlutterFlowTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  fontSize: 12.0,
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts:
+                                                      !FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumIsCustom,
+                                                ),
+                                          ),
+                                          Text(
+                                            'الحد الأدنى: ${listViewTypeCarRecord.aglSaat == 1 ? 'ساعة واحدة' : '${listViewTypeCarRecord.aglSaat.toString()} ساعات '}',
+                                            style: FlutterFlowTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  fontSize: 12.0,
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts:
+                                                      !FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumIsCustom,
+                                                ),
+                                          ),
+                                        ].divide(const SizedBox(height: 4.0)),
+                                      ),
+                                    ].divide(const SizedBox(width: 12.0)),
+                                  ),
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      if (listViewTypeCarRecord.ishafelh ==
+                                          true) {
+                                        FFAppState().tebycar =
+                                            listViewTypeCarRecord.naim;
+                                        FFAppState().typecarRev =
+                                            listViewTypeCarRecord.reference;
+                                        FFAppState().srtypecar =
+                                            listViewTypeCarRecord.sr;
+                                        FFAppState().totalsaatandcar =
+                                            functions.total(
                                                 listViewTypeCarRecord.sr,
-                                                formatType: FormatType.decimal,
-                                                decimalType:
-                                                    DecimalType.automatic,
-                                              )}/للساعة الواحدة',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primary,
-                                                    fontSize: 12.0,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
-                                                  ),
-                                            ),
-                                            Text(
-                                              'الحد الأدنى: ${listViewTypeCarRecord.aglSaat == 1 ? 'ساعة واحدة' : '${listViewTypeCarRecord.aglSaat.toString()} ساعات '}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .labelMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelMediumFamily,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                    fontSize: 12.0,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelMediumIsCustom,
-                                                  ),
-                                            ),
-                                          ].divide(const SizedBox(height: 4.0)),
-                                        ),
-                                      ].divide(const SizedBox(width: 12.0)),
+                                                8.0)!;
+                                        FFAppState().notcar =
+                                            listViewTypeCarRecord.not;
+                                        FFAppState().saatcar =
+                                            listViewTypeCarRecord.aglSaat;
+                                        FFAppState().onsaahcar =
+                                            listViewTypeCarRecord.sr;
+                                        FFAppState().totalsaat =
+                                            listViewTypeCarRecord.aglSaat;
+                                        FFAppState().addhors = 0;
+                                        FFAppState().TOTALmndob2 = 0;
+                                        FFAppState().totalapp2 = 0;
+                                        FFAppState().vat2 = 0;
+                                        FFAppState().totalAllNow2 = 0;
+                                        FFAppState().totalKsm = 0;
+                                        FFAppState().UbKsm = 0;
+                                        FFAppState().NsbhKsm = 0.0;
+                                        FFAppState().totalKsm2 = 0.0;
+                                        FFAppState().update(() {});
+                                        FFAppState().TOTALmndob2 =
+                                            functions.total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble())!;
+                                        FFAppState().totalapp2 =
+                                            functions.vat(
+                                                15.0,
+                                                functions.total(
+                                                    FFAppState().srtypecar,
+                                                    FFAppState()
+                                                        .totalsaat
+                                                        .toDouble()))!;
+                                        FFAppState().vat2 = functions.vat(
+                                            FFAppState().VatDolh.toDouble(),
+                                            functions.total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble()))!;
+                                        FFAppState().totalAllNow2 =
+                                            FFAppState().TOTALmndob2 +
+                                                FFAppState().totalapp2 +
+                                                FFAppState().vat2;
+                                        FFAppState().totalKsm = 0;
+                                        FFAppState().UbKsm =
+                                            listViewTypeCarRecord.totalKsmUb;
+                                        FFAppState().NsbhKsm =
+                                            listViewTypeCarRecord.nesbahkKsm;
+                                        FFAppState().totalmndob3 = functions
+                                            .total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble())!
+                                            .toDouble();
+                                        safeSetState(() {});
+                                        FFAppState().TOTALmndob2 =
+                                            FFAppState().TOTALmndob2 -
+                                                FFAppState().totalapp2 -
+                                                FFAppState().vat2;
+                                        FFAppState().totalAllNow2 =
+                                            FFAppState().TOTALmndob2 +
+                                                FFAppState().totalapp2 +
+                                                FFAppState().vat2;
+                                        FFAppState().totalmndob3 =
+                                            FFAppState().totalmndob3 +
+                                                FFAppState().totalapp2 +
+                                                FFAppState().vat2;
+                                        safeSetState(() {});
+                              
+                                        context.pushNamed(
+                                            Checkout66Widget.routeName);
+                                      } else {
+                                        FFAppState().tebycar =
+                                            listViewTypeCarRecord.naim;
+                                        FFAppState().typecarRev =
+                                            listViewTypeCarRecord.reference;
+                                        FFAppState().srtypecar =
+                                            listViewTypeCarRecord.sr;
+                                        FFAppState().totalsaatandcar =
+                                            functions.total(
+                                                listViewTypeCarRecord.sr,
+                                                8.0)!;
+                                        FFAppState().notcar =
+                                            listViewTypeCarRecord.not;
+                                        FFAppState().saatcar =
+                                            listViewTypeCarRecord.aglSaat;
+                                        FFAppState().onsaahcar =
+                                            listViewTypeCarRecord.sr;
+                                        FFAppState().totalsaat =
+                                            listViewTypeCarRecord.aglSaat;
+                                        FFAppState().addhors = 0;
+                                        FFAppState().TOTALmndob2 = 0;
+                                        FFAppState().totalapp2 = 0;
+                                        FFAppState().vat2 = 0;
+                                        FFAppState().totalAllNow2 = 0;
+                                        FFAppState().totalKsm = 0;
+                                        FFAppState().UbKsm = 0;
+                                        FFAppState().NsbhKsm = 0.0;
+                                        FFAppState().totalKsm2 = 0.0;
+                                        FFAppState().update(() {});
+                                        FFAppState().TOTALmndob2 =
+                                            functions.total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble())!;
+                                        FFAppState().totalapp2 =
+                                            functions.vat(
+                                                15.0,
+                                                functions.total(
+                                                    FFAppState().srtypecar,
+                                                    FFAppState()
+                                                        .totalsaat
+                                                        .toDouble()))!;
+                                        FFAppState().vat2 = functions.vat(
+                                            FFAppState().VatDolh.toDouble(),
+                                            functions.total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble()))!;
+                                        FFAppState().totalAllNow2 =
+                                            FFAppState().TOTALmndob2 +
+                                                FFAppState().totalapp2 +
+                                                FFAppState().vat2;
+                                        FFAppState().totalKsm = 0;
+                                        FFAppState().UbKsm =
+                                            listViewTypeCarRecord.totalKsmUb;
+                                        FFAppState().NsbhKsm =
+                                            listViewTypeCarRecord.nesbahkKsm;
+                                        FFAppState().totalmndob3 = functions
+                                            .total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble())!
+                                            .toDouble();
+                                        FFAppState().update(() {});
+                                        FFAppState().totalmndob3 = functions
+                                            .total(
+                                                FFAppState().srtypecar,
+                                                FFAppState()
+                                                    .totalsaat
+                                                    .toDouble())!
+                                            .toDouble();
+                                        safeSetState(() {});
+                                        FFAppState().TOTALmndob2 =
+                                            FFAppState().TOTALmndob2 -
+                                                FFAppState().totalapp2 -
+                                                FFAppState().vat2;
+                                        FFAppState().totalAllNow2 =
+                                            FFAppState().TOTALmndob2 +
+                                                FFAppState().totalapp2 +
+                                                FFAppState().vat2;
+                                        FFAppState().totalmndob3 =
+                                            FFAppState().totalmndob3 -
+                                                FFAppState().totalapp2 -
+                                                FFAppState().vat2;
+                                        FFAppState().totalAllnow3 =
+                                            FFAppState().totalmndob3 +
+                                                FFAppState().totalapp2 +
+                                                FFAppState().vat2;
+                                        FFAppState().update(() {});
+                              
+                                        context.pushNamed(
+                                            Checkout66Widget.routeName);
+                                      }
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'mx4hp3oi' /* Select */,
                                     ),
-                                    FFButtonWidget(
-                                      onPressed: () async {
-                                        if (listViewTypeCarRecord.ishafelh ==
-                                            true) {
-                                          FFAppState().tebycar =
-                                              listViewTypeCarRecord.naim;
-                                          FFAppState().typecarRev =
-                                              listViewTypeCarRecord.reference;
-                                          FFAppState().srtypecar =
-                                              listViewTypeCarRecord.sr;
-                                          FFAppState().totalsaatandcar =
-                                              functions.total(
-                                                  listViewTypeCarRecord.sr,
-                                                  8.0)!;
-                                          FFAppState().notcar =
-                                              listViewTypeCarRecord.not;
-                                          FFAppState().saatcar =
-                                              listViewTypeCarRecord.aglSaat;
-                                          FFAppState().onsaahcar =
-                                              listViewTypeCarRecord.sr;
-                                          FFAppState().totalsaat =
-                                              listViewTypeCarRecord.aglSaat;
-                                          FFAppState().addhors = 0;
-                                          FFAppState().TOTALmndob2 = 0;
-                                          FFAppState().totalapp2 = 0;
-                                          FFAppState().vat2 = 0;
-                                          FFAppState().totalAllNow2 = 0;
-                                          FFAppState().totalKsm = 0;
-                                          FFAppState().UbKsm = 0;
-                                          FFAppState().NsbhKsm = 0.0;
-                                          FFAppState().totalKsm2 = 0.0;
-                                          FFAppState().update(() {});
-                                          FFAppState().TOTALmndob2 =
-                                              functions.total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble())!;
-                                          FFAppState().totalapp2 =
-                                              functions.vat(
-                                                  15.0,
-                                                  functions.total(
-                                                      FFAppState().srtypecar,
-                                                      FFAppState()
-                                                          .totalsaat
-                                                          .toDouble()))!;
-                                          FFAppState().vat2 = functions.vat(
-                                              FFAppState().VatDolh.toDouble(),
-                                              functions.total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble()))!;
-                                          FFAppState().totalAllNow2 =
-                                              FFAppState().TOTALmndob2 +
-                                                  FFAppState().totalapp2 +
-                                                  FFAppState().vat2;
-                                          FFAppState().totalKsm = 0;
-                                          FFAppState().UbKsm =
-                                              listViewTypeCarRecord.totalKsmUb;
-                                          FFAppState().NsbhKsm =
-                                              listViewTypeCarRecord.nesbahkKsm;
-                                          FFAppState().totalmndob3 = functions
-                                              .total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble())!
-                                              .toDouble();
-                                          safeSetState(() {});
-                                          FFAppState().TOTALmndob2 =
-                                              FFAppState().TOTALmndob2 -
-                                                  FFAppState().totalapp2 -
-                                                  FFAppState().vat2;
-                                          FFAppState().totalAllNow2 =
-                                              FFAppState().TOTALmndob2 +
-                                                  FFAppState().totalapp2 +
-                                                  FFAppState().vat2;
-                                          FFAppState().totalmndob3 =
-                                              FFAppState().totalmndob3 +
-                                                  FFAppState().totalapp2 +
-                                                  FFAppState().vat2;
-                                          safeSetState(() {});
-
-                                          context.pushNamed(
-                                              Checkout66Widget.routeName);
-                                        } else {
-                                          FFAppState().tebycar =
-                                              listViewTypeCarRecord.naim;
-                                          FFAppState().typecarRev =
-                                              listViewTypeCarRecord.reference;
-                                          FFAppState().srtypecar =
-                                              listViewTypeCarRecord.sr;
-                                          FFAppState().totalsaatandcar =
-                                              functions.total(
-                                                  listViewTypeCarRecord.sr,
-                                                  8.0)!;
-                                          FFAppState().notcar =
-                                              listViewTypeCarRecord.not;
-                                          FFAppState().saatcar =
-                                              listViewTypeCarRecord.aglSaat;
-                                          FFAppState().onsaahcar =
-                                              listViewTypeCarRecord.sr;
-                                          FFAppState().totalsaat =
-                                              listViewTypeCarRecord.aglSaat;
-                                          FFAppState().addhors = 0;
-                                          FFAppState().TOTALmndob2 = 0;
-                                          FFAppState().totalapp2 = 0;
-                                          FFAppState().vat2 = 0;
-                                          FFAppState().totalAllNow2 = 0;
-                                          FFAppState().totalKsm = 0;
-                                          FFAppState().UbKsm = 0;
-                                          FFAppState().NsbhKsm = 0.0;
-                                          FFAppState().totalKsm2 = 0.0;
-                                          FFAppState().update(() {});
-                                          FFAppState().TOTALmndob2 =
-                                              functions.total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble())!;
-                                          FFAppState().totalapp2 =
-                                              functions.vat(
-                                                  15.0,
-                                                  functions.total(
-                                                      FFAppState().srtypecar,
-                                                      FFAppState()
-                                                          .totalsaat
-                                                          .toDouble()))!;
-                                          FFAppState().vat2 = functions.vat(
-                                              FFAppState().VatDolh.toDouble(),
-                                              functions.total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble()))!;
-                                          FFAppState().totalAllNow2 =
-                                              FFAppState().TOTALmndob2 +
-                                                  FFAppState().totalapp2 +
-                                                  FFAppState().vat2;
-                                          FFAppState().totalKsm = 0;
-                                          FFAppState().UbKsm =
-                                              listViewTypeCarRecord.totalKsmUb;
-                                          FFAppState().NsbhKsm =
-                                              listViewTypeCarRecord.nesbahkKsm;
-                                          FFAppState().totalmndob3 = functions
-                                              .total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble())!
-                                              .toDouble();
-                                          FFAppState().update(() {});
-                                          FFAppState().totalmndob3 = functions
-                                              .total(
-                                                  FFAppState().srtypecar,
-                                                  FFAppState()
-                                                      .totalsaat
-                                                      .toDouble())!
-                                              .toDouble();
-                                          safeSetState(() {});
-                                          FFAppState().TOTALmndob2 =
-                                              FFAppState().TOTALmndob2 -
-                                                  FFAppState().totalapp2 -
-                                                  FFAppState().vat2;
-                                          FFAppState().totalAllNow2 =
-                                              FFAppState().TOTALmndob2 +
-                                                  FFAppState().totalapp2 +
-                                                  FFAppState().vat2;
-                                          FFAppState().totalmndob3 =
-                                              FFAppState().totalmndob3 -
-                                                  FFAppState().totalapp2 -
-                                                  FFAppState().vat2;
-                                          FFAppState().totalAllnow3 =
-                                              FFAppState().totalmndob3 +
-                                                  FFAppState().totalapp2 +
-                                                  FFAppState().vat2;
-                                          FFAppState().update(() {});
-
-                                          context.pushNamed(
-                                              Checkout66Widget.routeName);
-                                        }
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'mx4hp3oi' /* Select */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 68.24,
-                                        height: 40.0,
-                                        padding: const EdgeInsets.all(8.0),
-                                        iconPadding: const EdgeInsetsDirectional
-                                            .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .bodySmall
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodySmallFamily,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
-                                                      .bodySmallIsCustom,
-                                            ),
-                                        elevation: 0.0,
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
+                                    options: FFButtonOptions(
+                                      width: 68.24,
+                                      height: 40.0,
+                                      padding: const EdgeInsets.all(8.0),
+                                      iconPadding: const EdgeInsetsDirectional
+                                          .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primary,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodySmall
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmallFamily,
+                                            color:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondaryBackground,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(context)
+                                                    .bodySmallIsCustom,
+                                          ),
+                                      elevation: 0.0,
+                                      borderRadius:
+                                          BorderRadius.circular(20.0),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           );

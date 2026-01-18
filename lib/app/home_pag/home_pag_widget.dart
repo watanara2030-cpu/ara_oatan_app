@@ -5,16 +5,11 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'home_pag_model.dart';
 export 'home_pag_model.dart';
@@ -1724,21 +1719,25 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                                                   useGoogleFonts: !FlutterFlowTheme.of(context).bodyMediumIsCustom,
                                                                                 ),
                                                                           ),
-                                                                          Switch(
-                                                                            value:
-                                                                                _model.switchValue!,
-                                                                            onChanged:
-                                                                                (newValue) async {
-                                                                              safeSetState(() => _model.switchValue = newValue);
-                                                                            },
-                                                                            activeThumbColor:
-                                                                                FlutterFlowTheme.of(context).primary,
-                                                                            activeTrackColor:
-                                                                                const Color(0xFFCBC9C9),
-                                                                            inactiveTrackColor:
-                                                                                FlutterFlowTheme.of(context).alternate,
-                                                                            inactiveThumbColor:
-                                                                                FlutterFlowTheme.of(context).error,
+                                                                          SizedBox(
+                                                                            height:10,
+                                                                            width: 20,
+                                                                            child: Switch(
+                                                                              value:
+                                                                                  _model.switchValue!,
+                                                                              onChanged:
+                                                                                  (newValue) async {
+                                                                                safeSetState(() => _model.switchValue = newValue);
+                                                                              },
+                                                                              activeThumbColor:
+                                                                                  FlutterFlowTheme.of(context).primary,
+                                                                              activeTrackColor:
+                                                                                  const Color(0xFFCBC9C9),
+                                                                              inactiveTrackColor:
+                                                                                  FlutterFlowTheme.of(context).alternate,
+                                                                              inactiveThumbColor:
+                                                                                  FlutterFlowTheme.of(context).error,
+                                                                            ),
                                                                           ),
                                                                         ],
                                                                       ),

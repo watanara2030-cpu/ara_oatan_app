@@ -116,7 +116,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
             ),
           )
         : AutoSizeText(
-            'text' ?? '',
+            text ?? '',
             style:
                 text == null ? null : widget.options.textStyle?.withoutColor(),
             textAlign: widget.options.textAlign,
