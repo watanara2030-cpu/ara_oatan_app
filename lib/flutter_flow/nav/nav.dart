@@ -88,13 +88,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : const HomePagWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const HomePagWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : const HomePagWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const HomePagWidget(),
         ),
         FFRoute(
           name: HomePagWidget.routeName,
@@ -177,7 +177,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: Profile05Widget.routePath,
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Profile05')
+              ? const NavBarPage(initialPage: 'Profile05')
               : const Profile05Widget(),
         ),
         FFRoute(
@@ -225,7 +225,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: List22TaskOverviewResponsiveWidget.routePath,
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'List22TaskOverviewResponsive')
+              ? const NavBarPage(initialPage: 'List22TaskOverviewResponsive')
               : const List22TaskOverviewResponsiveWidget(),
         ),
         FFRoute(
@@ -508,7 +508,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: DemoDWidget.routePath,
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'demoD')
+              ? const NavBarPage(initialPage: 'demoD')
               : DemoDWidget(
                   isSpeed: params.getParam(
                     'isSpeed',

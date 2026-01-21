@@ -25,6 +25,7 @@
 
 import 'package:emoji_flag_converter/emoji_flag_converter.dart';
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class FlutterFlowLanguageSelector extends StatelessWidget {
   const FlutterFlowLanguageSelector({
@@ -90,7 +91,6 @@ class FlutterFlowLanguageSelector extends StatelessWidget {
 
 class _LanguagePickerItem extends StatelessWidget {
   const _LanguagePickerItem({
-    super.key,
     required this.language,
     required this.languages,
     this.textStyle,
@@ -129,25 +129,25 @@ class _LanguagePickerItem extends StatelessWidget {
     }
     flagWidget = Transform.scale(
       scale: flagSize / 24.0,
-      child: SizedBox(
-        width: 24,
-        child: flagWidget,
-      ),
+      child: flagWidget,
     );
     return Row(
       children: [
+
         if (!hideFlags) ...[
           flagWidget,
-          SizedBox(width: flagTextGap),
         ],
-        Text(
-          _languageMap(languages.toSet())[language]?.name ?? '',
-          style: textStyle ??
-              const TextStyle(
-                color: Colors.white,
-                fontSize: 13,
-                fontWeight: FontWeight.normal,
-              ),
+        Expanded(
+          flex: 1,
+          child: Text(
+            _languageMap(languages.toSet())[language]?.name ?? '',
+            style: textStyle ??
+                const TextStyle(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.normal,
+                ),
+          ),
         ),
       ],
     );
@@ -231,13 +231,10 @@ class _LanguagePickerDropdown extends StatelessWidget {
                 fontSize: 15,
               ),
             ),
-            onChanged: (val) {
-              if (val != null) {
-                onChanged(val);
-              }
-            },
+onChanged: (val) async { if (val != null) { await context.setLocale(Locale(val)); } },
+
             items: items,
-            value: currentLanguage.isNotEmpty ? currentLanguage : null,
+            value: context.locale.languageCode,
           ),
         ),
       ),

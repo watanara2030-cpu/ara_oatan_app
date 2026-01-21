@@ -1,3 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -75,13 +78,13 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                         6.0, 4.0, 0.0, 0.0),
                     child: FlutterFlowIconButton(
                       borderColor: Colors.transparent,
-                      borderRadius: 20.0,
-                      borderWidth: 1.0,
-                      buttonSize: 40.0,
+                      borderRadius: 20.0.r,
+                      borderWidth: 1.0.w,
+                      buttonSize: 40.0.h,
                       icon: Icon(
                         Icons.close_sharp,
                         color: FlutterFlowTheme.of(context).primaryText,
-                        size: 24.0,
+                        size: 24.0.sp,
                       ),
                       onPressed: () async {
                         context.safePop();
@@ -94,13 +97,13 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                       const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                   child: Container(
                     width: double.infinity,
-                    height: 200.0,
+                    height: 200.0.h,
                     decoration: BoxDecoration(
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
-                          blurRadius: 20.0,
-                          color: Color(0x1A000000),
-                          offset: Offset(
+                          blurRadius: 20.0.r,
+                          color: const Color(0x1A000000),
+                          offset: const Offset(
                             0.0,
                             8.0,
                           ),
@@ -118,32 +121,32 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(24.0),
+                      padding: EdgeInsets.all(24.0.r),
                       child: Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Opacity(
+                              Opacity(
                                 opacity: 0.9,
                                 child: Icon(
                                   Icons.credit_card,
                                   color: Colors.white,
-                                  size: 32.0,
+                                  size: 32.sp,
                                 ),
                               ),
                               Align(
                                 alignment:
                                     const AlignmentDirectional(1.0, -1.0),
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(8.0.r),
                                   child: Image.asset(
                                     'assets/images/62610667_378909662740545_4307600512804454400_n.png',
-                                    width: 122.38,
-                                    height: 34.4,
+                                    width: 122.38.w,
+                                    height: 34.4.h,
                                     fit: BoxFit.fill,
                                   ),
                                 ),
@@ -162,7 +165,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .headlineSmallFamily,
                                       color: Colors.white,
-                                      fontSize: 20.0,
+                                      fontSize: 20.0.sp,
                                       letterSpacing: 2.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts:
@@ -180,7 +183,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         color: Colors.white,
-                                        fontSize: 14.0,
+                                        fontSize: 14.0.sp,
                                         letterSpacing: 0.0,
                                         useGoogleFonts:
                                             !FlutterFlowTheme.of(context)
@@ -188,7 +191,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                       ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 8.0)),
+                            ].divide( SizedBox(height: 8.0.h)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -202,7 +205,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
                                       color: Colors.white,
-                                      fontSize: 12.0,
+                                      fontSize: 12.0.sp,
                                       letterSpacing: 1.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
@@ -230,15 +233,13 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'cq1z5hta' /* Cardholder Name */,
-                                ),
+                                "Cardholder Name".tr(),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
-                                      fontSize: 14.0,
+                                      fontSize: 14.0.sp,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts:
@@ -262,9 +263,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                 textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  hintText: FFLocalizations.of(context).getText(
-                                    '44je0pgi' /* Enter cardholder name */,
-                                  ),
+                                  hintText: "Enter cardholder name".tr(),
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -281,9 +280,9 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      width: 1.0,
+                                      width: 1.0.w,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -291,21 +290,21 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                           FlutterFlowTheme.of(context).primary,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   filled: true,
                                   fillColor: FlutterFlowTheme.of(context)
@@ -319,7 +318,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
-                                      fontSize: 16.0,
+                                      fontSize: 16.0.sp,
                                       letterSpacing: 0.0,
                                       useGoogleFonts:
                                           !FlutterFlowTheme.of(context)
@@ -342,22 +341,20 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                     }),
                                 ],
                               ),
-                            ].divide(const SizedBox(height: 8.0)),
+                            ].divide(SizedBox(height: 8.0.h)),
                           ),
                           Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'bnflyvrg' /* Card Number */,
-                                ),
+                                "Card Number".tr(),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
-                                      fontSize: 14.0,
+                                      fontSize: 14.0.sp,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts:
@@ -380,9 +377,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                 textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  hintText: FFLocalizations.of(context).getText(
-                                    'y78mmcac' /*  */,
-                                  ),
+                                  hintText: "Enter cardholder name".tr(),
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -399,31 +394,31 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      width: 1.0,
+                                      width: 1.0.w,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      width: 1.0,
+                                      width: 1.0.w,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 1.0,
+                                      width: 1.0.w,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 1.0,
+                                      width: 1.0.w,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12.0.r),
                                   ),
                                   filled: true,
                                   fillColor: FlutterFlowTheme.of(context)
@@ -434,7 +429,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                   suffixIcon: Icon(
                                     Icons.credit_card,
                                     color: FlutterFlowTheme.of(context).primary,
-                                    size: 24.0,
+                                    size: 24.0.sp,
                                   ),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -466,9 +461,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'qewj3fvz' /* Expiry Month */,
-                                      ),
+                                      "Expiry Month".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -488,42 +481,18 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                           _model.dropDownmmValueController ??=
                                               FormFieldController<String>(null),
                                       options: [
-                                        FFLocalizations.of(context).getText(
-                                          '5v66mvhe' /* 1 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '6wj6d4zw' /* 2 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'ipqvfbrr' /* 3 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '2do635f6' /* 4 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '8rpyskcj' /* 5 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'fk87fob0' /* 6 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'quydjumi' /* 7 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'lcigsni7' /* 8 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'm1aow7qn' /* 9 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'qp735nbf' /* 10 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'io0ujoh3' /* 11 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '5n7ks9ui' /* 12 */,
-                                        )
+                                        "1".tr(),
+                                        "2".tr(),
+                                        "3".tr(),
+                                        "4".tr(),
+                                        "5".tr(),
+                                        "6".tr(),
+                                        "7".tr(),
+                                        "8".tr(),
+                                        "9".tr(),
+                                        "10".tr(),
+                                        "11".tr(),
+                                        "12".tr(),
                                       ],
                                       onChanged: (val) async {
                                         safeSetState(
@@ -544,10 +513,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                                 !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'd6n9zsg4' /* MM */,
-                                      ),
+                                      hintText: "MM".tr(),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -577,9 +543,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'nx4kcz84' /* Expiry Year */,
-                                      ),
+                                      "Expiry Year".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -599,39 +563,17 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                           _model.dropDownyyValueController ??=
                                               FormFieldController<String>(null),
                                       options: [
-                                        FFLocalizations.of(context).getText(
-                                          'ie87mg61' /* 24 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'q4lfz2q3' /* 25 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '3y9ysgpi' /* 26 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'bvqr8ezy' /* 27 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'mj32j0fs' /* 28 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'hi8sbhte' /* 29 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          's1620945' /* 30 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'mrns4m0f' /* 31 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'ehraq01w' /* 32 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'fqs9ebf3' /* 33 */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '2em5zr8l' /* 34 */,
-                                        )
+                                        "24".tr(),
+                                        "25".tr(),
+                                        "26".tr(),
+                                        "27".tr(),
+                                        "28".tr(),
+                                        "29".tr(),
+                                        "30".tr(),
+                                        "31".tr(),
+                                        "32".tr(),
+                                        "33".tr(),
+                                        "34".tr(),
                                       ],
                                       onChanged: (val) async {
                                         safeSetState(
@@ -652,10 +594,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                                 !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'af01uzbm' /* YY */,
-                                      ),
+                                      hintText: "YY".tr(),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -685,9 +624,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'gl24yedg' /* CVV */,
-                                      ),
+                                      "CVV".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -709,10 +646,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                       textInputAction: TextInputAction.done,
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
-                                        hintText:
-                                            FFLocalizations.of(context).getText(
-                                          'ewi55w8g' /* 123 */,
-                                        ),
+                                        hintText: "123".tr(),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -830,9 +764,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                                       _model.checkboxListTileValue = newValue!);
                                 },
                                 title: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '20g7h3ph' /* Save this card for future paym... */,
-                                  ),
+                                  "Save this card for future payments".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -895,7 +827,8 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'يجب إدخال جميع بيانات البطاقة',
+                                "Please do not close the page until the payment is completed"
+                                    .tr(),
                                 style: TextStyle(
                                   fontFamily: 'cairo',
                                   color: FlutterFlowTheme.of(context)
@@ -909,9 +842,7 @@ class _AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                           );
                         }
                       },
-                      text: FFLocalizations.of(context).getText(
-                        'wnirrlqf' /* Save Card */,
-                      ),
+                      text: "Save Card".tr(),
                       icon: const Icon(
                         Icons.save_rounded,
                         size: 20.0,

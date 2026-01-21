@@ -34,7 +34,7 @@ Future<PaymentResponse> processBraintreePayment(
   String paymentNonce, [
   String? deviceData,
 ]) async {
-  final callName = isProdPayments
+  const callName = isProdPayments
       ? 'processBraintreePayment'
       : 'processBraintreeTestPayment';
   final response = await makeCloudCall(

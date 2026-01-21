@@ -15,9 +15,12 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
@@ -30,10 +33,26 @@ void main() async {
   final appState = FFAppState(); // Initialize FFAppState
   await appState.initializePersistedState();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
-    child: MyApp(),
-  ));
+  runApp(EasyLocalization(
+      supportedLocales: const [
+         Locale('ar'),
+        Locale('en'),
+        Locale('ru'),
+        Locale('ky'),
+        Locale('az'),
+        Locale('ka'),
+        Locale('tr'),
+        Locale('ur'),
+        Locale('fr'),
+        Locale('id'),
+
+      ],
+      path: 'assets/langs',
+      fallbackLocale: const Locale('ar'),
+      child: ChangeNotifierProvider(
+        create: (context) => appState,
+        child: const MyApp(),
+      )));
 }
 
 class MyApp extends StatefulWidget {
@@ -116,40 +135,37 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'تطبيق توري تاكسي - الرئيسية',
-      scrollBehavior: MyAppScrollBehavior(),
-      localizationsDelegates: const [
-        FFLocalizationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        FallbackMaterialLocalizationDelegate(),
-        FallbackCupertinoLocalizationDelegate(),
-      ],
-      locale: _locale,
-      supportedLocales: const [
-        Locale('en'),
-        Locale('ar'),
-        Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
-        Locale('tr'),
-        Locale('ur'),
-        Locale('ru'),
-        Locale('az'),
-        Locale('ka'),
-        Locale('ky'),
-      ],
-      theme: ThemeData(
-        brightness: Brightness.light,
-        useMaterial3: false,
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        title: 'تطبيق توري تاكسي - الرئيسية',
+        scrollBehavior: MyAppScrollBehavior(),
+      locale: context.locale,
+        supportedLocales: context.supportedLocales,
+        localizationsDelegates: [
+      ...context.localizationDelegates,
+      const FFLocalizationsDelegate(),
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
+      const FallbackMaterialLocalizationDelegate(),
+      const FallbackCupertinoLocalizationDelegate(),
+        ],
+       
+        theme: ThemeData(
+          brightness: Brightness.light,
+          useMaterial3: false,
+        ),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          useMaterial3: false,
+        ),
+        themeMode: _themeMode,
+        routerConfig: _router,
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        useMaterial3: false,
-      ),
-      themeMode: _themeMode,
-      routerConfig: _router,
     );
   }
 }
@@ -213,9 +229,8 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.rocket_launch,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'u3lixadg' /* Initiate */,
-            ),
+            label: 
+           "Initiate".tr(),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -223,9 +238,8 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.task_alt_sharp,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'v6qwcz6i' /* Reservations */,
-            ),
+            label: 
+           "Reservations".tr(),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -233,9 +247,8 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.manage_accounts,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'zm5negaj' /* My account */,
-            ),
+            label:
+            "My account".tr(),
             tooltip: '',
           )
         ],

@@ -1257,7 +1257,7 @@ class _RegComWidgetState extends State<RegComWidget> {
                         safeSetState(() {});
                         await launchUrl(Uri(
                             scheme: 'mailto',
-                            path: 't0570361443@gmail.com',
+                            path: 'watanara2030@gmail.com',
                             query: {
                               'subject': 'تسجيل شركة توري تاكسي',
                               'body':

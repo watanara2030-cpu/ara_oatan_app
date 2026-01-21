@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -302,18 +304,16 @@ class _ListViWidgetState extends State<ListViWidget>
               elevation: 16.0,
               child: WebViewAware(
                 child: Column(
-                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: MediaQuery.sizeOf(context).height * 0.2,
+                      height: 100.h,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primary,
                         borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(22.0),
+                          bottomLeft: Radius.circular(20.0),
                           bottomRight: Radius.circular(22.0),
-                          topLeft: Radius.circular(0.0),
-                          topRight: Radius.circular(0.0),
+                         
                         ),
                         shape: BoxShape.rectangle,
                       ),

@@ -1,18 +1,13 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'logen_model.dart';
 export 'logen_model.dart';
 
@@ -171,9 +166,8 @@ class _LogenWidgetState extends State<LogenWidget>
                                         const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 22.0, 0.0, 22.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'a83ndb09' /* Login */,
-                                      ),
+                                                                                                'Login'.tr(),
+
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .displaySmall
@@ -205,10 +199,7 @@ class _LogenWidgetState extends State<LogenWidget>
                                         ],
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          labelText: FFLocalizations.of(context)
-                                              .getText(
-                                            'aqy5340c' /* Email */,
-                                          ),
+                                          labelText: 'Email Address'.tr(),
                                           labelStyle: FlutterFlowTheme.of(
                                                   context)
                                               .labelLarge
@@ -303,10 +294,8 @@ class _LogenWidgetState extends State<LogenWidget>
                                         ],
                                         obscureText: !_model.passwordVisibility,
                                         decoration: InputDecoration(
-                                          labelText: FFLocalizations.of(context)
-                                              .getText(
-                                            '2wv851ec' /* Password */,
-                                          ),
+                                          labelText:
+                                           'Password'.tr(),
                                           labelStyle: FlutterFlowTheme.of(
                                                   context)
                                               .labelLarge
@@ -424,9 +413,8 @@ class _LogenWidgetState extends State<LogenWidget>
                                             DemoDWidget.routeName,
                                             context.mounted);
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        '3edkkceu' /* Create Account */,
-                                      ),
+                                      text: 
+                                     'Create Account '.tr(),
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 44.0,
@@ -469,36 +457,23 @@ class _LogenWidgetState extends State<LogenWidget>
                                           MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
+
                                           TextSpan(
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              '4f49i5oh' /* Don't have an account?   */,
-                                            ),
-                                            style: const TextStyle(),
-                                          ),
-                                          TextSpan(
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              '6xzfg5qu' /* Sign Up here */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                  useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumIsCustom,
-                                                ),
-                                          )
+  text: "don't_have_account".tr(),
+  style: FlutterFlowTheme.of(context).bodyMedium.override(
+        fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+        letterSpacing: 0.0,
+        useGoogleFonts: !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+      ),
+),
+                                        TextSpan(
+  text: "Sign Up here".tr(),
+  style: FlutterFlowTheme.of(context).bodyMedium.override(
+        fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+        letterSpacing: 0.0,
+        useGoogleFonts: !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+      ),
+),
                                         ],
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium

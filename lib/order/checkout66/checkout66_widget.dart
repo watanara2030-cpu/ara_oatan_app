@@ -3,7 +3,6 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/push_notifications/push_notifications_util.dart';
 import '/backend/schema/enums/enums.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/mmaapp_widget.dart';
 import '/components/payment_methods2_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -12,18 +11,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'checkout66_model.dart';
@@ -2307,67 +2300,74 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               mainAxisAlignment:
                                   MainAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional
-                                      .fromSTEB(4.0, 0.0, 4.0, 0.0),
-                                  child: Icon(
-                                    Icons.local_offer,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primary,
-                                    size: 10.0,
+                                Expanded(
+                                  flex:1,
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional
+                                        .fromSTEB(4.0, 0.0, 4.0, 0.0),
+                                    child: Icon(
+                                      Icons.local_offer,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primary,
+                                      size: 10.0,
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  FFLocalizations.of(context)
-                                      .getVariableText(
-                                    enText: 'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    arText:
-                                        'تحصل على خصم ${FFAppState().NsbhKsm.toString()} % لكل ساعة إضافية تضيفها، بحد أقصى ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    zh_HansText:
-                                        'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    trText: 'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    urText: 'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    ruText: 'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    azText: 'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                    kaText: 'You get a  ${formatNumber(
-                                      FFAppState().NsbhKsm,
-                                      formatType: FormatType.percent,
-                                    )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                Expanded(
+                                                                  flex:7,
+
+                                  child: Text(
+                                    FFLocalizations.of(context)
+                                        .getVariableText(
+                                      enText: 'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      arText:
+                                          'تحصل على خصم ${FFAppState().NsbhKsm.toString()} % لكل ساعة إضافية تضيفها، بحد أقصى ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      zh_HansText:
+                                          'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      trText: 'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      urText: 'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      ruText: 'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      azText: 'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                      kaText: 'You get a  ${formatNumber(
+                                        FFAppState().NsbhKsm,
+                                        formatType: FormatType.percent,
+                                      )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
+                                          color:
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                          fontSize: 10.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMediumIsCustom,
+                                        ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily,
-                                        color:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                        fontSize: 10.0,
-                                        letterSpacing: 0.0,
-                                        useGoogleFonts:
-                                            !FlutterFlowTheme.of(
-                                                    context)
-                                                .bodyMediumIsCustom,
-                                      ),
                                 ),
                               ],
                             ),
@@ -2473,75 +2473,57 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 ),
               if (FFAppState().typeHgz == 2)
                 Row(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          0.0, 22.0, 0.0, 0.0),
+                    Expanded(
                       child: Container(
-                        width: 100.0,
                         height: 77.84,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).primary,
                           borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(0.0),
-                            bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(44.0),
                             topRight: Radius.circular(44.0),
                           ),
                         ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                        child: Row(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                      
                           children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment:
-                                  MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional
-                                      .fromSTEB(0.0, 33.0, 0.0, 0.0),
-                                  child: Icon(
-                                    Icons.drive_eta_sharp,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    size: 22.0,
-                                  ),
-                                ),
-                                if (FFAppState().addcart <= 0)
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional
-                                        .fromSTEB(0.0, 11.0, 18.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context)
-                                          .getText(
-                                        'un9qx6mz' /* The driver has been assigned,
-                        ... */
-                                        ,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(
-                                              context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
-                                                .secondaryBackground,
-                                            fontSize: 12.0,
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMediumIsCustom,
-                                          ),
-                                    ),
-                                  ),
-                              ],
+                                          const SizedBox(width: 12),
+                      
+                            Padding(
+                              padding: const EdgeInsetsDirectional
+                                  .fromSTEB(0.0, 33.0, 0.0, 0.0),
+                              child: Icon(
+                                Icons.drive_eta_sharp,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                size: 22.0,
+                              ),
                             ),
+                                          const SizedBox(width: 8),
+                      
+                            if (FFAppState().addcart <= 0)
+                             Expanded(
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 11.0, 18.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText('un9qx6mz'),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                              fontSize: 12.0,
+                              letterSpacing: 0.0,
+                              useGoogleFonts:
+                                  !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                            ),
+                          ),
+                        ),
+                      )
+                      
                           ],
                         ),
                       ),
@@ -3324,12 +3306,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         true))
                                   AuthUserStreamWidget(
                                     builder: (context) => Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+
                                       children: [
                                         Container(
-                                          width: 388.6,
+                                    
                                           height: 64.1,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(
@@ -3579,7 +3560,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           ),
                                                         });
                                                       }
-                          
+                                                              
                                                       _model.mnadebList =
                                                           await queryUserRecordOnce(
                                                         queryBuilder:
@@ -3677,11 +3658,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                               .totalAllnow3 =
                                                           0.0;
                                                       safeSetState(() {});
-                          
+                                                              
                                                       context.pushNamed(
                                                           OksendWidget
                                                               .routeName);
-                          
+                                                              
                                                       FFAppState()
                                                               .typecarRev =
                                                           null;
@@ -3746,7 +3727,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                             msg:
                                                                 'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
                                                           );
-                          
+                                                              
                                                           triggerPushNotification(
                                                             notificationTitle:
                                                                 'طلب جديد',
@@ -3801,7 +3782,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                   }),
                                                   Future(() async {}),
                                                 ]);
-                          
+                                                              
                                                 safeSetState(() {});
                                               },
                                               text: FFLocalizations.of(
@@ -3874,12 +3855,10 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         false))
                                   AuthUserStreamWidget(
                                     builder: (context) => Row(
-                                      mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
                                         Container(
-                                          width: 388.6,
                                           height: 64.1,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(

@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import '/backend/gemini/gemini.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -177,9 +179,7 @@ class _AbutMdenhWidgetState extends State<AbutMdenhWidget> {
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 0.0, 11.0, 12.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'fvl1fg51' /* general tips */,
-                        ),
+                       "general tips when visiting this city today:".tr(),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,

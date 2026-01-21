@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -173,9 +175,7 @@ class _AldolWidgetState extends State<AldolWidget>
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            FFLocalizations.of(context).getText(
-              'p6fpp7ky' /* Welcome to Ara Watan */,
-            ),
+           "Welcome to the Arra Watan app".tr(),
             style: FlutterFlowTheme.of(context).labelLarge.override(
                   fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                   color: FlutterFlowTheme.of(context).info,
@@ -286,9 +286,7 @@ class _AldolWidgetState extends State<AldolWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '2xe4zfms' /* The first international Saudi ... */,
-                                      ),
+                                     "first global saudi tourist taxi app".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelLarge
                                           .override(
@@ -392,10 +390,8 @@ class _AldolWidgetState extends State<AldolWidget>
                                               }.withoutNulls,
                                             );
                                           },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'xiyj484n' /* Browse Saudi Arabia */,
-                                          ),
+                                          text: 
+                                        "Browse cities/counties in".tr(),
                                           options: FFButtonOptions(
                                             width: double.infinity,
                                             height: 44.0,
@@ -458,10 +454,8 @@ class _AldolWidgetState extends State<AldolWidget>
                 padding:
                     const EdgeInsetsDirectional.fromSTEB(24.0, 18.0, 24.0, 0.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'bzjdrejy' /* Other countries */,
-                  ),
-                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                 "Other".tr()
+                ,  style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily:
                             FlutterFlowTheme.of(context).labelMediumFamily,
                         fontSize: 18.0,
@@ -666,9 +660,8 @@ class _AldolWidgetState extends State<AldolWidget>
                                         }.withoutNulls,
                                       );
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'hym6nejh' /* browse */,
-                                    ),
+                                    text: 
+                                    "Browse cities/counties in".tr(),
                                     options: FFButtonOptions(
                                       width: 70.0,
                                       height: 36.0,

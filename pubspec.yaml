@@ -21,12 +21,6 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  flutter_web_plugins:
-    sdk: flutter
   auto_size_text: 3.0.0
   cached_network_image: 3.4.1
   cached_network_image_platform_interface: 4.1.1
@@ -39,8 +33,10 @@ dependencies:
   cloud_functions_web: 4.11.2
   collection: 1.19.1
   csslib: 1.0.2
+  cupertino_icons: ^1.0.0
   dropdown_button2: 2.3.9
   easy_debounce: 2.0.1
+  easy_localization: ^3.0.8
   emoji_flag_converter: 1.1.0
   equatable: 2.0.7
   file_picker: 10.1.9
@@ -60,24 +56,31 @@ dependencies:
   firebase_storage_platform_interface: 5.2.7
   firebase_storage_web: 3.10.14
   firebase_vertexai: 1.0.1
+  flutter:
+    sdk: flutter
   flutter_animate: 4.5.0
-  flutter_braintree: 
+  flutter_braintree:
     git:
       url: https://github.com/adlyyy4/flutter-braintree.git
       ref: e7a543415b100be98b4ac19c964e6d29b69e5464
   flutter_cache_manager: 3.4.1
-  flutter_credit_card: 
+  flutter_credit_card:
     git:
       url: https://github.com/FlutterFlow/flutter_credit_card
       ref: v4.0.2
-  flutter_google_places: 
+  flutter_google_places:
     git:
       url: https://github.com/ShehanYjoz/flutter_google_places.git
       ref: 52ddef33b785fac671a04dd387c5ba7d921709bf
+  flutter_localizations:
+    sdk: flutter
   flutter_native_splash: 2.4.1
   flutter_plugin_android_lifecycle: 2.0.28
   flutter_rating_bar: 4.0.1
+  flutter_screenutil: ^5.9.3
   flutter_spinkit: 5.2.0
+  flutter_web_plugins:
+    sdk: flutter
   font_awesome_flutter: 10.7.0
   from_css_color: 2.0.0
   geolocator: 10.0.1
@@ -119,6 +122,7 @@ dependencies:
   path_provider_linux: 2.2.1
   path_provider_platform_interface: 2.1.2
   path_provider_windows: 2.3.0
+  permission_handler: ^12.0.1
   plugin_platform_interface: 2.1.8
   pointer_interceptor: 0.10.1+2
   pointer_interceptor_ios: 0.10.1
@@ -164,15 +168,11 @@ dependencies:
   webview_flutter_android: 4.7.0
   webview_flutter_platform_interface: 2.13.1
   webview_flutter_wkwebview: 3.22.0
-  webviewx_plus: 
+  webviewx_plus:
     git:
       url: https://github.com/FlutterFlow/webviewx_plus.git
       ref: 4f84ece5e06d52643c5d844f41880baf8440c584
   xml: 6.5.0
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
 
 dependency_overrides:
   google_api_headers: 4.5.3
@@ -184,11 +184,10 @@ dependency_overrides:
 dev_dependencies:
   flutter_launcher_icons: 0.13.1
   flutter_lints: 4.0.0
-  image: 4.2.0
-  lints: 4.0.0
   flutter_test:
     sdk: flutter
-
+  image: 4.2.0
+  lints: 4.0.0
 
 flutter_launcher_icons:
   android: 'launcher_icon'
@@ -200,10 +199,8 @@ flutter_launcher_icons:
   adaptive_icon_background: '#ffffff'
   adaptive_icon_foreground: 'assets/images/app_launcher_icon.png'
 
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter.
 flutter:
 
@@ -211,10 +208,12 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/fonts/
+    - assets/langs/
     - assets/images/
     - assets/videos/
     - assets/audios/
@@ -240,14 +239,10 @@ flutter:
           weight: 800
         - asset: assets/fonts/Cairo-Black.ttf
           weight: 900
-
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
@@ -267,4 +262,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-

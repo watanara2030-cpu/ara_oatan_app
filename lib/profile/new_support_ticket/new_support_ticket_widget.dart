@@ -3,12 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'new_support_ticket_model.dart';
 export 'new_support_ticket_model.dart';
 
@@ -186,10 +182,10 @@ class _NewSupportTicketWidgetState extends State<NewSupportTicketWidget> {
                                     ),
                                     Flexible(
                                       child: FFButtonWidget(
-                                        onPressed: () async {
-                                          await launchURL(
-                                              'https://wa.me/message/LHEPTGBXGS7UJ1');
-                                        },
+                                       onPressed: () async {
+  await launchURL('https://wa.me/966533356126');
+},
+
                                         text:
                                             FFLocalizations.of(context).getText(
                                           '6hgljn1l' /* WhatsApp */,

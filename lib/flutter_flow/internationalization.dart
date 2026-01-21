@@ -14,7 +14,7 @@ class FFLocalizations {
       Localizations.of<FFLocalizations>(context, FFLocalizations)!;
 
   static List<String> languages() =>
-      ['en', 'ar', 'zh_Hans', 'tr', 'ur', 'ru', 'az', 'ka','ky'];
+      ['en', 'ar', 'zh_Hans', 'tr', 'ur', 'ru', 'az', 'ka','ky','fr', 'id'];
 
   static late SharedPreferences _prefs;
   static Future initialize() async =>
@@ -96,6 +96,7 @@ class FFLocalizations {
     'uk',
     'vi',
     'ky',
+    'id',
   };
 }
 

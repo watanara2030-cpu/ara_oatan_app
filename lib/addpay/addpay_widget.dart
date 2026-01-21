@@ -1,3 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/flutter_flow/flutter_flow_credit_card_form.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -67,13 +70,11 @@ class _AddpayWidgetState extends State<AddpayWidget> {
             },
           ),
           title: Text(
-            FFLocalizations.of(context).getText(
-              'vb3q9fzc' /* الدفع */,
-            ),
+            "Payment method.".tr(),
             style: FlutterFlowTheme.of(context).labelMedium.override(
                   fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  fontSize: 22.0,
+                  fontSize: 22.0.sp,
                   letterSpacing: 0.0,
                   useGoogleFonts:
                       !FlutterFlowTheme.of(context).labelMediumIsCustom,
@@ -128,9 +129,7 @@ class _AddpayWidgetState extends State<AddpayWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    'wewsked9' /* مدى / فيزا / ماستر كارد */,
-                                  ),
+                                 "Credit Card".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .labelSmall
                                       .override(
@@ -148,8 +147,8 @@ class _AddpayWidgetState extends State<AddpayWidget> {
                             ),
                             Image.network(
                               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOhwm0YanIrAsPkXE4BKlorFDWDAsKi2Ev6w&s',
-                              width: 55.0,
-                              height: 33.0,
+                              width: 55.0.w,
+                              height: 33.0.h,
                               fit: BoxFit.cover,
                             ),
                           ],
@@ -257,14 +256,14 @@ class _AddpayWidgetState extends State<AddpayWidget> {
                     builder: (alertDialogContext) {
                       return WebViewAware(
                         child: AlertDialog(
-                          title: const Text('خطا'),
-                          content: const Text(
-                              'بيانات الدفع غير صحيحة يرجى مراجعة البنك'),
+                          title: const Text("wrong payment method").tr(),
+                          content:  Text(
+                            "Payment details are incorrect. Please check with your bank".tr()),
                           actions: [
                             TextButton(
                               onPressed: () =>
                                   Navigator.pop(alertDialogContext),
-                              child: const Text('موافق'),
+                              child: const Text('Agreed').tr(),
                             ),
                           ],
                         ),
@@ -272,9 +271,8 @@ class _AddpayWidgetState extends State<AddpayWidget> {
                     },
                   );
                 },
-                text: FFLocalizations.of(context).getText(
-                  'jtcmll9f' /* دفع الآن */,
-                ),
+                text:
+                "Pay Now".tr(),
                 icon: const Icon(
                   Icons.add_card,
                   size: 15.0,

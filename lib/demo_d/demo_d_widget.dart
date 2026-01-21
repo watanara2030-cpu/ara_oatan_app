@@ -1,18 +1,16 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/push_notifications/push_notifications_util.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -884,10 +882,11 @@ class _DemoDWidgetState extends State<DemoDWidget>
                                                           onPressed: () async {
                                                             currentUserLocationValue =
                                                                 await getCurrentUserLocation(
-                                                                    defaultLocation:
-                                                                        const LatLng(
-                                                                            0.0,
-                                                                            0.0));
+                                                              defaultLocation:
+                                                                  const LatLng(
+                                                                      24.7136,
+                                                                      46.6753), // الرياض مثلاً
+                                                            );
                                                             FFAppState()
                                                                     .IsLnstantAddress =
                                                                 true;
@@ -1837,17 +1836,17 @@ class _DemoDWidgetState extends State<DemoDWidget>
                                                   ],
                                                 ),
                                             ].divide(
-                                                const SizedBox(height: 16.0)),
+                                                const SizedBox(height: 32.0)),
                                           ),
                                         if ((widget.isSpeed != false) &&
                                             (_model.viewINFO == true))
                                           Container(
                                             width: double.infinity,
-                                            height: 168.4,
+                                            height: 350.4.h,
                                             decoration: BoxDecoration(
                                               color: Colors.white,
                                               image: DecorationImage(
-                                                fit: BoxFit.cover,
+                                                fit: BoxFit.fill,
                                                 image: Image.network(
                                                   '',
                                                 ).image,
@@ -1888,19 +1887,26 @@ class _DemoDWidgetState extends State<DemoDWidget>
                                                   FlutterFlowGoogleMap(
                                                     controller: _model
                                                         .googleMapsController,
-                                                    onCameraIdle: (latLng) =>
-                                                        _model.googleMapsCenter =
-                                                            latLng,
-                                                    initialLocation: _model
-                                                            .googleMapsCenter ??=
-                                                        _model.loceshn!,
+                                                    onCameraIdle: (latLng) async {
+  _model.googleMapsCenter = latLng;
+
+  // خزّن الموقع الجديد
+  _model.loceshn = LatLng(latLng.latitude, latLng.longitude);
+
+  safeSetState(() {});
+},
+
+                                                   initialLocation: _model.googleMapsCenter ??
+    _model.loceshn ??
+    const LatLng(24.7136, 46.6753), // الرياض احتياط
+
                                                     markerColor:
                                                         GoogleMarkerColor
                                                             .violet,
-                                                    mapType: MapType.hybrid,
+                                                    mapType: MapType.normal,
                                                     style:
                                                         GoogleMapStyle.standard,
-                                                    initialZoom: 20.0,
+                                                    initialZoom: 16.0,
                                                     allowInteraction: true,
                                                     allowZoom: true,
                                                     showZoomControls: false,
@@ -1924,7 +1930,7 @@ class _DemoDWidgetState extends State<DemoDWidget>
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .error,
-                                                        size: 22.0,
+                                                        size: 38.0,
                                                       ),
                                                     ),
                                                   ),

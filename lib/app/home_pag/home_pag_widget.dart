@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -170,28 +172,20 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                     indicatorWeight: 3.0,
                                     tabs: [
                                       Tab(
-                                        text:
-                                            FFLocalizations.of(context).getText(
-                                          'ynbsay6v' /* Login */,
-                                        ),
+                                        text: 'Login'.tr(),
                                         icon: const Icon(
                                           Icons.lock_person_outlined,
                                         ),
                                       ),
                                       Tab(
-                                        text:
-                                            FFLocalizations.of(context).getText(
-                                          '73nzjepr' /* Register */,
-                                        ),
+                                        text: 'Email Address'.tr(),
                                         icon: const Icon(
                                           Icons.lock_reset_outlined,
                                         ),
                                       ),
                                       Tab(
                                         text:
-                                            FFLocalizations.of(context).getText(
-                                          'l8l3j3qv' /* Success Partner Registration */,
-                                        ),
+                                          "Success Partner Registration".tr(),
                                         icon: const Icon(
                                           Icons.handshake_sharp,
                                         ),
@@ -207,6 +201,8 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                     },
                                   ),
                                 ),
+
+
                                 Expanded(
                                   child: TabBarView(
                                     controller: _model.tabBarController,
@@ -241,11 +237,7 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                       decoration:
                                                           InputDecoration(
                                                         labelText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '8gngx8fm' /* Email Address */,
-                                                        ),
+                                                           "Email Address".tr(),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -259,11 +251,7 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                                       0.0,
                                                                 ),
                                                         hintText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'oz5u3njo' /*  */,
-                                                        ),
+                                                           "Enter your email...".tr(),
                                                         hintStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -375,11 +363,7 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                       decoration:
                                                           InputDecoration(
                                                         labelText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'h9szauvt' /* Password */,
-                                                        ),
+                                                       "Password".tr(),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -525,11 +509,11 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                             0.0, 0.0),
                                                     child: Column(
                                                       mainAxisSize:
-                                                          MainAxisSize.max,
+                                                          MainAxisSize.min,
                                                       children: [
                                                         Row(
                                                           mainAxisSize:
-                                                              MainAxisSize.max,
+                                                              MainAxisSize.min,
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
                                                                   .center,
@@ -670,11 +654,9 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                                   context
                                                                       .mounted);
                                                             },
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'xzqrxbqw' /* Login */,
-                                                            ),
+                                                            text: 
+                                                           'Login'.tr(),
+
                                                             options:
                                                                 FFButtonOptions(
                                                               width: 230.0,
@@ -810,11 +792,7 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                                             DemoDWidget.routeName,
                                                                             context.mounted);
                                                                       },
-                                                                      text: FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'ihtw1ev8' /* Login with Google */,
-                                                                      ),
+                                                                      text: "Login with Google".tr(),
                                                                       icon:
                                                                           const FaIcon(
                                                                         FontAwesomeIcons
@@ -1729,10 +1707,8 @@ class _HomePagWidgetState extends State<HomePagWidget>
                                                                                   (newValue) async {
                                                                                 safeSetState(() => _model.switchValue = newValue);
                                                                               },
-                                                                              activeThumbColor:
-                                                                                  FlutterFlowTheme.of(context).primary,
                                                                               activeTrackColor:
-                                                                                  const Color(0xFFCBC9C9),
+                                                                                  FlutterFlowTheme.of(context).primary,
                                                                               inactiveTrackColor:
                                                                                   FlutterFlowTheme.of(context).alternate,
                                                                               inactiveThumbColor:
