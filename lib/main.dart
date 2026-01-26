@@ -17,6 +17,7 @@ import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_app_check/firebase_app_check.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +28,9 @@ void main() async {
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
-
+await FirebaseAppCheck.instance.activate(
+    androidProvider: AndroidProvider.debug, // 👈 IMPORTANT
+  );
   await FFLocalizations.initialize();
 
   final appState = FFAppState(); // Initialize FFAppState

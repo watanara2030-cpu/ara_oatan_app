@@ -31,7 +31,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.mycompany.araoatanapp2"
+    namespace "com.mycompany.araoatanapp"
     compileSdkVersion 35
     
 
@@ -56,7 +56,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.mycompany.araoatanapp2"
+        applicationId "com.mycompany.araoatanapp"
         minSdkVersion 23
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
@@ -64,19 +64,19 @@ android {
     }
 
    signingConfigs {
-       release {
-           keyAlias keystoreProperties['keyAlias']
-           keyPassword keystoreProperties['keyPassword']
-           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-           storePassword keystoreProperties['storePassword']
-       }
+      release {
+        storeFile file("tutorial-multi-language-app-aavlbx-keystore.jks")
+        storePassword "1d60e90f34257fc0e4ae21def522372f"
+        keyAlias "tutorial-multi-language-app-aavlbx"
+        keyPassword "1d60e90f34257fc0e4ae21def522372f"
+    }
    }
 
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

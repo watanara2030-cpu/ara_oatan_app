@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/components/listamak_widget.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
@@ -91,14 +93,15 @@ class _MapdemoWidgetState extends State<MapdemoWidget> {
         ),
         body: SafeArea(
           top: true,
+          bottom: true,
           child: Column(
-            mainAxisSize: MainAxisSize.max,
+
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Stack(
                 children: [
                   Container(
-                    height: MediaQuery.sizeOf(context).height * 0.848,
+                    height:500.h,
                     decoration: const BoxDecoration(),
                     child: Stack(
                       children: [
@@ -194,7 +197,7 @@ class _MapdemoWidgetState extends State<MapdemoWidget> {
                                   size: 15.0,
                                 ),
                                 options: FFButtonOptions(
-                                  height: 40.0,
+                                  height: 25.0.h,
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   iconPadding:
@@ -209,7 +212,7 @@ class _MapdemoWidgetState extends State<MapdemoWidget> {
                                             .labelSmallFamily,
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        fontSize: 16.0,
+                                        fontSize: 16.0.sp,
                                         letterSpacing: 0.0,
                                         useGoogleFonts:
                                             !FlutterFlowTheme.of(context)

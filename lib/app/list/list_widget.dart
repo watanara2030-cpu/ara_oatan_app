@@ -1370,154 +1370,161 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                       );
                                                                     }
                                                                   },
-                                                                  child: Column(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .start,
-                                                                    children: [
-                                                                      Hero(
-                                                                        tag: listViewVillagesRecord
-                                                                            .img,
-                                                                        transitionOnUserGestures:
-                                                                            true,
-                                                                        child:
-                                                                            ClipRRect(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
+                                                                  child: SingleChildScrollView(
+                                                                    child: Column(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .start,
+                                                                      children: [
+                                                                        Hero(
+                                                                          tag: listViewVillagesRecord
+                                                                              .img,
+                                                                          transitionOnUserGestures:
+                                                                              true,
                                                                           child:
-                                                                              Image.network(
-                                                                            listViewVillagesRecord.img,
-                                                                            width:
-                                                                                double.infinity,
-                                                                            height:
-                                                                                220.0,
-                                                                            fit:
-                                                                                BoxFit.cover,
+                                                                              ClipRRect(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(8.0),
+                                                                            child:
+                                                                                Image.network(
+                                                                              listViewVillagesRecord.img,
+                                                                             width: 100,
+  height: 100,
+  fit: BoxFit.cover,
+  errorBuilder: (context, error, stackTrace) {
+    return Image.asset(
+      'assets/images/avatar.jpg',
+      width: 100,
+      height: 100,
+      fit: BoxFit.cover,
+    );
+  },
+                                                                            ),
                                                                           ),
                                                                         ),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: const EdgeInsetsDirectional
-                                                                            .fromSTEB(
-                                                                            0.0,
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          listViewVillagesRecord
-                                                                              .naim,
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .labelMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
-                                                                                fontSize: 16.0,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: !FlutterFlowTheme.of(context).labelMediumIsCustom,
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: const EdgeInsetsDirectional
-                                                                            .fromSTEB(
-                                                                            0.0,
-                                                                            4.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child: FutureBuilder<
-                                                                            int>(
-                                                                          future:
-                                                                              queryMkanRecordCount(
-                                                                            queryBuilder: (mkanRecord) => mkanRecord
-                                                                                .where(
-                                                                                  'id_vill',
-                                                                                  isEqualTo: listViewVillagesRecord.reference,
-                                                                                )
-                                                                                .where(
-                                                                                  'acctev',
-                                                                                  isEqualTo: true,
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional
+                                                                              .fromSTEB(
+                                                                              0.0,
+                                                                              16.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            listViewVillagesRecord
+                                                                                .naim,
+                                                                            style: FlutterFlowTheme.of(context)
+                                                                                .labelMedium
+                                                                                .override(
+                                                                                  fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                  fontSize: 16.0,
+                                                                                  letterSpacing: 0.0,
+                                                                                  useGoogleFonts: !FlutterFlowTheme.of(context).labelMediumIsCustom,
                                                                                 ),
                                                                           ),
-                                                                          builder:
-                                                                              (context, snapshot) {
-                                                                            // Customize what your widget looks like when it's loading.
-                                                                            if (!snapshot.hasData) {
-                                                                              return Center(
-                                                                                child: SizedBox(
-                                                                                  width: 50.0,
-                                                                                  height: 50.0,
-                                                                                  child: SpinKitChasingDots(
-                                                                                    color: FlutterFlowTheme.of(context).primary,
-                                                                                    size: 50.0,
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional
+                                                                              .fromSTEB(
+                                                                              0.0,
+                                                                              4.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child: FutureBuilder<
+                                                                              int>(
+                                                                            future:
+                                                                                queryMkanRecordCount(
+                                                                              queryBuilder: (mkanRecord) => mkanRecord
+                                                                                  .where(
+                                                                                    'id_vill',
+                                                                                    isEqualTo: listViewVillagesRecord.reference,
+                                                                                  )
+                                                                                  .where(
+                                                                                    'acctev',
+                                                                                    isEqualTo: true,
                                                                                   ),
-                                                                                ),
+                                                                            ),
+                                                                            builder:
+                                                                                (context, snapshot) {
+                                                                              // Customize what your widget looks like when it's loading.
+                                                                              if (!snapshot.hasData) {
+                                                                                return Center(
+                                                                                  child: SizedBox(
+                                                                                    width: 50.0,
+                                                                                    height: 50.0,
+                                                                                    child: SpinKitChasingDots(
+                                                                                      color: FlutterFlowTheme.of(context).primary,
+                                                                                      size: 50.0,
+                                                                                    ),
+                                                                                  ),
+                                                                                );
+                                                                              }
+                                                                              int rowCount =
+                                                                                  snapshot.data!;
+                                                                    
+                                                                              return Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  Icon(
+                                                                                    Icons.location_on,
+                                                                                    color: FlutterFlowTheme.of(context).primary,
+                                                                                    size: 12.0,
+                                                                                  ),
+                                                                                  Text(
+                                                                                    '${rowCount.toString()} مكان سياحي ',
+                                                                                    style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                          fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                          fontSize: 11.0,
+                                                                                          letterSpacing: 0.0,
+                                                                                          useGoogleFonts: !FlutterFlowTheme.of(context).labelMediumIsCustom,
+                                                                                        ),
+                                                                                  ),
+                                                                                ],
                                                                               );
-                                                                            }
-                                                                            int rowCount =
-                                                                                snapshot.data!;
-
-                                                                            return Row(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              children: [
-                                                                                Icon(
-                                                                                  Icons.location_on,
-                                                                                  color: FlutterFlowTheme.of(context).primary,
-                                                                                  size: 12.0,
-                                                                                ),
-                                                                                Text(
-                                                                                  '${rowCount.toString()} مكان سياحي ',
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional
+                                                                              .fromSTEB(
+                                                                              0.0,
+                                                                              0.0,
+                                                                              0.0,
+                                                                              5.0),
+                                                                          child:
+                                                                              Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceBetween,
+                                                                            children: [
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 0.0, 0.0),
+                                                                                child: Text(
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'wqsntrwu' /* View Now */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
-                                                                                        fontSize: 11.0,
+                                                                                        color: FlutterFlowTheme.of(context).primary,
                                                                                         letterSpacing: 0.0,
                                                                                         useGoogleFonts: !FlutterFlowTheme.of(context).labelMediumIsCustom,
                                                                                       ),
                                                                                 ),
-                                                                              ],
-                                                                            );
-                                                                          },
-                                                                        ),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: const EdgeInsetsDirectional
-                                                                            .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            5.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
-                                                                          children: [
-                                                                            Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 0.0, 0.0),
-                                                                              child: Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  'wqsntrwu' /* View Now */,
-                                                                                ),
-                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                      fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                      letterSpacing: 0.0,
-                                                                                      useGoogleFonts: !FlutterFlowTheme.of(context).labelMediumIsCustom,
-                                                                                    ),
                                                                               ),
-                                                                            ),
-                                                                            Icon(
-                                                                              Icons.navigate_next,
-                                                                              color: FlutterFlowTheme.of(context).primary,
-                                                                              size: 24.0,
-                                                                            ),
-                                                                          ],
+                                                                              Icon(
+                                                                                Icons.navigate_next,
+                                                                                color: FlutterFlowTheme.of(context).primary,
+                                                                                size: 24.0,
+                                                                              ),
+                                                                            ],
+                                                                          ),
                                                                         ),
-                                                                      ),
-                                                                    ],
+                                                                      ],
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),

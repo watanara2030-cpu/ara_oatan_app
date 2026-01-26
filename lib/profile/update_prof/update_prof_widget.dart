@@ -1,3 +1,5 @@
+import 'package:ara_oatan_app/order/checkout66/checkout66_widget.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
@@ -126,327 +128,410 @@ class _UpdateProfWidgetState extends State<UpdateProfWidget>
           child: Padding(
             padding:
                 const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      16.0, 0.0, 16.0, 0.0),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Card(
-                                clipBehavior: Clip.antiAliasWithSaveLayer,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50.0),
-                                ),
-                                child: Stack(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(2.0),
-                                      child: AuthUserStreamWidget(
-                                        builder: (context) => InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            final selectedMedia =
-                                                await selectMediaWithSourceBottomSheet(
-                                              context: context,
-                                              allowPhoto: true,
-                                            );
-                                            if (selectedMedia != null &&
-                                                selectedMedia.every((m) =>
-                                                    validateFileFormat(
-                                                        m.storagePath,
-                                                        context))) {
-                                              safeSetState(() => _model
-                                                      .isDataUploading_uploadDataMcff1 =
-                                                  true);
-                                              var selectedUploadedFiles =
-                                                  <FFUploadedFile>[];
-
-                                              var downloadUrls = <String>[];
-                                              try {
-                                                selectedUploadedFiles =
-                                                    selectedMedia
-                                                        .map((m) =>
-                                                            FFUploadedFile(
-                                                              name: m
-                                                                  .storagePath
-                                                                  .split('/')
-                                                                  .last,
-                                                              bytes: m.bytes,
-                                                              height: m
-                                                                  .dimensions
-                                                                  ?.height,
-                                                              width: m
-                                                                  .dimensions
-                                                                  ?.width,
-                                                              blurHash:
-                                                                  m.blurHash,
-                                                              originalFilename:
-                                                                  m.originalFilename,
-                                                            ))
-                                                        .toList();
-
-                                                downloadUrls =
-                                                    (await Future.wait(
-                                                  selectedMedia.map(
-                                                    (m) async =>
-                                                        await uploadData(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        16.0, 0.0, 16.0, 0.0),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                            //  mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: Card(
+                                    clipBehavior: Clip.none,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(50.0),
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.all(2.0),
+                                          child: AuthUserStreamWidget(
+                                            builder: (context) => InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor: Colors.transparent,
+                                              onTap: () async {
+                                                final selectedMedia =
+                                                    await selectMediaWithSourceBottomSheet(
+                                                  context: context,
+                                                  allowPhoto: true,
+                                                );
+                                                if (selectedMedia != null &&
+                                                    selectedMedia.every((m) =>
+                                                        validateFileFormat(
                                                             m.storagePath,
-                                                            m.bytes),
-                                                  ),
-                                                ))
-                                                        .where((u) => u != null)
-                                                        .map((u) => u!)
-                                                        .toList();
-                                              } finally {
-                                                _model.isDataUploading_uploadDataMcff1 =
-                                                    false;
-                                              }
-                                              if (selectedUploadedFiles
-                                                          .length ==
-                                                      selectedMedia.length &&
-                                                  downloadUrls.length ==
-                                                      selectedMedia.length) {
-                                                safeSetState(() {
-                                                  _model.uploadedLocalFile_uploadDataMcff1 =
-                                                      selectedUploadedFiles
-                                                          .first;
-                                                  _model.uploadedFileUrl_uploadDataMcff1 =
-                                                      downloadUrls.first;
-                                                });
-                                              } else {
-                                                safeSetState(() {});
-                                                return;
-                                              }
-                                            }
-
-                                            await currentUserReference!
-                                                .update(createUserRecordData(
-                                              photoUrl: _model
-                                                  .uploadedFileUrl_uploadDataMcff1,
-                                            ));
-                                          },
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(60.0),
-                                            child: Image.network(
-                                              currentUserPhoto,
-                                              width: 100.0,
-                                              height: 100.0,
-                                              fit: BoxFit.cover,
+                                                            context))) {
+                                                  safeSetState(() => _model
+                                                          .isDataUploading_uploadDataMcff1 =
+                                                      true);
+                                                  var selectedUploadedFiles =
+                                                      <FFUploadedFile>[];
+                                  
+                                                  var downloadUrls = <String>[];
+                                                  try {
+                                                    selectedUploadedFiles =
+                                                        selectedMedia
+                                                            .map((m) =>
+                                                                FFUploadedFile(
+                                                                  name: m
+                                                                      .storagePath
+                                                                      .split('/')
+                                                                      .last,
+                                                                  bytes: m.bytes,
+                                                                  height: m
+                                                                      .dimensions
+                                                                      ?.height,
+                                                                  width: m
+                                                                      .dimensions
+                                                                      ?.width,
+                                                                  blurHash:
+                                                                      m.blurHash,
+                                                                  originalFilename:
+                                                                      m.originalFilename,
+                                                                ))
+                                                            .toList();
+                                  
+                                                    downloadUrls =
+                                                        (await Future.wait(
+                                                      selectedMedia.map(
+                                                        (m) async =>
+                                                            await uploadData(
+                                                                m.storagePath,
+                                                                m.bytes),
+                                                      ),
+                                                    ))
+                                                            .where((u) => u != null)
+                                                            .map((u) => u!)
+                                                            .toList();
+                                                  } finally {
+                                                    _model.isDataUploading_uploadDataMcff1 =
+                                                        false;
+                                                  }
+                                                  if (selectedUploadedFiles
+                                                              .length ==
+                                                          selectedMedia.length &&
+                                                      downloadUrls.length ==
+                                                          selectedMedia.length) {
+                                                    safeSetState(() {
+                                                      _model.uploadedLocalFile_uploadDataMcff1 =
+                                                          selectedUploadedFiles
+                                                              .first;
+                                                      _model.uploadedFileUrl_uploadDataMcff1 =
+                                                          downloadUrls.first;
+                                                    });
+                                                  } else {
+                                                    safeSetState(() {});
+                                                    return;
+                                                  }
+                                                }
+                                  
+                                                await currentUserReference!
+                                                    .update(createUserRecordData(
+                                                  photoUrl: _model
+                                                      .uploadedFileUrl_uploadDataMcff1,
+                                                ));
+                                              },
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(60.0),
+                                                child:Image.network(
+                                    currentUserPhoto,
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return Image.asset(
+                                        'assets/images/avatar.jpg',
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      );
+                                    },
+                                  )
+                                  
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment: const AlignmentDirectional(
-                                          0.48, 0.75),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(11.0, 0.0, 0.0, 0.0),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            final selectedMedia =
-                                                await selectMedia(
-                                              mediaSource:
-                                                  MediaSource.photoGallery,
-                                              multiImage: false,
-                                            );
-                                            if (selectedMedia != null &&
-                                                selectedMedia.every((m) =>
-                                                    validateFileFormat(
-                                                        m.storagePath,
-                                                        context))) {
-                                              safeSetState(() => _model
-                                                      .isDataUploading_uploadDataMcff =
-                                                  true);
-                                              var selectedUploadedFiles =
-                                                  <FFUploadedFile>[];
-
-                                              var downloadUrls = <String>[];
-                                              try {
-                                                selectedUploadedFiles =
-                                                    selectedMedia
-                                                        .map((m) =>
-                                                            FFUploadedFile(
-                                                              name: m
-                                                                  .storagePath
-                                                                  .split('/')
-                                                                  .last,
-                                                              bytes: m.bytes,
-                                                              height: m
-                                                                  .dimensions
-                                                                  ?.height,
-                                                              width: m
-                                                                  .dimensions
-                                                                  ?.width,
-                                                              blurHash:
-                                                                  m.blurHash,
-                                                              originalFilename:
-                                                                  m.originalFilename,
-                                                            ))
-                                                        .toList();
-
-                                                downloadUrls =
-                                                    (await Future.wait(
-                                                  selectedMedia.map(
-                                                    (m) async =>
-                                                        await uploadData(
+                                        Align(
+                                          alignment: const AlignmentDirectional(
+                                              0.48, 0.75),
+                                          child: Padding(
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(11.0, 0.0, 0.0, 0.0),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor: Colors.transparent,
+                                              onTap: () async {
+                                                final selectedMedia =
+                                                    await selectMedia(
+                                                  mediaSource:
+                                                      MediaSource.photoGallery,
+                                                  multiImage: false,
+                                                );
+                                                if (selectedMedia != null &&
+                                                    selectedMedia.every((m) =>
+                                                        validateFileFormat(
                                                             m.storagePath,
-                                                            m.bytes),
-                                                  ),
-                                                ))
-                                                        .where((u) => u != null)
-                                                        .map((u) => u!)
-                                                        .toList();
-                                              } finally {
-                                                _model.isDataUploading_uploadDataMcff =
-                                                    false;
-                                              }
-                                              if (selectedUploadedFiles
-                                                          .length ==
-                                                      selectedMedia.length &&
-                                                  downloadUrls.length ==
-                                                      selectedMedia.length) {
-                                                safeSetState(() {
-                                                  _model.uploadedLocalFile_uploadDataMcff =
-                                                      selectedUploadedFiles
-                                                          .first;
-                                                  _model.uploadedFileUrl_uploadDataMcff =
-                                                      downloadUrls.first;
-                                                });
-                                              } else {
-                                                safeSetState(() {});
-                                                return;
-                                              }
-                                            }
-
-                                            await currentUserReference!
-                                                .update(createUserRecordData(
-                                              photoUrl: _model
-                                                  .uploadedFileUrl_uploadDataMcff1,
-                                            ));
-                                          },
-                                          child: const Icon(
-                                            Icons.edit,
-                                            color: Color(0xFF696969),
-                                            size: 22.0,
+                                                            context))) {
+                                                  safeSetState(() => _model
+                                                          .isDataUploading_uploadDataMcff =
+                                                      true);
+                                                  var selectedUploadedFiles =
+                                                      <FFUploadedFile>[];
+                                  
+                                                  var downloadUrls = <String>[];
+                                                  try {
+                                                    selectedUploadedFiles =
+                                                        selectedMedia
+                                                            .map((m) =>
+                                                                FFUploadedFile(
+                                                                  name: m
+                                                                      .storagePath
+                                                                      .split('/')
+                                                                      .last,
+                                                                  bytes: m.bytes,
+                                                                  height: m
+                                                                      .dimensions
+                                                                      ?.height,
+                                                                  width: m
+                                                                      .dimensions
+                                                                      ?.width,
+                                                                  blurHash:
+                                                                      m.blurHash,
+                                                                  originalFilename:
+                                                                      m.originalFilename,
+                                                                ))
+                                                            .toList();
+                                  
+                                                    downloadUrls =
+                                                        (await Future.wait(
+                                                      selectedMedia.map(
+                                                        (m) async =>
+                                                            await uploadData(
+                                                                m.storagePath,
+                                                                m.bytes),
+                                                      ),
+                                                    ))
+                                                            .where((u) => u != null)
+                                                            .map((u) => u!)
+                                                            .toList();
+                                                  } finally {
+                                                    _model.isDataUploading_uploadDataMcff =
+                                                        false;
+                                                  }
+                                                  if (selectedUploadedFiles
+                                                              .length ==
+                                                          selectedMedia.length &&
+                                                      downloadUrls.length ==
+                                                          selectedMedia.length) {
+                                                    safeSetState(() {
+                                                      _model.uploadedLocalFile_uploadDataMcff =
+                                                          selectedUploadedFiles
+                                                              .first;
+                                                      _model.uploadedFileUrl_uploadDataMcff =
+                                                          downloadUrls.first;
+                                                    });
+                                                  } else {
+                                                    safeSetState(() {});
+                                                    return;
+                                                  }
+                                                }
+                                  
+                                                await currentUserReference!
+                                                    .update(createUserRecordData(
+                                                  photoUrl: _model
+                                                      .uploadedFileUrl_uploadDataMcff1,
+                                                ));
+                                              },
+                                              child: const Icon(
+                                                Icons.edit,
+                                                color: Color(0xFF696969),
+                                                size: 22.0,
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
+                                      ],
                                     ),
-                                  ],
+                                  ).animateOnPageLoad(
+                                      animationsMap['cardOnPageLoadAnimation']!),
                                 ),
-                              ).animateOnPageLoad(
-                                  animationsMap['cardOnPageLoadAnimation']!),
-                            ],
-                          ),
-                          AuthUserStreamWidget(
-                            builder: (context) => TextFormField(
-                              controller: _model.textController1,
-                              focusNode: _model.textFieldFocusNode1,
-                              autofocus: false,
-                              obscureText: false,
-                              decoration: InputDecoration(
-                                labelText: FFLocalizations.of(context).getText(
-                                  '604pukst' /* Name */,
-                                ),
-                                hintText: FFLocalizations.of(context).getText(
-                                  '7dplhdxl' /* Enter your full name */,
-                                ),
-                                hintStyle: FlutterFlowTheme.of(context)
-                                    .bodyLarge
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyLargeFamily,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .bodyLargeIsCustom,
-                                    ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                prefixIcon: const Icon(
-                                  Icons.person,
-                                ),
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyMediumIsCustom,
-                                  ),
-                              validator: _model.textController1Validator
-                                  .asValidator(context),
+                              ],
                             ),
-                          ),
-                          AuthUserStreamWidget(
-                            builder: (context) => TextFormField(
-                              controller: _model.textController2,
-                              focusNode: _model.textFieldFocusNode2,
+                            AuthUserStreamWidget(
+                              builder: (context) => TextFormField(
+                                controller: _model.textController1,
+                                focusNode: _model.textFieldFocusNode1,
+                                autofocus: false,
+                                obscureText: false,
+                                decoration: InputDecoration(
+                                  labelText: FFLocalizations.of(context).getText(
+                                    '604pukst' /* Name */,
+                                  ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    '7dplhdxl' /* Enter your full name */,
+                                  ),
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(context)
+                                                .bodyLargeIsCustom,
+                                      ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color:
+                                          FlutterFlowTheme.of(context).alternate,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: Color(0x00000000),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: Color(0x00000000),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: Color(0x00000000),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  prefixIcon: const Icon(
+                                    Icons.person,
+                                  ),
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .bodyMediumIsCustom,
+                                    ),
+                                validator: _model.textController1Validator
+                                    .asValidator(context),
+                              ),
+                            ),
+                            AuthUserStreamWidget(
+                              builder: (context) => TextFormField(
+                                controller: _model.textController2,
+                                focusNode: _model.textFieldFocusNode2,
+                                autofocus: false,
+                                obscureText: false,
+                                decoration: InputDecoration(
+                                  labelText: FFLocalizations.of(context).getText(
+                                    '1tj0rsix' /* Phone Number */,
+                                  ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    '7j4w94u8' /* Enter your mobile number */,
+                                  ),
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(context)
+                                                .bodyLargeIsCustom,
+                                      ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color:
+                                          FlutterFlowTheme.of(context).alternate,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: Color(0x00000000),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: Color(0x00000000),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                      color: Color(0x00000000),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  prefixIcon: const Icon(
+                                    Icons.phone,
+                                  ),
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .bodyMediumIsCustom,
+                                    ),
+                                keyboardType: TextInputType.phone,
+                                validator: _model.textController2Validator
+                                    .asValidator(context),
+                              ),
+                            ),
+                            TextFormField(
+                              controller: _model.textController3,
+                              focusNode: _model.textFieldFocusNode3,
                               autofocus: false,
+                              readOnly: true,
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: FFLocalizations.of(context).getText(
-                                  '1tj0rsix' /* Phone Number */,
+                                  'qft54s75' /* Email */,
                                 ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  '7j4w94u8' /* Enter your mobile number */,
+                                  '3lvbnhv9' /* Enter your mobile number */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .bodyLarge
@@ -460,8 +545,7 @@ class _UpdateProfWidgetState extends State<UpdateProfWidget>
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
+                                    color: FlutterFlowTheme.of(context).alternate,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
@@ -488,7 +572,7 @@ class _UpdateProfWidgetState extends State<UpdateProfWidget>
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 prefixIcon: const Icon(
-                                  Icons.phone,
+                                  Icons.email,
                                 ),
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -497,130 +581,61 @@ class _UpdateProfWidgetState extends State<UpdateProfWidget>
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyMediumIsCustom,
+                                    useGoogleFonts: !FlutterFlowTheme.of(context)
+                                        .bodyMediumIsCustom,
                                   ),
                               keyboardType: TextInputType.phone,
-                              validator: _model.textController2Validator
+                              validator: _model.textController3Validator
                                   .asValidator(context),
                             ),
-                          ),
-                          TextFormField(
-                            controller: _model.textController3,
-                            focusNode: _model.textFieldFocusNode3,
-                            autofocus: false,
-                            readOnly: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              labelText: FFLocalizations.of(context).getText(
-                                'qft54s75' /* Email */,
-                              ),
-                              hintText: FFLocalizations.of(context).getText(
-                                '3lvbnhv9' /* Enter your mobile number */,
-                              ),
-                              hintStyle: FlutterFlowTheme.of(context)
-                                  .bodyLarge
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyLargeFamily,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyLargeIsCustom,
-                                  ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: FlutterFlowTheme.of(context).alternate,
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                              prefixIcon: const Icon(
-                                Icons.email,
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyMediumFamily,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: !FlutterFlowTheme.of(context)
-                                      .bodyMediumIsCustom,
-                                ),
-                            keyboardType: TextInputType.phone,
-                            validator: _model.textController3Validator
-                                .asValidator(context),
-                          ),
-                        ].divide(const SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      16.0, 0.0, 16.0, 0.0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      await currentUserReference!.update(createUserRecordData(
-                        displayName: _model.textController1.text,
-                        phoneNumber: _model.textController2.text,
-                        phoneN: int.tryParse(_model.textController2.text),
-                      ));
-                      context.safePop();
-                    },
-                    text: FFLocalizations.of(context).getText(
-                      'l8rle2rn' /* Update Profile */,
-                    ),
-                    icon: const FaIcon(
-                      FontAwesomeIcons.undoAlt,
-                      size: 12.0,
-                    ),
-                    options: FFButtonOptions(
-                      width: double.infinity,
-                      height: 55.0,
-                      padding: const EdgeInsets.all(8.0),
-                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                          0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .titleMedium
-                          .override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).titleMediumFamily,
-                            color: Colors.white,
-                            letterSpacing: 0.0,
-                            useGoogleFonts: !FlutterFlowTheme.of(context)
-                                .titleMediumIsCustom,
-                          ),
-                      elevation: 3.0,
-                      borderRadius: BorderRadius.circular(25.0),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        16.0, 0.0, 16.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await currentUserReference!.update(createUserRecordData(
+                          displayName: _model.textController1.text,
+                          phoneNumber: _model.textController2.text,
+                          phoneN: int.tryParse(_model.textController2.text),
+                        ));
+                        context.pushReplacementNamed(Checkout66Widget.routeName);
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        'l8rle2rn' /* Update Profile */,
+                      ),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.undoAlt,
+                        size: 12.0,
+                      ),
+                      options: FFButtonOptions(
+                        width: double.infinity,
+                        height: 55.0,
+                        padding: const EdgeInsets.all(8.0),
+                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleMedium
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).titleMediumFamily,
+                              color: Colors.white,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .titleMediumIsCustom,
+                            ),
+                        elevation: 3.0,
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -105,7 +107,7 @@ class _Citie2WidgetState extends State<Citie2Widget> {
             children: [
               Container(
                 width: double.infinity,
-                height: 113.92,
+                height: 250.h,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   image: DecorationImage(
@@ -135,6 +137,7 @@ class _Citie2WidgetState extends State<Citie2Widget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        SizedBox(height: 80.h,),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 8.0),
@@ -290,11 +293,20 @@ class _Citie2WidgetState extends State<Citie2Widget> {
                                           topLeft: Radius.circular(22.0),
                                           topRight: Radius.circular(22.0),
                                         ),
-                                        child: Image.network(
+                                        child:
+                                         Image.network(
                                           columnCitiesRecord.img,
-                                          width: double.infinity,
-                                          height: 200.0,
-                                          fit: BoxFit.cover,
+                                       width: double.infinity,
+  height: 200.h,
+  fit: BoxFit.cover,
+  errorBuilder: (context, error, stackTrace) {
+    return Image.asset(
+      'assets/images/regions.jpg',
+                                       width: double.infinity,
+      height: 200.h,
+      fit: BoxFit.cover,
+    );
+  },
                                         ),
                                       ),
                                       Row(

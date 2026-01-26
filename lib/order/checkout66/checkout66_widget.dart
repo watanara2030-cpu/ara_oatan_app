@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
@@ -142,7 +144,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
           elevation: 16.0,
           child: WebViewAware(
             child: Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
@@ -160,13 +161,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                   child: Align(
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
@@ -207,8 +206,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   ),
                             ),
                             Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
+                                                          children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 11.0, 0.0, 0.0),
@@ -711,8 +709,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
             style: FlutterFlowTheme.of(context).labelLarge.override(
                   fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  fontSize: 18.0,
-                  letterSpacing: 0.0,
+                  fontSize: 18.0.sp,
                   useGoogleFonts:
                       !FlutterFlowTheme.of(context).labelLargeIsCustom,
                 ),
@@ -724,145 +721,130 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (currentPhoneNumber == '')
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 16.0, 16.0, 16.0),
-                      child: AuthUserStreamWidget(
-                        builder: (context) => Container(
-                          width: double.infinity,
-                          height: 103.24,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .error,
-                            borderRadius:
-                                BorderRadius.circular(8.0),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.all(12.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.warning_amber_rounded,
-                                      color: FlutterFlowTheme.of(
-                                              context)
-                                          .secondaryBackground,
-                                      size: 18.0,
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context)
-                                          .getText(
-                                        '2n28fqm2' /* Note: Your request cannot be c... */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(
-                                              context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMediumFamily,
-                                            color: FlutterFlowTheme
-                                                    .of(context)
-                                                .secondaryBackground,
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts:
-                                                !FlutterFlowTheme
-                                                        .of(context)
-                                                    .bodyMediumIsCustom,
-                                          ),
-                                    ),
-                                  ].divide(const SizedBox(
-                                      width: 12.0)),
-                                ),
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
+            Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (currentPhoneNumber == '')
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 16.0, 16.0, 16.0),
+                    child: AuthUserStreamWidget(
+                      builder: (context) => Container(
+                        height: 103.24.h,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context)
+                              .error,
+                          borderRadius:
+                              BorderRadius.circular(8.0.r),
+                        ),
+                        child: Column(
+                                                    children: [
+                            Padding(
+                              padding:
+                                   EdgeInsets.all(12.0.r),
+                              child: Row(
+                                                                mainAxisAlignment:
                                     MainAxisAlignment.center,
                                 children: [
-                                  FFButtonWidget(
-                                    onPressed: () async {
-                                      context.pushNamed(
-                                          UpdateProfWidget
-                                              .routeName);
-                                    },
-                                    text: FFLocalizations.of(
+                                  Icon(
+                                    Icons.warning_amber_rounded,
+                                    color: FlutterFlowTheme.of(
                                             context)
-                                        .getText(
-                                      'vlo7yf10' /* Add your phone number */,
-                                    ),
-                                    icon: const Icon(
-                                      Icons.add_outlined,
-                                      size: 15.0,
-                                    ),
-                                    options: FFButtonOptions(
-                                      height: 32.5,
-                                      padding:
-                                          const EdgeInsetsDirectional
-                                              .fromSTEB(16.0, 0.0,
-                                              16.0, 0.0),
-                                      iconPadding:
-                                          const EdgeInsetsDirectional
-                                              .fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: FlutterFlowTheme.of(
-                                              context)
-                                          .warning,
-                                      textStyle:
-                                          FlutterFlowTheme.of(
-                                                  context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmallFamily,
-                                                color: FlutterFlowTheme
-                                                        .of(context)
-                                                    .secondaryText,
-                                                fontSize: 14.0,
-                                                letterSpacing:
-                                                    0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmallIsCustom,
-                                              ),
-                                      elevation: 0.0,
-                                      borderRadius:
-                                          BorderRadius.circular(
-                                              8.0),
-                                    ),
+                                        .secondaryBackground,
+                                    size: 18.0.sp,
                                   ),
-                                ],
+                                
+                                  Text(
+  FFLocalizations.of(context).getText('2n28fqm2'),
+  textAlign: TextAlign.center,
+  overflow: TextOverflow.ellipsis, // ✅ Add ...
+  softWrap: true,                 // ✅ Allow wrapping
+  style: FlutterFlowTheme.of(context).bodyMedium.override(
+    fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+    color: FlutterFlowTheme.of(context).secondaryBackground,
+    useGoogleFonts:
+        !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+    fontSize: 9.sp,                 // ✅ Make it smaller
+  ),
+)
+
+                                ].divide(const SizedBox(
+                                    width: 0.0)),
                               ),
-                            ],
-                          ),
+                            ),
+                            Row(
+                                                            mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                              children: [
+                                FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed(
+                                        UpdateProfWidget
+                                            .routeName);
+                                  },
+                                  text: FFLocalizations.of(
+                                          context)
+                                      .getText(
+                                    'vlo7yf10' /* Add your phone number */,
+                                  ),
+                                  icon: const Icon(
+                                    Icons.add_outlined,
+                                    size: 15.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    height: 32.5,
+                                    padding:
+                                        const EdgeInsetsDirectional
+                                            .fromSTEB(16.0, 0.0,
+                                            16.0, 0.0),
+                                    iconPadding:
+                                        const EdgeInsetsDirectional
+                                            .fromSTEB(
+                                            0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(
+                                            context)
+                                        .warning,
+                                    textStyle:
+                                        FlutterFlowTheme.of(
+                                                context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(
+                                                          context)
+                                                      .titleSmallFamily,
+                                              color: FlutterFlowTheme
+                                                      .of(context)
+                                                  .secondaryText,
+                                              fontSize: 14.0,
+                                              letterSpacing:
+                                                  0.0,
+                                              useGoogleFonts:
+                                                  !FlutterFlowTheme.of(
+                                                          context)
+                                                      .titleSmallIsCustom,
+                                            ),
+                                    elevation: 0.0,
+                                    borderRadius:
+                                        BorderRadius.circular(
+                                            8.0),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                ],
-              ),
+                  ),
+              ],
+            ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(
                     0.0, 8.0, 0.0, 0.0),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     if (FFAppState().addcart >= 1)
                       FFButtonWidget(
@@ -1555,8 +1537,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           12.0, 12.0, 12.0, 12.0),
                       child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
@@ -1599,14 +1580,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           ),
                           if (FFAppState().Minimumhours >= 2)
                             Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment:
+                                                          mainAxisAlignment:
                                   MainAxisAlignment.center,
                               children: [
                                 Flex(
                                   direction: Axis.vertical,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
+                                                                  children: [
                                     Padding(
                                       padding:
                                           const EdgeInsetsDirectional
@@ -1666,13 +1645,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               ],
                             ),
                           Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment:
+                                                      mainAxisAlignment:
                                 MainAxisAlignment.spaceBetween,
                             children: [
                               Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment:
+                                                              crossAxisAlignment:
                                     CrossAxisAlignment.start,
                                 children: [
                                   Text(
@@ -1724,8 +1701,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 ],
                               ),
                               Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
+                                                              mainAxisAlignment:
                                     MainAxisAlignment.center,
                                 crossAxisAlignment:
                                     CrossAxisAlignment.start,
@@ -1762,8 +1738,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     ),
                                   ),
                                   Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment:
+                                                                      mainAxisAlignment:
                                         MainAxisAlignment.start,
                                     children: [
                                       Container(
@@ -2296,8 +2271,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           ),
                           if (FFAppState().NsbhKsm >= 1.0)
                             Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment:
+                                                          mainAxisAlignment:
                                   MainAxisAlignment.center,
                               children: [
                                 Expanded(
@@ -2404,8 +2378,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
               if ((FFAppState().addcart <= 0) &&
                   (FFAppState().typeHgz == 1))
                 Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
+                                  children: [
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           0.0, 22.0, 0.0, 0.0),
@@ -2416,11 +2389,9 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           color: FlutterFlowTheme.of(context).primary,
                         ),
                         child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
+                                                  children: [
                             Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment:
+                                                          mainAxisAlignment:
                                   MainAxisAlignment.center,
                               children: [
                                 Padding(
@@ -2537,8 +2508,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           
                     return SingleChildScrollView(
                       child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: List.generate(mkss.length, (mkssIndex) {
+                                              children: List.generate(mkss.length, (mkssIndex) {
                           final mkssItem = mkss[mkssIndex];
                           return ListView(
                             padding: EdgeInsets.zero,
@@ -2550,8 +2520,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     const EdgeInsetsDirectional.fromSTEB(
                                         12.0, 8.0, 8.0, 8.0),
                                 child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment:
+                                                                  mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
@@ -2560,8 +2529,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                               .fromSTEB(
                                               12.0, 0.0, 0.0, 0.0),
                                       child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
+                                                                              mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -2654,8 +2622,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 ),
               if (FFAppState().addcart >= 1)
                 Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     if ((valueOrDefault<bool>(
                                 currentUserDocument?.actevMndob, false) ==
@@ -2767,7 +2734,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 ),
               SingleChildScrollView(
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
                   children: [
                     if ((FFAppState().villnow != null) &&
                         (FFAppState().typecarRev != null))
@@ -2790,7 +2756,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 12.0, 12.0, 12.0),
                             child: Column(
-                              mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment:
                                   CrossAxisAlignment.start,
                               children: [
@@ -2820,7 +2785,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                       .alternate,
                                 ),
                                 Row(
-                                  mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -2871,7 +2835,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   ],
                                 ),
                                 Row(
-                                  mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -2919,7 +2882,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   ],
                                 ),
                                 Row(
-                                  mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -2968,7 +2930,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 ),
                                 if (FFAppState().isVat == true)
                                   Row(
-                                    mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
@@ -3018,7 +2979,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 if ((FFAppState().addhors >= 1) &&
                                     (FFAppState().NsbhKsm >= 1.0))
                                   Row(
-                                    mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
@@ -3074,7 +3034,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                       .alternate,
                                 ),
                                 Row(
-                                  mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -3130,7 +3089,6 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     padding: const EdgeInsetsDirectional
                                         .fromSTEB(0.0, 7.0, 0.0, 22.0),
                                     child: Row(
-                                      mainAxisSize: MainAxisSize.min,
                                       children: [
                                         FFButtonWidget(
                                           onPressed: () async {

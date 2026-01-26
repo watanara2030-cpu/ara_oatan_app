@@ -1,4 +1,4 @@
-package com.mycompany.araoatanapp2
+package com.mycompany.araoatanapp
 
 import io.flutter.embedding.android.FlutterActivity
 

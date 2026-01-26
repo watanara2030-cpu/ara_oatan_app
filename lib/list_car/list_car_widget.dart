@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -140,18 +142,20 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                       }
                       List<TypeCarRecord> listViewTypeCarRecordList =
                           snapshot.data!;
+final sortedList = List<TypeCarRecord>.from(listViewTypeCarRecordList)
+  ..sort((a, b) => a.nesbahkKsm.compareTo(b.nesbahkKsm));
 
                       return ListView.separated(
-                        padding: EdgeInsets.zero,
+                        padding: EdgeInsets.all(8),
                         primary: false,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
-                        itemCount: listViewTypeCarRecordList.length,
+                        itemCount: sortedList.length,
                         separatorBuilder: (_, __) =>
-                            const SizedBox(height: 12.0),
+                             SizedBox(height: 12.0.h),
                         itemBuilder: (context, listViewIndex) {
                           final listViewTypeCarRecord =
-                              listViewTypeCarRecordList[listViewIndex];
+                              sortedList[listViewIndex];
                           return Material(
                             color: Colors.transparent,
                             elevation: 2.0,
@@ -159,7 +163,6 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Container(
-                              width: double.infinity,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -170,7 +173,7 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Row(
-                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisSize: MainAxisSize.min,
                                     children: [
                                       ClipRRect(
                                         borderRadius: const BorderRadius.only(
@@ -181,9 +184,9 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                                         ),
                                         child: Image.network(
                                           listViewTypeCarRecord.img,
-                                          width: 100.0,
-                                          height: 80.0,
-                                          fit: BoxFit.cover,
+                                          width: 80.0.h,
+                                          height: 100.0.w,
+                                          fit: BoxFit.fill,
                                         ),
                                       ),
                                       Column(
@@ -262,7 +265,7 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                                           ),
                                         ].divide(const SizedBox(height: 4.0)),
                                       ),
-                                    ].divide(const SizedBox(width: 12.0)),
+                                    ].divide(const SizedBox(width: 5.0)),
                                   ),
                                   FFButtonWidget(
                                     onPressed: () async {
@@ -304,7 +307,7 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                                                     .toDouble())!;
                                         FFAppState().totalapp2 =
                                             functions.vat(
-                                                15.0,
+                                                10.0,
                                                 functions.total(
                                                     FFAppState().srtypecar,
                                                     FFAppState()
@@ -451,8 +454,8 @@ class _ListCarWidgetState extends State<ListCarWidget> {
                                       'mx4hp3oi' /* Select */,
                                     ),
                                     options: FFButtonOptions(
-                                      width: 68.24,
-                                      height: 40.0,
+                                      width: 50.24.w,
+                                      height: 40.0.h,
                                       padding: const EdgeInsets.all(8.0),
                                       iconPadding: const EdgeInsetsDirectional
                                           .fromSTEB(0.0, 0.0, 0.0, 0.0),

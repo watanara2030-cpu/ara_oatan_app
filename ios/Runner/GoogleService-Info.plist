@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>638010533068-9da68jcfc1m6ad295l6ltem1dgud9mql.apps.googleusercontent.com</string>
+	<string>638010533068-sbkqifsp8r9jsu5tc3n7pvmqbi79htmr.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.638010533068-9da68jcfc1m6ad295l6ltem1dgud9mql</string>
+	<string>com.googleusercontent.apps.638010533068-sbkqifsp8r9jsu5tc3n7pvmqbi79htmr</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>638010533068-etjsqfcgv1evduo4aisbjqvf3hsnem7l.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mycompany.araoatanapp2</string>
+	<string>com.mycompany.araoatanapp</string>
 	<key>PROJECT_ID</key>
 	<string>tutorial-multi-language-70gx4j</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:638010533068:ios:c3e19a470d6fa228844e69</string>
+	<string>1:638010533068:ios:f042b6ca66700276844e69</string>
 </dict>
 </plist>
