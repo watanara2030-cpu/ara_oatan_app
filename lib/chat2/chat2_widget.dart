@@ -113,10 +113,15 @@ class _Chat2WidgetState extends State<Chat2Widget> {
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
-                    child: Image.network(
-                      widget.imgMndob!,
-                      fit: BoxFit.cover,
-                    ),
+                    
+
+                    child: Image(
+  fit: BoxFit.cover,
+  image: (widget.imgMndob != null && widget.imgMndob!.isNotEmpty)
+      ? NetworkImage(widget.imgMndob!)
+      : const AssetImage('assets/images/__2025-07-09_133622.png') as ImageProvider,
+),
+
                   ),
                   Column(
                     mainAxisSize: MainAxisSize.max,

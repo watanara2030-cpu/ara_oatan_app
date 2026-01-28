@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "638010533068-i0je5prtf3dohfp9a49jad50leqi1l2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.araoatanapp",
+            "certificate_hash": "0bfb4192dec2096ecfd813cb3b8f4bcba1452238"
+          }
+        },
+        {
           "client_id": "638010533068-pm52feh7mifg3jllek9dj79kabn0n6ne.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
