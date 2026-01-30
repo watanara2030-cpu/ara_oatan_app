@@ -38,7 +38,7 @@ await FirebaseAppCheck.instance.activate(
 
   runApp(EasyLocalization(
       supportedLocales: const [
-         Locale('ar'),
+        Locale('ar'),
         Locale('en'),
         Locale('ru'),
         Locale('ky'),
@@ -48,6 +48,7 @@ await FirebaseAppCheck.instance.activate(
         Locale('ur'),
         Locale('fr'),
         Locale('id'),
+      //  Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
 
       ],
       path: 'assets/langs',

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '/auth/firebase_auth/auth_util.dart';
@@ -313,7 +314,6 @@ class _ListViWidgetState extends State<ListViWidget>
                         borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(20.0),
                           bottomRight: Radius.circular(22.0),
-                         
                         ),
                         shape: BoxShape.rectangle,
                       ),
@@ -333,7 +333,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'تتصفح الآن ${FFAppState().naimdolh}',
+                                    'YOU ARE BROWSING NOW ${FFAppState().naimdolh}',
                                     style: FlutterFlowTheme.of(context)
                                         .labelSmall
                                         .override(
@@ -366,9 +366,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                                 AldolWidget.routeName);
                                           },
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'gre0xlvp' /* Change country */,
-                                            ),
+                                           "Change country".tr(),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -442,9 +440,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                       size: 25.0,
                                     ),
                                     title: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'hv2r3qq4' /* Start */,
-                                      ),
+                                     "Start".tr(),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .labelLarge
@@ -459,9 +455,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                           ),
                                     ),
                                     subtitle: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'iv445i6q' /* Start from your current locati... */,
-                                      ),
+                                    "Start from your current location".tr(),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -530,9 +524,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                           ),
                                     ),
                                     subtitle: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'phg4x7a8' /* Change city */,
-                                      ),
+                                    "Change city".tr(),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -624,9 +616,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                           ),
                                     ),
                                     subtitle: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '1ntkntbh' /* Change region */,
-                                      ),
+                                      "Change region".tr(),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -685,9 +675,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                         size: 25.0,
                                       ),
                                       title: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'idqw5803' /* Browse the map */,
-                                        ),
+                                      "Browse the map".tr(),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .labelLarge
@@ -769,9 +757,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                         size: 25.0,
                                       ),
                                       title: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'ldzvugtu' /* View list */,
-                                        ),
+                                      "View list".tr(),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .labelLarge
@@ -859,9 +845,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                           ),
                                     ),
                                     subtitle: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'etis4wg7' /* Added destinations */,
-                                      ),
+                                     "Added destinations".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -915,9 +899,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                       size: 25.0,
                                     ),
                                     title: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'sahkayqn' /* My bookings */,
-                                      ),
+                                     "Your Bookings".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelLarge
                                           .override(
@@ -930,10 +912,9 @@ class _ListViWidgetState extends State<ListViWidget>
                                                     .labelLargeIsCustom,
                                           ),
                                     ),
-                                    subtitle: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '5wwnncqm' /* Booking list. */,
-                                      ),
+                                    subtitle: 
+                                    Text(
+                                     "Booking list.".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -985,9 +966,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                       size: 25.0,
                                     ),
                                     title: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'cxgjrbn5' /* Suggest a Place */,
-                                      ),
+                                    "Suggest a Place".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
@@ -1005,9 +984,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                           ),
                                     ),
                                     subtitle: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'h1mz2wy4' /* Add a Special Place */,
-                                      ),
+                                      "Add a Special Place".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -1058,9 +1035,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                       size: 25.0,
                                     ),
                                     title: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'fpsu953q' /* general information */,
-                                      ),
+                                      "general information".tr(),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .labelLarge
@@ -1183,9 +1158,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                               ),
                                         ),
                                         subtitle: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '0fnyrgzh' /* رسائل جديدة */,
-                                          ),
+                                          "Message".tr(),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
@@ -1241,9 +1214,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                       size: 25.0,
                                     ),
                                     title: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'p6tqq44u' /* Settings */,
-                                      ),
+                                     "Settings".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelLarge
                                           .override(
@@ -1293,9 +1264,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                       size: 25.0,
                                     ),
                                     title: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '56gb4f6g' /* Help */,
-                                      ),
+                                     "Help".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .labelLarge
                                           .override(
@@ -1363,9 +1332,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                 size: 25.0,
                               ),
                               title: Text(
-                                FFLocalizations.of(context).getText(
-                                  '74c9fipn' /* Log Out */,
-                                ),
+                                "Log Out".tr(),
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -1536,11 +1503,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                                             Checkout66Widget
                                                                 .routeName);
                                                       },
-                                                      text: FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'nkwn5fr9' /* View My Trip */,
-                                                      ),
+                                                      text: "View My Trip".tr(),
                                                       icon: const FaIcon(
                                                         FontAwesomeIcons
                                                             .glasses,
@@ -1662,11 +1625,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                                               .fromSTEB(16.0,
                                                               16.0, 16.0, 0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'lhefc6ln' /* Experience top destinations */,
-                                                        ),
+                                                     "Experience top destinations".tr(),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -2095,9 +2054,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                                                                       }
                                                                                     },
                                                                                     child: Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        'assjes9i' /* Add */,
-                                                                                      ),
+                                                                                    "Add".tr(),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                             fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                                             color: FlutterFlowTheme.of(context).error,
@@ -2148,11 +2105,7 @@ class _ListViWidgetState extends State<ListViWidget>
                                                                           16.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'swhxsz7h' /* Tourist landmarks */,
-                                                                    ),
+                                                                   "Tourist landmarks".tr(),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .labelLarge

@@ -187,7 +187,7 @@ class _ListViCopy2WidgetState extends State<ListViCopy2Widget>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'تتصفح الآن ${FFAppState().naimdolh}',
+                                'YOU ARE BROWSING NOW ${FFAppState().naimdolh}',
                                 style: FlutterFlowTheme.of(context)
                                     .labelSmall
                                     .override(

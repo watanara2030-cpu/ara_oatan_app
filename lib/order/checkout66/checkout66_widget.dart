@@ -161,18 +161,18 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                   child: Align(
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Column(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'mq4294hr' /* تتصفح الآن */,
+                                  'mq4294hr' /* YOU ARE BROWSING NOW */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -206,7 +206,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   ),
                             ),
                             Row(
-                                                          children: [
+                              children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 11.0, 0.0, 0.0),
@@ -721,130 +721,114 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
         body: SingleChildScrollView(
           child: Column(
             children: [
-            Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (currentPhoneNumber == '')
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 16.0, 16.0, 16.0),
-                    child: AuthUserStreamWidget(
-                      builder: (context) => Container(
-                        height: 103.24.h,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context)
-                              .error,
-                          borderRadius:
-                              BorderRadius.circular(8.0.r),
-                        ),
-                        child: Column(
-                                                    children: [
-                            Padding(
-                              padding:
-                                   EdgeInsets.all(12.0.r),
-                              child: Row(
-                                                                mainAxisAlignment:
-                                    MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.warning_amber_rounded,
-                                    color: FlutterFlowTheme.of(
-                                            context)
-                                        .secondaryBackground,
-                                    size: 18.0.sp,
-                                  ),
-                                
-                                  Text(
-  FFLocalizations.of(context).getText('2n28fqm2'),
-  textAlign: TextAlign.center,
-  overflow: TextOverflow.ellipsis, // ✅ Add ...
-  softWrap: true,                 // ✅ Allow wrapping
-  style: FlutterFlowTheme.of(context).bodyMedium.override(
-    fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-    color: FlutterFlowTheme.of(context).secondaryBackground,
-    useGoogleFonts:
-        !FlutterFlowTheme.of(context).bodyMediumIsCustom,
-    fontSize: 9.sp,                 // ✅ Make it smaller
-  ),
-)
-
-                                ].divide(const SizedBox(
-                                    width: 0.0)),
-                              ),
-                            ),
-                            Row(
-                                                            mainAxisAlignment:
-                                  MainAxisAlignment.center,
-                              children: [
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed(
-                                        UpdateProfWidget
-                                            .routeName);
-                                  },
-                                  text: FFLocalizations.of(
-                                          context)
-                                      .getText(
-                                    'vlo7yf10' /* Add your phone number */,
-                                  ),
-                                  icon: const Icon(
-                                    Icons.add_outlined,
-                                    size: 15.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    height: 32.5,
-                                    padding:
-                                        const EdgeInsetsDirectional
-                                            .fromSTEB(16.0, 0.0,
-                                            16.0, 0.0),
-                                    iconPadding:
-                                        const EdgeInsetsDirectional
-                                            .fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                    color: FlutterFlowTheme.of(
-                                            context)
-                                        .warning,
-                                    textStyle:
-                                        FlutterFlowTheme.of(
-                                                context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(
-                                                          context)
-                                                      .titleSmallFamily,
-                                              color: FlutterFlowTheme
-                                                      .of(context)
-                                                  .secondaryText,
-                                              fontSize: 14.0,
-                                              letterSpacing:
-                                                  0.0,
-                                              useGoogleFonts:
-                                                  !FlutterFlowTheme.of(
-                                                          context)
-                                                      .titleSmallIsCustom,
-                                            ),
-                                    elevation: 0.0,
-                                    borderRadius:
-                                        BorderRadius.circular(
-                                            8.0),
-                                  ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (currentPhoneNumber == '')
+                    Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 16.0, 16.0, 16.0),
+                      child: AuthUserStreamWidget(
+                        builder: (context) => Container(
+                          height: 103.24.h,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).error,
+                            borderRadius: BorderRadius.circular(8.0.r),
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(12.0.r),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.warning_amber_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      size: 18.0.sp,
+                                    ),
+                                    Text(
+                                      FFLocalizations.of(context)
+                                          .getText('2n28fqm2'),
+                                      textAlign: TextAlign.center,
+                                      overflow:
+                                          TextOverflow.ellipsis, // ✅ Add ...
+                                      softWrap: true, // ✅ Allow wrapping
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(context)
+                                                    .bodyMediumIsCustom,
+                                            fontSize: 9.sp, // ✅ Make it smaller
+                                          ),
+                                    )
+                                  ].divide(const SizedBox(width: 0.0)),
                                 ),
-                              ],
-                            ),
-                          ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                          UpdateProfWidget.routeName);
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'vlo7yf10' /* Add your phone number */,
+                                    ),
+                                    icon: const Icon(
+                                      Icons.add_outlined,
+                                      size: 15.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      height: 32.5,
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              16.0, 0.0, 16.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color:
+                                          FlutterFlowTheme.of(context).warning,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            fontSize: 14.0,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(context)
+                                                    .titleSmallIsCustom,
+                                          ),
+                                      elevation: 0.0,
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-              ],
-            ),
+                ],
+              ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(
-                    0.0, 8.0, 0.0, 0.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     if (FFAppState().addcart >= 1)
                       FFButtonWidget(
@@ -862,8 +846,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         ?.unfocus();
                                   },
                                   child: Padding(
-                                    padding: MediaQuery.viewInsetsOf(
-                                        context),
+                                    padding: MediaQuery.viewInsetsOf(context),
                                     child: const MmaappWidget(),
                                   ),
                                 ),
@@ -880,33 +863,26 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                         ),
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                          iconPadding:
-                              const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                          iconColor:
-                              FlutterFlowTheme.of(context).primary,
-                          color: FlutterFlowTheme.of(context)
-                              .secondaryBackground,
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconColor: FlutterFlowTheme.of(context).primary,
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily:
-                                    FlutterFlowTheme.of(context)
-                                        .titleSmallFamily,
-                                color: FlutterFlowTheme.of(context)
-                                    .primary,
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .titleSmallFamily,
+                                color: FlutterFlowTheme.of(context).primary,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .titleSmallIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .titleSmallIsCustom,
                               ),
                           elevation: 0.0,
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primary,
+                            color: FlutterFlowTheme.of(context).primary,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
@@ -916,8 +892,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
               ),
               if (FFAppState().AllowBooking == true)
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      0.0, 9.0, 0.0, 9.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 9.0, 0.0, 9.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -943,13 +919,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
-                                color:
-                                    FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 fontSize: 17.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelLargeIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
                               ),
                         ),
                         subtitle: Text(
@@ -964,19 +938,17 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     .labelMediumFamily,
                                 fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelMediumIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelMediumIsCustom,
                               ),
                         ),
                         trailing: Icon(
                           Icons.arrow_forward_ios,
-                          color:
-                              FlutterFlowTheme.of(context).secondaryText,
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           size: 20.0,
                         ),
-                        tileColor: FlutterFlowTheme.of(context)
-                            .secondaryBackground,
+                        tileColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
                         dense: false,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -993,8 +965,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
               if ((FFAppState().AllowBooking == true) &&
                   (FFAppState().IsLnstantAddress == false))
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      0.0, 9.0, 0.0, 9.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 9.0, 0.0, 9.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -1020,13 +992,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
-                                color:
-                                    FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 fontSize: 17.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelLargeIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
                               ),
                         ),
                         subtitle: Text(
@@ -1041,19 +1011,17 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     .labelMediumFamily,
                                 fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelMediumIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelMediumIsCustom,
                               ),
                         ),
                         trailing: Icon(
                           Icons.arrow_forward_ios,
-                          color:
-                              FlutterFlowTheme.of(context).secondaryText,
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           size: 20.0,
                         ),
-                        tileColor: FlutterFlowTheme.of(context)
-                            .secondaryBackground,
+                        tileColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
                         dense: false,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -1070,17 +1038,16 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
               if ((FFAppState().AllowBooking == true) &&
                   (FFAppState().IsLnstantAddress == true))
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      0.0, 9.0, 0.0, 9.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 9.0, 0.0, 9.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      currentUserLocationValue =
-                          await getCurrentUserLocation(
-                              defaultLocation: const LatLng(0.0, 0.0));
+                      currentUserLocationValue = await getCurrentUserLocation(
+                          defaultLocation: const LatLng(0.0, 0.0));
                       // تاكيد تحديث الموقع
                       var confirmDialogResponse = await showDialog<bool>(
                             context: context,
@@ -1120,20 +1087,16 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             await PENmdenhCall.call(
                           io: FFAppState().LOceshtoaddAdress,
                         );
-                          
+
                         if ((_model.apiResultvcchome2Copy33?.succeeded ??
                             true)) {
                           // تحديث حالة التطبيق موقع المستخدم الحالي
-                          FFAppState().mkanuserorder =
-                              currentUserLocationValue;
-                          FFAppState().fullAdress =
-                              PENmdenhCall.fullAdress(
-                            (_model.apiResultvcchome2Copy33?.jsonBody ??
-                                ''),
+                          FFAppState().mkanuserorder = currentUserLocationValue;
+                          FFAppState().fullAdress = PENmdenhCall.fullAdress(
+                            (_model.apiResultvcchome2Copy33?.jsonBody ?? ''),
                           )!;
                           FFAppState().adressNaim = PENmdenhCall.name(
-                            (_model.apiResultvcchome2Copy33?.jsonBody ??
-                                ''),
+                            (_model.apiResultvcchome2Copy33?.jsonBody ?? ''),
                           )!;
                           safeSetState(() {});
                           // جلب المدينة من Villages
@@ -1142,8 +1105,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 villagesRecord.where(
                               'naim',
                               isEqualTo: PENmdenhCall.name(
-                                (_model.apiResultvcchome2Copy33
-                                        ?.jsonBody ??
+                                (_model.apiResultvcchome2Copy33?.jsonBody ??
                                     ''),
                               ),
                             ),
@@ -1153,8 +1115,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           FFAppState().villa = _model.vil?.reference;
                           FFAppState().villnow = _model.vil?.reference;
                           FFAppState().villtextnow = PENmdenhCall.name(
-                            (_model.apiResultvcchome2Copy33?.jsonBody ??
-                                ''),
+                            (_model.apiResultvcchome2Copy33?.jsonBody ?? ''),
                           )!;
                           safeSetState(() {});
                         } else {
@@ -1169,8 +1130,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                       'لم نتمكن من العثور على موقعك الحالي ، يرجى تفعيل الموقع'),
                                   actions: [
                                     TextButton(
-                                      onPressed: () => Navigator.pop(
-                                          alertDialogContext),
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
                                       child: const Text('Ok'),
                                     ),
                                   ],
@@ -1180,7 +1141,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           );
                         }
                       }
-                          
+
                       safeSetState(() {});
                     },
                     child: Material(
@@ -1200,13 +1161,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
-                                color:
-                                    FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 fontSize: 17.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelLargeIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
                               ),
                         ),
                         subtitle: Text(
@@ -1218,9 +1177,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     .labelMediumFamily,
                                 fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelMediumIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelMediumIsCustom,
                               ),
                         ),
                         trailing: Icon(
@@ -1228,8 +1186,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           color: FlutterFlowTheme.of(context).error,
                           size: 20.0,
                         ),
-                        tileColor: FlutterFlowTheme.of(context)
-                            .secondaryBackground,
+                        tileColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
                         dense: false,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -1245,8 +1203,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 ),
               if (FFAppState().AllowBooking == true)
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      0.0, 9.0, 0.0, 9.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 9.0, 0.0, 9.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -1274,9 +1232,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
                                 ),
-                            pickerBackgroundColor:
-                                FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                            pickerBackgroundColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             pickerForegroundColor:
                                 FlutterFlowTheme.of(context).primaryText,
                             selectedDateTimeBackgroundColor:
@@ -1289,7 +1246,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           );
                         },
                       );
-                          
+
                       TimeOfDay? datePickedTime;
                       if (datePickedDate != null) {
                         datePickedTime = await showTimePicker(
@@ -1304,21 +1261,19 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   FlutterFlowTheme.of(context).primary,
                               headerForegroundColor:
                                   FlutterFlowTheme.of(context).info,
-                              headerTextStyle:
-                                  FlutterFlowTheme.of(context)
-                                      .headlineLarge
-                                      .override(
-                                        fontFamily: 'cairo',
-                                        fontSize: 32.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
+                              headerTextStyle: FlutterFlowTheme.of(context)
+                                  .headlineLarge
+                                  .override(
+                                    fontFamily: 'cairo',
+                                    fontSize: 32.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                               pickerBackgroundColor:
                                   FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                               pickerForegroundColor:
-                                  FlutterFlowTheme.of(context)
-                                      .primaryText,
+                                  FlutterFlowTheme.of(context).primaryText,
                               selectedDateTimeBackgroundColor:
                                   FlutterFlowTheme.of(context).primary,
                               selectedDateTimeForegroundColor:
@@ -1330,9 +1285,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           },
                         );
                       }
-                          
-                      if (datePickedDate != null &&
-                          datePickedTime != null) {
+
+                      if (datePickedDate != null && datePickedTime != null) {
                         safeSetState(() {
                           _model.datePicked = DateTime(
                             datePickedDate.year,
@@ -1370,13 +1324,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
-                                color:
-                                    FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 fontSize: 17.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelLargeIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
                               ),
                         ),
                         subtitle: Text(
@@ -1391,19 +1343,17 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     .labelMediumFamily,
                                 fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelMediumIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelMediumIsCustom,
                               ),
                         ),
                         trailing: Icon(
                           Icons.arrow_forward_ios,
-                          color:
-                              FlutterFlowTheme.of(context).secondaryText,
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           size: 20.0,
                         ),
-                        tileColor: FlutterFlowTheme.of(context)
-                            .secondaryBackground,
+                        tileColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
                         dense: false,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -1419,8 +1369,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 ),
               if (FFAppState().AllowBooking == true)
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      0.0, 9.0, 0.0, 9.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 9.0, 0.0, 9.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -1429,23 +1379,21 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                     onTap: () async {
                       await showModalBottomSheet(
                         isScrollControlled: true,
-                        backgroundColor: FlutterFlowTheme.of(context)
-                            .secondaryBackground,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
                         context: context,
                         builder: (context) {
                           return WebViewAware(
                             child: GestureDetector(
                               onTap: () {
                                 FocusScope.of(context).unfocus();
-                                FocusManager.instance.primaryFocus
-                                    ?.unfocus();
+                                FocusManager.instance.primaryFocus?.unfocus();
                               },
                               child: Padding(
                                 padding: MediaQuery.viewInsetsOf(context),
                                 child: SizedBox(
                                   height:
-                                      MediaQuery.sizeOf(context).height *
-                                          0.77,
+                                      MediaQuery.sizeOf(context).height * 0.77,
                                   child: const PaymentMethods2Widget(),
                                 ),
                               ),
@@ -1470,13 +1418,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
-                                color:
-                                    FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 fontSize: 17.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelLargeIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
                               ),
                         ),
                         subtitle: Text(
@@ -1491,19 +1437,17 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     .labelMediumFamily,
                                 fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts:
-                                    !FlutterFlowTheme.of(context)
-                                        .labelMediumIsCustom,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelMediumIsCustom,
                               ),
                         ),
                         trailing: Icon(
                           Icons.arrow_forward_ios,
-                          color:
-                              FlutterFlowTheme.of(context).secondaryText,
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           size: 20.0,
                         ),
-                        tileColor: FlutterFlowTheme.of(context)
-                            .secondaryBackground,
+                        tileColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
                         dense: false,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -1520,13 +1464,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
               if ((FFAppState().villnow != null) &&
                   (FFAppState().typecarRev != null))
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      7.0, 8.0, 7.0, 8.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(7.0, 8.0, 7.0, 8.0),
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context)
-                          .secondaryBackground,
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
                       border: Border.all(
                         color: FlutterFlowTheme.of(context).alternate,
@@ -1537,7 +1480,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           12.0, 12.0, 12.0, 12.0),
                       child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
@@ -1546,17 +1489,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  fontFamily:
-                                      FlutterFlowTheme.of(context)
-                                          .headlineSmallFamily,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primary,
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineSmallFamily,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   fontSize: 18.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
-                                  useGoogleFonts:
-                                      !FlutterFlowTheme.of(context)
-                                          .headlineSmallIsCustom,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .headlineSmallIsCustom,
                                 ),
                           ),
                           Text(
@@ -1566,36 +1506,31 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily:
-                                      FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
                                   fontSize: 13.0,
                                   letterSpacing: 0.0,
-                                  useGoogleFonts:
-                                      !FlutterFlowTheme.of(context)
-                                          .bodyMediumIsCustom,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .bodyMediumIsCustom,
                                 ),
                           ),
                           if (FFAppState().Minimumhours >= 2)
                             Row(
-                                                          mainAxisAlignment:
-                                  MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Flex(
                                   direction: Axis.vertical,
-                                                                  children: [
+                                  children: [
                                     Padding(
                                       padding:
-                                          const EdgeInsetsDirectional
-                                              .fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               4.0, 0.0, 4.0, 0.0),
                                       child: Icon(
                                         Icons.sim_card_alert,
-                                        color: FlutterFlowTheme.of(
-                                                context)
-                                            .error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         size: 9.0,
                                       ),
                                     ),
@@ -1619,23 +1554,18 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         kaText:
                                             'Based on the defined iterations, the minimum hours required are ${FFAppState().Minimumhours.toString()} hours ',
                                       ),
-                                      style: FlutterFlowTheme.of(
-                                              context)
+                                      style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color:
-                                                FlutterFlowTheme.of(
-                                                        context)
-                                                    .error,
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
                                             fontSize: 11.0,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ).animateOnPageLoad(animationsMap[
@@ -1645,165 +1575,134 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               ],
                             ),
                           Row(
-                                                      mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Column(
-                                                              crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context)
-                                        .getText(
+                                    FFLocalizations.of(context).getText(
                                       '3wz9h8sg' /* Current Hours */,
                                     ),
-                                    style: FlutterFlowTheme.of(
-                                            context)
+                                    style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(
-                                                      context)
+                                              FlutterFlowTheme.of(context)
                                                   .bodySmallFamily,
-                                          color: FlutterFlowTheme.of(
-                                                  context)
+                                          color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           fontSize: 11.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(
-                                                      context)
+                                              !FlutterFlowTheme.of(context)
                                                   .bodySmallIsCustom,
                                         ),
                                   ),
                                   Text(
                                     '${FFAppState().saatcar.toString()} ساعة  ',
-                                    style: FlutterFlowTheme.of(
-                                            context)
+                                    style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(
-                                                      context)
+                                              FlutterFlowTheme.of(context)
                                                   .bodyLargeFamily,
-                                          color: FlutterFlowTheme.of(
-                                                  context)
+                                          color: FlutterFlowTheme.of(context)
                                               .primary,
                                           fontSize: 11.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(
-                                                      context)
+                                              !FlutterFlowTheme.of(context)
                                                   .bodyLargeIsCustom,
                                         ),
                                   ),
                                 ],
                               ),
                               Column(
-                                                              mainAxisAlignment:
-                                    MainAxisAlignment.center,
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
                                     padding:
-                                        const EdgeInsetsDirectional
-                                            .fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             22.0, 0.0, 22.0, 0.0),
                                     child: Text(
-                                      FFLocalizations.of(context)
-                                          .getText(
+                                      FFLocalizations.of(context).getText(
                                         '2c08i4up' /* Additional Hours? */,
                                       ),
-                                      style: FlutterFlowTheme.of(
-                                              context)
+                                      style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodySmallFamily,
-                                            color:
-                                                FlutterFlowTheme.of(
-                                                        context)
-                                                    .secondaryText,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             fontSize: 11.0,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodySmallIsCustom,
                                           ),
                                     ),
                                   ),
                                   Row(
-                                                                      mainAxisAlignment:
-                                        MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
                                         width: 120.0,
                                         height: 40.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(
-                                                  context)
+                                          color: FlutterFlowTheme.of(context)
                                               .secondaryBackground,
                                           borderRadius:
-                                              BorderRadius.circular(
-                                                  8.0),
+                                              BorderRadius.circular(8.0),
                                           shape: BoxShape.rectangle,
                                         ),
-                                        child:
-                                            FlutterFlowCountController(
-                                          decrementIconBuilder:
-                                              (enabled) => Icon(
+                                        child: FlutterFlowCountController(
+                                          decrementIconBuilder: (enabled) =>
+                                              Icon(
                                             Icons.remove_rounded,
                                             color: enabled
-                                                ? FlutterFlowTheme.of(
-                                                        context)
+                                                ? FlutterFlowTheme.of(context)
                                                     .secondaryText
-                                                : FlutterFlowTheme.of(
-                                                        context)
+                                                : FlutterFlowTheme.of(context)
                                                     .alternate,
                                             size: 18.0,
                                           ),
-                                          incrementIconBuilder:
-                                              (enabled) => Icon(
+                                          incrementIconBuilder: (enabled) =>
+                                              Icon(
                                             Icons.add_rounded,
                                             color: enabled
-                                                ? FlutterFlowTheme.of(
-                                                        context)
+                                                ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : FlutterFlowTheme.of(
-                                                        context)
+                                                : FlutterFlowTheme.of(context)
                                                     .alternate,
                                             size: 18.0,
                                           ),
-                                          countBuilder: (count) =>
-                                              Text(
+                                          countBuilder: (count) => Text(
                                             count.toString(),
-                                            style: FlutterFlowTheme
-                                                    .of(context)
+                                            style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
                                                   fontFamily:
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .titleLargeFamily,
-                                                  color: FlutterFlowTheme
-                                                          .of(context)
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
                                                       .primary,
                                                   fontSize: 18.0,
                                                   letterSpacing: 0.0,
                                                   shadows: [
                                                     Shadow(
-                                                      color: FlutterFlowTheme.of(
-                                                              context)
-                                                          .alternate,
-                                                      offset:
-                                                          const Offset(
-                                                              2.0,
-                                                              2.0),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .alternate,
+                                                      offset: const Offset(
+                                                          2.0, 2.0),
                                                       blurRadius: 2.0,
                                                     )
                                                   ],
@@ -1813,14 +1712,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           .titleLargeIsCustom,
                                                 ),
                                           ),
-                                          count: _model
-                                              .countControllerValue ??= 0,
+                                          count: _model.countControllerValue ??=
+                                              0,
                                           updateCount: (count) async {
                                             safeSetState(() => _model
                                                     .countControllerValue =
                                                 count); // تحديث حالة التطبيق
-                                            FFAppState()
-                                                .totalKsm2 = _model
+                                            FFAppState().totalKsm2 = _model
                                                     .countControllerValue!
                                                     .toDouble() *
                                                 FFAppState()
@@ -1829,62 +1727,43 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                 FFAppState().NsbhKsm /
                                                 100;
                                             safeSetState(() {});
-                                            if (FFAppState()
-                                                    .totalKsm2 <
-                                                FFAppState()
-                                                    .UbKsm
-                                                    .toDouble()) {
+                                            if (FFAppState().totalKsm2 <
+                                                FFAppState().UbKsm.toDouble()) {
                                               // تحديث الساعات
                                               FFAppState().addhors =
-                                                  _model
-                                                      .countControllerValue!;
+                                                  _model.countControllerValue!;
                                               FFAppState().totalsaat =
-                                                  FFAppState()
-                                                          .saatcar +
-                                                      FFAppState()
-                                                          .addhors;
-                                              FFAppState()
-                                                  .totalAllNew = 0.0;
-                                              FFAppState()
-                                                  .totalAllnowPrent = '';
-                                              FFAppState()
-                                                  .TOTALmndob2 = 0;
-                                              FFAppState().totalapp2 =
-                                                  0;
+                                                  FFAppState().saatcar +
+                                                      FFAppState().addhors;
+                                              FFAppState().totalAllNew = 0.0;
+                                              FFAppState().totalAllnowPrent =
+                                                  '';
+                                              FFAppState().TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 = 0;
                                               FFAppState().vat2 = 0;
-                                              FFAppState()
-                                                  .totalAllNow2 = 0;
-                                              FFAppState().totalKsm2 =
-                                                  0.0;
+                                              FFAppState().totalAllNow2 = 0;
+                                              FFAppState().totalKsm2 = 0.0;
                                               safeSetState(() {});
                                               // خصم متغير
-                                              FFAppState()
-                                                  .totalKsm2 = _model
+                                              FFAppState().totalKsm2 = _model
                                                       .countControllerValue!
                                                       .toDouble() *
                                                   FFAppState()
                                                       .srtypecar
                                                       .toDouble() *
-                                                  FFAppState()
-                                                      .NsbhKsm /
+                                                  FFAppState().NsbhKsm /
                                                   100;
                                               safeSetState(() {});
                                               // إجراء عملية محاسبية ( حدف القيم السابقة
-                                              FFAppState()
-                                                  .TOTALmndob2 = 0;
-                                              FFAppState().totalapp2 =
-                                                  0;
+                                              FFAppState().TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 = 0;
                                               FFAppState().vat2 = 0;
-                                              FFAppState()
-                                                  .totalAllNow2 = 0;
-                                              FFAppState()
-                                                  .update(() {});
+                                              FFAppState().totalAllNow2 = 0;
+                                              FFAppState().update(() {});
                                               // تعيين قيم جديدة محاسبية
-                                              FFAppState()
-                                                      .TOTALmndob2 =
+                                              FFAppState().TOTALmndob2 =
                                                   functions.total(
-                                                      FFAppState()
-                                                          .srtypecar,
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
                                                           .totalsaat
                                                           .toDouble())!;
@@ -1897,27 +1776,20 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           FFAppState()
                                                               .totalsaat
                                                               .toDouble()))!;
-                                              FFAppState().vat2 =
-                                                  functions.vat(
-                                                      FFAppState()
-                                                          .VatDolh
-                                                          .toDouble(),
-                                                      functions.total(
-                                                          FFAppState()
-                                                              .srtypecar,
-                                                          FFAppState()
-                                                              .totalsaat
-                                                              .toDouble()))!;
-                                              FFAppState()
-                                                      .totalAllNow2 =
+                                              FFAppState().vat2 = functions.vat(
                                                   FFAppState()
-                                                          .TOTALmndob2 +
+                                                      .VatDolh
+                                                      .toDouble(),
+                                                  functions.total(
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                      .totalmndob3 =
+                                                          .totalsaat
+                                                          .toDouble()))!;
+                                              FFAppState().totalAllNow2 =
+                                                  FFAppState().TOTALmndob2 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2;
+                                              FFAppState().totalmndob3 =
                                                   functions
                                                       .total(
                                                           FFAppState()
@@ -1926,51 +1798,30 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                               .totalsaat
                                                               .toDouble())!
                                                       .toDouble();
-                                              FFAppState()
-                                                  .update(() {});
+                                              FFAppState().update(() {});
                                               // تحديث الحسابات متغير حالة التطبيق
-                                              FFAppState()
-                                                      .TOTALmndob2 =
-                                                  FFAppState()
-                                                          .TOTALmndob2 -
-                                                      FFAppState()
-                                                          .totalapp2 -
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                      .totalAllNow2 =
-                                                  FFAppState()
-                                                          .TOTALmndob2 +
-                                                      FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                      .totalmndob3 =
-                                                  FFAppState()
-                                                          .totalmndob3 -
-                                                      FFAppState()
-                                                          .totalapp2 -
-                                                      FFAppState()
-                                                          .vat2 -
-                                                      FFAppState()
-                                                          .totalKsm2;
+                                              FFAppState().TOTALmndob2 =
+                                                  FFAppState().TOTALmndob2 -
+                                                      FFAppState().totalapp2 -
+                                                      FFAppState().vat2;
+                                              FFAppState().totalAllNow2 =
+                                                  FFAppState().TOTALmndob2 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2;
+                                              FFAppState().totalmndob3 =
+                                                  FFAppState().totalmndob3 -
+                                                      FFAppState().totalapp2 -
+                                                      FFAppState().vat2 -
+                                                      FFAppState().totalKsm2;
                                               FFAppState().totalAllnow3 =
-                                                  FFAppState()
-                                                          .totalmndob3 +
-                                                      FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2 -
-                                                      FFAppState()
-                                                          .totalKsm2;
-                                              FFAppState()
-                                                  .update(() {});
-                                              FFAppState()
-                                                      .TOTALmndob2 =
+                                                  FFAppState().totalmndob3 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2 -
+                                                      FFAppState().totalKsm2;
+                                              FFAppState().update(() {});
+                                              FFAppState().TOTALmndob2 =
                                                   functions.total(
-                                                      FFAppState()
-                                                          .srtypecar,
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
                                                           .totalsaat
                                                           .toDouble())!;
@@ -1983,29 +1834,21 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           FFAppState()
                                                               .totalsaat
                                                               .toDouble()))!;
-                                              FFAppState().vat2 =
-                                                  functions.vat(
-                                                      FFAppState()
-                                                          .VatDolh
-                                                          .toDouble(),
-                                                      functions.total(
-                                                          FFAppState()
-                                                              .srtypecar,
-                                                          FFAppState()
-                                                              .totalsaat
-                                                              .toDouble()))!;
-                                              FFAppState()
-                                                      .totalAllNow2 =
+                                              FFAppState().vat2 = functions.vat(
                                                   FFAppState()
-                                                          .TOTALmndob2 +
+                                                      .VatDolh
+                                                      .toDouble(),
+                                                  functions.total(
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                  .update(() {});
-                                              FFAppState()
-                                                      .totalmndob3 =
+                                                          .totalsaat
+                                                          .toDouble()))!;
+                                              FFAppState().totalAllNow2 =
+                                                  FFAppState().TOTALmndob2 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2;
+                                              FFAppState().update(() {});
+                                              FFAppState().totalmndob3 =
                                                   functions
                                                       .total(
                                                           FFAppState()
@@ -2014,82 +1857,58 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                               .totalsaat
                                                               .toDouble())!
                                                       .toDouble();
-                                              FFAppState()
-                                                      .totalAllnow3 =
-                                                  (FFAppState()
-                                                              .TOTALmndob2 +
+                                              FFAppState().totalAllnow3 =
+                                                  (FFAppState().TOTALmndob2 +
                                                           FFAppState()
                                                               .totalapp2 +
-                                                          FFAppState()
-                                                              .vat2)
+                                                          FFAppState().vat2)
                                                       .toDouble();
                                               safeSetState(() {});
-                                              FFAppState()
-                                                      .totalmndob3 =
-                                                  FFAppState()
-                                                          .totalmndob3 -
+                                              FFAppState().totalmndob3 =
+                                                  FFAppState().totalmndob3 -
                                                       FFAppState()
                                                           .totalapp2
                                                           .toDouble() -
                                                       FFAppState()
                                                           .vat2
                                                           .toDouble();
-                                              FFAppState()
-                                                      .totalAllnow3 =
-                                                  FFAppState()
-                                                          .totalmndob3 +
+                                              FFAppState().totalAllnow3 =
+                                                  FFAppState().totalmndob3 +
                                                       FFAppState()
                                                           .totalapp2
                                                           .toDouble() +
                                                       FFAppState()
                                                           .vat2
                                                           .toDouble() -
-                                                      FFAppState()
-                                                          .totalKsm2;
+                                                      FFAppState().totalKsm2;
                                               safeSetState(() {});
                                             } else {
                                               FFAppState().addhors =
-                                                  _model
-                                                      .countControllerValue!;
+                                                  _model.countControllerValue!;
                                               FFAppState().totalsaat =
-                                                  FFAppState()
-                                                          .saatcar +
-                                                      FFAppState()
-                                                          .addhors;
-                                              FFAppState()
-                                                  .totalAllNew = 0.0;
-                                              FFAppState()
-                                                  .totalAllnowPrent = '';
-                                              FFAppState()
-                                                  .TOTALmndob2 = 0;
-                                              FFAppState().totalapp2 =
-                                                  0;
+                                                  FFAppState().saatcar +
+                                                      FFAppState().addhors;
+                                              FFAppState().totalAllNew = 0.0;
+                                              FFAppState().totalAllnowPrent =
+                                                  '';
+                                              FFAppState().TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 = 0;
                                               FFAppState().vat2 = 0;
-                                              FFAppState()
-                                                  .totalAllNow2 = 0;
-                                              FFAppState().totalKsm2 =
-                                                  0.0;
+                                              FFAppState().totalAllNow2 = 0;
+                                              FFAppState().totalKsm2 = 0.0;
                                               safeSetState(() {});
                                               // خصم ثابت
                                               FFAppState().totalKsm2 =
-                                                  FFAppState()
-                                                      .UbKsm
-                                                      .toDouble();
+                                                  FFAppState().UbKsm.toDouble();
                                               safeSetState(() {});
-                                              FFAppState()
-                                                  .TOTALmndob2 = 0;
-                                              FFAppState().totalapp2 =
-                                                  0;
+                                              FFAppState().TOTALmndob2 = 0;
+                                              FFAppState().totalapp2 = 0;
                                               FFAppState().vat2 = 0;
-                                              FFAppState()
-                                                  .totalAllNow2 = 0;
-                                              FFAppState()
-                                                  .update(() {});
-                                              FFAppState()
-                                                      .TOTALmndob2 =
+                                              FFAppState().totalAllNow2 = 0;
+                                              FFAppState().update(() {});
+                                              FFAppState().TOTALmndob2 =
                                                   functions.total(
-                                                      FFAppState()
-                                                          .srtypecar,
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
                                                           .totalsaat
                                                           .toDouble())!;
@@ -2102,27 +1921,20 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           FFAppState()
                                                               .totalsaat
                                                               .toDouble()))!;
-                                              FFAppState().vat2 =
-                                                  functions.vat(
-                                                      FFAppState()
-                                                          .VatDolh
-                                                          .toDouble(),
-                                                      functions.total(
-                                                          FFAppState()
-                                                              .srtypecar,
-                                                          FFAppState()
-                                                              .totalsaat
-                                                              .toDouble()))!;
-                                              FFAppState()
-                                                      .totalAllNow2 =
+                                              FFAppState().vat2 = functions.vat(
                                                   FFAppState()
-                                                          .TOTALmndob2 +
+                                                      .VatDolh
+                                                      .toDouble(),
+                                                  functions.total(
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                      .totalmndob3 =
+                                                          .totalsaat
+                                                          .toDouble()))!;
+                                              FFAppState().totalAllNow2 =
+                                                  FFAppState().TOTALmndob2 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2;
+                                              FFAppState().totalmndob3 =
                                                   functions
                                                       .total(
                                                           FFAppState()
@@ -2131,50 +1943,29 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                               .totalsaat
                                                               .toDouble())!
                                                       .toDouble();
-                                              FFAppState()
-                                                  .update(() {});
-                                              FFAppState()
-                                                      .TOTALmndob2 =
-                                                  FFAppState()
-                                                          .TOTALmndob2 -
-                                                      FFAppState()
-                                                          .totalapp2 -
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                      .totalAllNow2 =
-                                                  FFAppState()
-                                                          .TOTALmndob2 +
-                                                      FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                      .totalmndob3 =
-                                                  FFAppState()
-                                                          .totalmndob3 -
-                                                      FFAppState()
-                                                          .totalapp2 -
-                                                      FFAppState()
-                                                          .vat2 -
-                                                      FFAppState()
-                                                          .totalKsm2;
+                                              FFAppState().update(() {});
+                                              FFAppState().TOTALmndob2 =
+                                                  FFAppState().TOTALmndob2 -
+                                                      FFAppState().totalapp2 -
+                                                      FFAppState().vat2;
+                                              FFAppState().totalAllNow2 =
+                                                  FFAppState().TOTALmndob2 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2;
+                                              FFAppState().totalmndob3 =
+                                                  FFAppState().totalmndob3 -
+                                                      FFAppState().totalapp2 -
+                                                      FFAppState().vat2 -
+                                                      FFAppState().totalKsm2;
                                               FFAppState().totalAllnow3 =
-                                                  FFAppState()
-                                                          .totalmndob3 +
-                                                      FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2 -
-                                                      FFAppState()
-                                                          .totalKsm2;
-                                              FFAppState()
-                                                  .update(() {});
-                                              FFAppState()
-                                                      .TOTALmndob2 =
+                                                  FFAppState().totalmndob3 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2 -
+                                                      FFAppState().totalKsm2;
+                                              FFAppState().update(() {});
+                                              FFAppState().TOTALmndob2 =
                                                   functions.total(
-                                                      FFAppState()
-                                                          .srtypecar,
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
                                                           .totalsaat
                                                           .toDouble())!;
@@ -2187,29 +1978,21 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           FFAppState()
                                                               .totalsaat
                                                               .toDouble()))!;
-                                              FFAppState().vat2 =
-                                                  functions.vat(
-                                                      FFAppState()
-                                                          .VatDolh
-                                                          .toDouble(),
-                                                      functions.total(
-                                                          FFAppState()
-                                                              .srtypecar,
-                                                          FFAppState()
-                                                              .totalsaat
-                                                              .toDouble()))!;
-                                              FFAppState()
-                                                      .totalAllNow2 =
+                                              FFAppState().vat2 = functions.vat(
                                                   FFAppState()
-                                                          .TOTALmndob2 +
+                                                      .VatDolh
+                                                      .toDouble(),
+                                                  functions.total(
+                                                      FFAppState().srtypecar,
                                                       FFAppState()
-                                                          .totalapp2 +
-                                                      FFAppState()
-                                                          .vat2;
-                                              FFAppState()
-                                                  .update(() {});
-                                              FFAppState()
-                                                      .totalmndob3 =
+                                                          .totalsaat
+                                                          .toDouble()))!;
+                                              FFAppState().totalAllNow2 =
+                                                  FFAppState().TOTALmndob2 +
+                                                      FFAppState().totalapp2 +
+                                                      FFAppState().vat2;
+                                              FFAppState().update(() {});
+                                              FFAppState().totalmndob3 =
                                                   functions
                                                       .total(
                                                           FFAppState()
@@ -2218,38 +2001,30 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                               .totalsaat
                                                               .toDouble())!
                                                       .toDouble();
-                                              FFAppState()
-                                                      .totalAllnow3 =
-                                                  (FFAppState()
-                                                              .TOTALmndob2 +
+                                              FFAppState().totalAllnow3 =
+                                                  (FFAppState().TOTALmndob2 +
                                                           FFAppState()
                                                               .totalapp2 +
-                                                          FFAppState()
-                                                              .vat2)
+                                                          FFAppState().vat2)
                                                       .toDouble();
                                               safeSetState(() {});
-                                              FFAppState()
-                                                      .totalmndob3 =
-                                                  FFAppState()
-                                                          .totalmndob3 -
+                                              FFAppState().totalmndob3 =
+                                                  FFAppState().totalmndob3 -
                                                       FFAppState()
                                                           .totalapp2
                                                           .toDouble() -
                                                       FFAppState()
                                                           .vat2
                                                           .toDouble();
-                                              FFAppState()
-                                                      .totalAllnow3 =
-                                                  FFAppState()
-                                                          .totalmndob3 +
+                                              FFAppState().totalAllnow3 =
+                                                  FFAppState().totalmndob3 +
                                                       FFAppState()
                                                           .totalapp2
                                                           .toDouble() +
                                                       FFAppState()
                                                           .vat2
                                                           .toDouble() -
-                                                      FFAppState()
-                                                          .totalKsm2;
+                                                      FFAppState().totalKsm2;
                                               safeSetState(() {});
                                             }
                                           },
@@ -2258,12 +2033,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           maximum: 300,
                                           contentPadding:
                                               const EdgeInsetsDirectional
-                                                  .fromSTEB(12.0, 0.0,
-                                                  12.0, 0.0),
+                                                  .fromSTEB(
+                                                  12.0, 0.0, 12.0, 0.0),
                                         ),
                                       ),
-                                    ].divide(
-                                        const SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -2271,36 +2045,33 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           ),
                           if (FFAppState().NsbhKsm >= 1.0)
                             Row(
-                                                          mainAxisAlignment:
-                                  MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Expanded(
-                                  flex:1,
+                                  flex: 1,
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional
-                                        .fromSTEB(4.0, 0.0, 4.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            4.0, 0.0, 4.0, 0.0),
                                     child: Icon(
                                       Icons.local_offer,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primary,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                       size: 10.0,
                                     ),
                                   ),
                                 ),
                                 Expanded(
-                                                                  flex:7,
-
+                                  flex: 7,
                                   child: Text(
-                                    FFLocalizations.of(context)
-                                        .getVariableText(
+                                    FFLocalizations.of(context).getVariableText(
                                       enText: 'You get a  ${formatNumber(
                                         FFAppState().NsbhKsm,
                                         formatType: FormatType.percent,
                                       )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
                                       arText:
                                           'تحصل على خصم ${FFAppState().NsbhKsm.toString()} % لكل ساعة إضافية تضيفها، بحد أقصى ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
-                                      zh_HansText:
-                                          'You get a  ${formatNumber(
+                                      zh_HansText: 'You get a  ${formatNumber(
                                         FFAppState().NsbhKsm,
                                         formatType: FormatType.percent,
                                       )}  discount for each additional hour you add, up to a maximum of  ${FFAppState().UbKsm.toString()}${FFAppState().RMZCurrency}',
@@ -2331,14 +2102,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily,
-                                          color:
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
                                           fontSize: 10.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(
-                                                      context)
+                                              !FlutterFlowTheme.of(context)
                                                   .bodyMediumIsCustom,
                                         ),
                                   ),
@@ -2347,8 +2116,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             ),
                           Divider(
                             thickness: 1.0,
-                            color:
-                                FlutterFlowTheme.of(context).alternate,
+                            color: FlutterFlowTheme.of(context).alternate,
                           ),
                         ].divide(const SizedBox(height: 12.0)),
                       ),
@@ -2364,21 +2132,18 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                     FFLocalizations.of(context).getText(
                       '3im46sag' /* List of added locations. */,
                     ),
-                    style: FlutterFlowTheme.of(context)
-                        .labelMedium
-                        .override(
-                          fontFamily: FlutterFlowTheme.of(context)
-                              .labelMediumFamily,
+                    style: FlutterFlowTheme.of(context).labelMedium.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           letterSpacing: 0.0,
-                          useGoogleFonts: !FlutterFlowTheme.of(context)
-                              .labelMediumIsCustom,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                 ),
-              if ((FFAppState().addcart <= 0) &&
-                  (FFAppState().typeHgz == 1))
+              if ((FFAppState().addcart <= 0) && (FFAppState().typeHgz == 1))
                 Row(
-                                  children: [
+                  children: [
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           0.0, 22.0, 0.0, 0.0),
@@ -2389,14 +2154,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           color: FlutterFlowTheme.of(context).primary,
                         ),
                         child: Column(
-                                                  children: [
+                          children: [
                             Row(
-                                                          mainAxisAlignment:
-                                  MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional
-                                      .fromSTEB(0.0, 33.0, 0.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 33.0, 0.0, 0.0),
                                   child: Icon(
                                     Icons.sentiment_dissatisfied,
                                     color: FlutterFlowTheme.of(context)
@@ -2406,30 +2170,26 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 ),
                                 if (FFAppState().addcart <= 0)
                                   Padding(
-                                    padding: const EdgeInsetsDirectional
-                                        .fromSTEB(0.0, 33.0, 18.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 33.0, 18.0, 0.0),
                                     child: Text(
-                                      FFLocalizations.of(context)
-                                          .getText(
+                                      FFLocalizations.of(context).getText(
                                         'vbjndb7s' /* No tours have been added! */,
                                       ),
                                       textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(
-                                              context)
+                                      style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
                                             fontSize: 22.0,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2457,14 +2217,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                           ),
                         ),
                         child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                      
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                                          const SizedBox(width: 12),
-                      
+                            const SizedBox(width: 12),
                             Padding(
-                              padding: const EdgeInsetsDirectional
-                                  .fromSTEB(0.0, 33.0, 0.0, 0.0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 33.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.drive_eta_sharp,
                                 color: FlutterFlowTheme.of(context)
@@ -2472,29 +2230,35 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 size: 22.0,
                               ),
                             ),
-                                          const SizedBox(width: 8),
-                      
+                            const SizedBox(width: 8),
                             if (FFAppState().addcart <= 0)
-                             Expanded(
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 11.0, 18.0, 0.0),
-                          child: Text(
-                            FFLocalizations.of(context).getText('un9qx6mz'),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                              color: FlutterFlowTheme.of(context).secondaryBackground,
-                              fontSize: 12.0,
-                              letterSpacing: 0.0,
-                              useGoogleFonts:
-                                  !FlutterFlowTheme.of(context).bodyMediumIsCustom,
-                            ),
-                          ),
-                        ),
-                      )
-                      
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 11.0, 18.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context)
+                                        .getText('un9qx6mz'),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          fontSize: 12.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(context)
+                                                  .bodyMediumIsCustom,
+                                        ),
+                                  ),
+                                ),
+                              )
                           ],
                         ),
                       ),
@@ -2505,10 +2269,10 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 Builder(
                   builder: (context) {
                     final mkss = FFAppState().cartmkss.toList();
-                          
+
                     return SingleChildScrollView(
                       child: Column(
-                                              children: List.generate(mkss.length, (mkssIndex) {
+                        children: List.generate(mkss.length, (mkssIndex) {
                           final mkssItem = mkss[mkssIndex];
                           return ListView(
                             padding: EdgeInsets.zero,
@@ -2516,70 +2280,64 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             scrollDirection: Axis.vertical,
                             children: [
                               Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(
-                                        12.0, 8.0, 8.0, 8.0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 8.0, 8.0, 8.0),
                                 child: Row(
-                                                                  mainAxisAlignment:
+                                  mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
                                       padding:
-                                          const EdgeInsetsDirectional
-                                              .fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               12.0, 0.0, 0.0, 0.0),
                                       child: Column(
-                                                                              mainAxisAlignment:
+                                        mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
                                           Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                    0.0, 0.0, 0.0, 8.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                             child: Text(
                                               mkssItem.naim,
-                                              style: FlutterFlowTheme
-                                                      .of(context)
-                                                  .labelLarge
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeFamily,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeIsCustom,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelLargeFamily,
+                                                        fontSize: 15.0,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts:
+                                                            !FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelLargeIsCustom,
+                                                      ),
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                    0.0, 0.0, 0.0, 8.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                             child: Text(
                                               mkssItem.textivill,
-                                              style: FlutterFlowTheme
-                                                      .of(context)
-                                                  .labelLarge
-                                                  .override(
-                                                    fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeFamily,
-                                                    fontSize: 12.0,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeIsCustom,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelLargeFamily,
+                                                        fontSize: 12.0,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts:
+                                                            !FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelLargeIsCustom,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -2593,8 +2351,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                       icon: Icon(
                                         Icons.delete_outline_rounded,
                                         color:
-                                            FlutterFlowTheme.of(context)
-                                                .error,
+                                            FlutterFlowTheme.of(context).error,
                                         size: 20.0,
                                       ),
                                       onPressed: () async {
@@ -2603,10 +2360,9 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         FFAppState().addcart =
                                             FFAppState().addcart + -1;
                                         FFAppState().Minimumhours =
-                                            (FFAppState().addcart / 2)
-                                                .toInt();
-                                        FFAppState().removeFromMkan(
-                                            mkssItem.revmkan!);
+                                            (FFAppState().addcart / 2).toInt();
+                                        FFAppState()
+                                            .removeFromMkan(mkssItem.revmkan!);
                                         FFAppState().update(() {});
                                       },
                                     ),
@@ -2622,7 +2378,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                 ),
               if (FFAppState().addcart >= 1)
                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     if ((valueOrDefault<bool>(
                                 currentUserDocument?.actevMndob, false) ==
@@ -2642,31 +2398,27 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               obscureText: false,
                               decoration: InputDecoration(
                                 isDense: true,
-                                labelText:
-                                    FFLocalizations.of(context).getText(
+                                labelText: FFLocalizations.of(context).getText(
                                   'njvlci0g' /* عدد الساعات المطلوبة */,
                                 ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily:
-                                          FlutterFlowTheme.of(context)
-                                              .labelMediumFamily,
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelMediumFamily,
                                       letterSpacing: 0.0,
                                       useGoogleFonts:
                                           !FlutterFlowTheme.of(context)
                                               .labelMediumIsCustom,
                                     ),
-                                hintText:
-                                    FFLocalizations.of(context).getText(
+                                hintText: FFLocalizations.of(context).getText(
                                   'lxw2tgd1' /* TextField */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily:
-                                          FlutterFlowTheme.of(context)
-                                              .labelMediumFamily,
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelMediumFamily,
                                       letterSpacing: 0.0,
                                       useGoogleFonts:
                                           !FlutterFlowTheme.of(context)
@@ -2677,34 +2429,28 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
-                                  borderRadius:
-                                      BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
-                                  borderRadius:
-                                      BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .error,
+                                    color: FlutterFlowTheme.of(context).error,
                                     width: 1.0,
                                   ),
-                                  borderRadius:
-                                      BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .error,
+                                    color: FlutterFlowTheme.of(context).error,
                                     width: 1.0,
                                   ),
-                                  borderRadius:
-                                      BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
@@ -2713,17 +2459,16 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily:
-                                        FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
                                     letterSpacing: 0.0,
                                     useGoogleFonts:
                                         !FlutterFlowTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                               keyboardType: TextInputType.number,
-                              cursorColor: FlutterFlowTheme.of(context)
-                                  .primaryText,
+                              cursorColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                               validator: _model.textControllerValidator
                                   .asValidator(context),
                             ),
@@ -2747,8 +2492,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 .secondaryBackground,
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(
-                              color:
-                                  FlutterFlowTheme.of(context).alternate,
+                              color: FlutterFlowTheme.of(context).alternate,
                               width: 1.0,
                             ),
                           ),
@@ -2756,8 +2500,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 12.0, 12.0, 12.0),
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
@@ -2766,12 +2509,10 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   style: FlutterFlowTheme.of(context)
                                       .headlineSmall
                                       .override(
-                                        fontFamily:
-                                            FlutterFlowTheme.of(context)
-                                                .headlineSmallFamily,
-                                        color:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .headlineSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts:
@@ -2781,8 +2522,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 ),
                                 Divider(
                                   thickness: 1.0,
-                                  color: FlutterFlowTheme.of(context)
-                                      .alternate,
+                                  color: FlutterFlowTheme.of(context).alternate,
                                 ),
                                 Row(
                                   mainAxisAlignment:
@@ -2796,17 +2536,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2819,16 +2556,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .primaryText,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2846,17 +2580,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2866,16 +2597,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .primaryText,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2893,17 +2621,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2913,16 +2638,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .primaryText,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -2935,42 +2657,36 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     children: [
                                       Text(
                                         'VAT  ضريبة القيمة المضافة  ${FFAppState().VatDolh.toString()}% :',
-                                        style: FlutterFlowTheme.of(
-                                                context)
+                                        style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(
-                                                          context)
+                                                  FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
-                                              color: FlutterFlowTheme.of(
-                                                      context)
-                                                  .secondaryText,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(
-                                                          context)
+                                                  !FlutterFlowTheme.of(context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
                                       Text(
                                         '${FFAppState().vat2.toString()}${FFAppState().RMZCurrency}',
-                                        style: FlutterFlowTheme.of(
-                                                context)
+                                        style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(
-                                                          context)
+                                                  FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
-                                              color: FlutterFlowTheme.of(
-                                                      context)
-                                                  .primaryText,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(
-                                                          context)
+                                                  !FlutterFlowTheme.of(context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
@@ -2983,46 +2699,39 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context)
-                                            .getText(
+                                        FFLocalizations.of(context).getText(
                                           'fy9yp6wj' /* Total Deductions: */,
                                         ),
-                                        style: FlutterFlowTheme.of(
-                                                context)
+                                        style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(
-                                                          context)
+                                                  FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
-                                              color: FlutterFlowTheme.of(
-                                                      context)
-                                                  .error,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(
-                                                          context)
+                                                  !FlutterFlowTheme.of(context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
                                       Text(
                                         '${FFAppState().totalKsm2.toString()} ${FFAppState().RMZCurrency}',
-                                        style: FlutterFlowTheme.of(
-                                                context)
+                                        style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(
-                                                          context)
+                                                  FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
-                                              color: FlutterFlowTheme.of(
-                                                      context)
-                                                  .error,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(
-                                                          context)
+                                                  !FlutterFlowTheme.of(context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
@@ -3030,8 +2739,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                   ),
                                 Divider(
                                   thickness: 1.0,
-                                  color: FlutterFlowTheme.of(context)
-                                      .alternate,
+                                  color: FlutterFlowTheme.of(context).alternate,
                                 ),
                                 Row(
                                   mainAxisAlignment:
@@ -3045,18 +2753,15 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .headlineSmall
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .headlineSmallFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .primary,
                                             fontSize: 20.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .headlineSmallIsCustom,
                                           ),
                                     ),
@@ -3066,18 +2771,15 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                           .headlineSmall
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .headlineSmallFamily,
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .primary,
                                             fontSize: 20.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(
-                                                        context)
+                                                !FlutterFlowTheme.of(context)
                                                     .headlineSmallIsCustom,
                                           ),
                                     ),
@@ -3086,20 +2788,19 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                 if ((FFAppState().payth != 'نقدآ') &&
                                     (FFAppState().payth != ''))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional
-                                        .fromSTEB(0.0, 7.0, 0.0, 22.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 7.0, 0.0, 22.0),
                                     child: Row(
                                       children: [
                                         FFButtonWidget(
                                           onPressed: () async {
-                                            if ((FFAppState()
-                                                        .Minimumhours >=
+                                            if ((FFAppState().Minimumhours >=
                                                     2) &&
                                                 (FFAppState().totalsaat <
                                                     FFAppState()
                                                         .Minimumhours)) {
-                                              ScaffoldMessenger.of(
-                                                      context)
+                                              ScaffoldMessenger.of(context)
                                                   .showSnackBar(
                                                 SnackBar(
                                                   content: Text(
@@ -3111,10 +2812,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           .secondaryBackground,
                                                     ),
                                                   ),
-                                                  duration:
-                                                      const Duration(
-                                                          milliseconds:
-                                                              4000),
+                                                  duration: const Duration(
+                                                      milliseconds: 4000),
                                                   backgroundColor:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -3126,27 +2825,22 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                   await MyserCall.call(
                                                 description:
                                                     '$currentUserDisplayName/ حجز رحلة  ${FFAppState().totalsaat.toString()} ساعات - ${FFAppState().naimvillatext}',
-                                                amount: (FFAppState()
-                                                            .totalAllnow3 *
-                                                        100)
-                                                    .round(),
-                                                name: FFAppState()
-                                                    .CardData
-                                                    .name,
+                                                amount:
+                                                    (FFAppState().totalAllnow3 *
+                                                            100)
+                                                        .round(),
+                                                name:
+                                                    FFAppState().CardData.name,
                                                 number: FFAppState()
                                                     .CardData
                                                     .number,
-                                                month: FFAppState()
-                                                    .CardData
-                                                    .month,
-                                                year: FFAppState()
-                                                    .CardData
-                                                    .year,
-                                                cvc: FFAppState()
-                                                    .CardData
-                                                    .cvc,
+                                                month:
+                                                    FFAppState().CardData.month,
+                                                year:
+                                                    FFAppState().CardData.year,
+                                                cvc: FFAppState().CardData.cvc,
                                               );
-                          
+
                                               if ((_model.apiResultr5n
                                                       ?.succeeded ??
                                                   true)) {
@@ -3156,16 +2850,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           ?.jsonBody ??
                                                       ''),
                                                 )!;
-                                                FFAppState()
-                                                    .MyserStartPay = true;
-                                                FFAppState().DonePay =
-                                                    false;
-                                                FFAppState()
-                                                        .TypeHgzPAYMOYSER =
+                                                FFAppState().MyserStartPay =
+                                                    true;
+                                                FFAppState().DonePay = false;
+                                                FFAppState().TypeHgzPAYMOYSER =
                                                     TypeHgz.Rhlh;
-                                                FFAppState()
-                                                    .update(() {});
-                          
+                                                FFAppState().update(() {});
+
                                                 context.pushNamed(
                                                   WebviewWidget.routeName,
                                                   queryParameters: {
@@ -3180,24 +2871,20 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                   }.withoutNulls,
                                                 );
                                               } else {
-                                                ScaffoldMessenger.of(
-                                                        context)
+                                                ScaffoldMessenger.of(context)
                                                     .showSnackBar(
                                                   SnackBar(
                                                     content: Text(
                                                       'خطا في معلومات الدفع او البطاقة',
                                                       style: TextStyle(
-                                                        fontFamily:
-                                                            'cairo',
+                                                        fontFamily: 'cairo',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
                                                       ),
                                                     ),
-                                                    duration:
-                                                        const Duration(
-                                                            milliseconds:
-                                                                4000),
+                                                    duration: const Duration(
+                                                        milliseconds: 4000),
                                                     backgroundColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -3206,12 +2893,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                 );
                                               }
                                             }
-                          
+
                                             safeSetState(() {});
                                           },
-                                          text:
-                                              FFLocalizations.of(context)
-                                                  .getText(
+                                          text: FFLocalizations.of(context)
+                                              .getText(
                                             'hgw4quay' /* Pay Now */,
                                           ),
                                           icon: const Icon(
@@ -3219,25 +2905,20 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                             size: 15.0,
                                           ),
                                           options: FFButtonOptions(
-                                            width:
-                                                MediaQuery.sizeOf(context)
-                                                        .width *
-                                                    0.92,
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.92,
                                             height: 53.0,
-                                            padding:
-                                                const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(16.0, 0.0, 16.0, 0.0),
                                             iconPadding:
                                                 const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .primary,
                                             textStyle:
-                                                FlutterFlowTheme.of(
-                                                        context)
+                                                FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
                                                       fontFamily: 'cairo',
@@ -3246,33 +2927,27 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                     ),
                                             elevation: 0.0,
                                             borderRadius:
-                                                BorderRadius.circular(
-                                                    8.0),
+                                                BorderRadius.circular(8.0),
                                           ),
                                         ),
                                       ],
                                     ),
                                   ),
                                 if ((valueOrDefault(
-                                                currentUserDocument
-                                                    ?.phoneN,
-                                                0)
+                                                currentUserDocument?.phoneN, 0)
                                             .toString() !=
                                         '') &&
                                     (FFAppState().payth == 'نقدآ') &&
-                                    (FFAppState().DriverGuideState ==
-                                        true))
+                                    (FFAppState().DriverGuideState == true))
                                   AuthUserStreamWidget(
                                     builder: (context) => Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Container(
-                                    
                                           height: 64.1,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
                                           ),
                                           child: Visibility(
@@ -3282,14 +2957,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                             0)
                                                         .toString() !=
                                                     '') &&
-                                                (FFAppState().payth ==
-                                                    'نقدآ'),
+                                                (FFAppState().payth == 'نقدآ'),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 await Future.wait([
                                                   Future(() async {
-                                                    if ((FFAppState()
-                                                                .tebycar !=
+                                                    if ((FFAppState().tebycar !=
                                                             '') &&
                                                         (FFAppState()
                                                                 .mkanuserorder !=
@@ -3305,10 +2978,9 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           'id',
                                                           isNotEqualTo: 1,
                                                         ),
-                                                        singleRecord:
-                                                            true,
-                                                      ).then((s) => s
-                                                              .firstOrNull);
+                                                        singleRecord: true,
+                                                      ).then((s) =>
+                                                              s.firstOrNull);
                                                       if (FFAppState()
                                                               .DriverGuideState ==
                                                           true) {
@@ -3321,9 +2993,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                 .totalAllnow3,
                                                             user:
                                                                 currentUserReference,
-                                                            lokeshn:
-                                                                FFAppState()
-                                                                    .mkanuserorder,
+                                                            lokeshn: FFAppState()
+                                                                .mkanuserorder,
                                                             dataOrder:
                                                                 getCurrentTimestamp,
                                                             cartext:
@@ -3352,15 +3023,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .totalsaat,
                                                             vill: FFAppState()
                                                                 .villnow,
-                                                            iDorder: ((_model
-                                                                        .conOrder!) +
-                                                                    1)
-                                                                .toString(),
-                                                            halhOrder: Halh
-                                                                .Pending,
-                                                            schedule:
-                                                                FFAppState()
-                                                                    .dataSchedule,
+                                                            iDorder:
+                                                                ((_model.conOrder!) +
+                                                                        1)
+                                                                    .toString(),
+                                                            halhOrder:
+                                                                Halh.Pending,
+                                                            schedule: FFAppState()
+                                                                .dataSchedule,
                                                             fullSchedule:
                                                                 FFAppState()
                                                                     .fulltextSchedule,
@@ -3381,24 +3051,23 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .mkanuserorder
                                                                     ?.toString(),
                                                             allnow: true,
-                                                            activeOrder:
-                                                                false,
+                                                            activeOrder: false,
                                                             totalMndob2:
                                                                 FFAppState()
                                                                     .totalmndob3,
                                                             ksm: FFAppState()
                                                                 .totalKsm2,
-                                                            driverGuide:
-                                                                true,
+                                                            driverGuide: true,
                                                             reviewMndonsend:
                                                                 false,
                                                             retengUser:
                                                                 valueOrDefault<
                                                                     double>(
                                                               functions
-                                                                  .averageRating((currentUserDocument?.reteng.toList() ??
-                                                                          [])
-                                                                      .toList())
+                                                                  .averageRating(
+                                                                      (currentUserDocument?.reteng.toList() ??
+                                                                              [])
+                                                                          .toList())
                                                                   ?.toDouble(),
                                                               0.0,
                                                             ),
@@ -3429,9 +3098,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                 .totalAllnow3,
                                                             user:
                                                                 currentUserReference,
-                                                            lokeshn:
-                                                                FFAppState()
-                                                                    .mkanuserorder,
+                                                            lokeshn: FFAppState()
+                                                                .mkanuserorder,
                                                             dataOrder:
                                                                 getCurrentTimestamp,
                                                             cartext:
@@ -3460,15 +3128,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .totalsaat,
                                                             vill: FFAppState()
                                                                 .villnow,
-                                                            iDorder: ((_model
-                                                                        .conOrder!) +
-                                                                    1)
-                                                                .toString(),
-                                                            halhOrder: Halh
-                                                                .Pending,
-                                                            schedule:
-                                                                FFAppState()
-                                                                    .dataSchedule,
+                                                            iDorder:
+                                                                ((_model.conOrder!) +
+                                                                        1)
+                                                                    .toString(),
+                                                            halhOrder:
+                                                                Halh.Pending,
+                                                            schedule: FFAppState()
+                                                                .dataSchedule,
                                                             fullSchedule:
                                                                 FFAppState()
                                                                     .fulltextSchedule,
@@ -3489,15 +3156,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .mkanuserorder
                                                                     ?.toString(),
                                                             allnow: true,
-                                                            activeOrder:
-                                                                false,
+                                                            activeOrder: false,
                                                             totalMndob2:
                                                                 FFAppState()
                                                                     .totalmndob3,
                                                             ksm: FFAppState()
                                                                 .totalKsm2,
-                                                            driverGuide:
-                                                                false,
+                                                            driverGuide: false,
                                                             reviewMndonsend:
                                                                 false,
                                                             srSAAH: FFAppState()
@@ -3518,7 +3183,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           ),
                                                         });
                                                       }
-                                                              
+
                                                       _model.mnadebList =
                                                           await queryUserRecordOnce(
                                                         queryBuilder:
@@ -3527,7 +3192,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_vill',
                                                                       isEqualTo:
-                                                                          FFAppState().villnow,
+                                                                          FFAppState()
+                                                                              .villnow,
                                                                     )
                                                                     .where(
                                                                       'actev_mndob',
@@ -3547,12 +3213,15 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_type_car',
                                                                       isEqualTo:
-                                                                          FFAppState().typecarRev,
+                                                                          FFAppState()
+                                                                              .typecarRev,
                                                                     )
                                                                     .where(
                                                                       'ngl',
                                                                       isEqualTo:
-                                                                          _model.ngl?.ngl,
+                                                                          _model
+                                                                              .ngl
+                                                                              ?.ngl,
                                                                     ),
                                                       );
                                                       _model.mnadebListcon =
@@ -3563,7 +3232,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_vill',
                                                                       isEqualTo:
-                                                                          FFAppState().villnow,
+                                                                          FFAppState()
+                                                                              .villnow,
                                                                     )
                                                                     .where(
                                                                       'actev_mndob',
@@ -3583,67 +3253,59 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_type_car',
                                                                       isEqualTo:
-                                                                          FFAppState().typecarRev,
+                                                                          FFAppState()
+                                                                              .typecarRev,
                                                                     )
                                                                     .where(
                                                                       'ngl',
                                                                       isEqualTo:
-                                                                          _model.ngl?.ngl,
+                                                                          _model
+                                                                              .ngl
+                                                                              ?.ngl,
                                                                     ),
                                                       );
-                                                      _model.nmndob = _model
-                                                          .mnadebListcon;
+                                                      _model.nmndob =
+                                                          _model.mnadebListcon;
                                                       safeSetState(() {});
                                                       // مسح الخصومات
+                                                      FFAppState().typeHgz = 0;
                                                       FFAppState()
-                                                          .typeHgz = 0;
-                                                      FFAppState()
-                                                              .AllowBooking =
-                                                          false;
+                                                          .AllowBooking = false;
                                                       FFAppState()
                                                               .DriverGuideState =
                                                           false;
-                                                      FFAppState()
-                                                          .NsbhKsm = 0.0;
-                                                      FFAppState()
-                                                          .totalKsm = 0;
-                                                      FFAppState().UbKsm =
-                                                          0;
-                                                      FFAppState()
-                                                              .totalKsm2 =
+                                                      FFAppState().NsbhKsm =
+                                                          0.0;
+                                                      FFAppState().totalKsm = 0;
+                                                      FFAppState().UbKsm = 0;
+                                                      FFAppState().totalKsm2 =
                                                           0.0;
                                                       FFAppState()
-                                                              .totalAllnow3 =
-                                                          0.0;
+                                                          .totalAllnow3 = 0.0;
                                                       safeSetState(() {});
-                                                              
+
                                                       context.pushNamed(
                                                           OksendWidget
                                                               .routeName);
-                                                              
-                                                      FFAppState()
-                                                              .typecarRev =
+
+                                                      FFAppState().typecarRev =
                                                           null;
-                                                      FFAppState()
-                                                          .addcart = 0;
-                                                      FFAppState()
-                                                          .cartItems = [];
-                                                      FFAppState()
-                                                          .cartmkss = [];
+                                                      FFAppState().addcart = 0;
+                                                      FFAppState().cartItems =
+                                                          [];
+                                                      FFAppState().cartmkss =
+                                                          [];
                                                       FFAppState()
                                                           .cartPriceSummary = [];
-                                                      FFAppState()
-                                                          .saatcar = 0;
+                                                      FFAppState().saatcar = 0;
                                                       FFAppState()
                                                           .totalsaatandcar = 0;
-                                                      FFAppState()
-                                                          .srtypecar = 0;
-                                                      FFAppState()
-                                                          .tebycar = '';
-                                                      FFAppState()
-                                                          .notcar = '';
-                                                      FFAppState()
-                                                          .adressNaim = '';
+                                                      FFAppState().srtypecar =
+                                                          0;
+                                                      FFAppState().tebycar = '';
+                                                      FFAppState().notcar = '';
+                                                      FFAppState().adressNaim =
+                                                          '';
                                                       FFAppState()
                                                               .adressSelection =
                                                           null;
@@ -3651,29 +3313,25 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           .fulltextSchedule = '';
                                                       FFAppState()
                                                           .taimSchedule = '';
-                                                      FFAppState()
-                                                          .TOTALmndob2 = 0;
-                                                      FFAppState()
-                                                          .totalapp2 = 0;
-                                                      FFAppState().vat2 =
+                                                      FFAppState().TOTALmndob2 =
                                                           0;
+                                                      FFAppState().totalapp2 =
+                                                          0;
+                                                      FFAppState().vat2 = 0;
                                                       FFAppState()
                                                           .totalAllNow2 = 0;
                                                       safeSetState(() {});
-                                                      for (int loop1Index =
-                                                              0;
+                                                      for (int loop1Index = 0;
                                                           loop1Index <=
-                                                              _model
-                                                                  .mnadebList!
+                                                              _model.mnadebList!
                                                                   .length;
                                                           loop1Index++) {
-                                                        final currentLoop1Item = _model
-                                                                .mnadebList!
-                                                                .map((e) => e)
-                                                                .toList()[
-                                                            loop1Index];
-                                                        if (_model
-                                                                .nmndob ==
+                                                        final currentLoop1Item =
+                                                            _model.mnadebList!
+                                                                    .map((e) => e)
+                                                                    .toList()[
+                                                                loop1Index];
+                                                        if (_model.nmndob ==
                                                             0) {
                                                           break;
                                                         } else {
@@ -3685,7 +3343,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                             msg:
                                                                 'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
                                                           );
-                                                              
+
                                                           triggerPushNotification(
                                                             notificationTitle:
                                                                 'طلب جديد',
@@ -3702,12 +3360,10 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           _model.nmndob =
                                                               (_model.nmndob!) -
                                                                   1;
-                                                          safeSetState(
-                                                              () {});
+                                                          safeSetState(() {});
                                                         }
                                                       }
-                                                      FFAppState()
-                                                              .totalmndob3 =
+                                                      FFAppState().totalmndob3 =
                                                           0.0;
                                                       safeSetState(() {});
                                                     } else {
@@ -3716,20 +3372,19 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                         builder:
                                                             (alertDialogContext) {
                                                           return WebViewAware(
-                                                            child:
-                                                                AlertDialog(
+                                                            child: AlertDialog(
                                                               title: const Text(
                                                                   'خطا'),
-                                                              content:
-                                                                  const Text(
-                                                                      'يرجى تحديد كل الخيارات'),
+                                                              content: const Text(
+                                                                  'يرجى تحديد كل الخيارات'),
                                                               actions: [
                                                                 TextButton(
-                                                                  onPressed:
-                                                                      () =>
-                                                                          Navigator.pop(alertDialogContext),
-                                                                  child: const Text(
-                                                                      'Ok'),
+                                                                  onPressed: () =>
+                                                                      Navigator.pop(
+                                                                          alertDialogContext),
+                                                                  child:
+                                                                      const Text(
+                                                                          'Ok'),
                                                                 ),
                                                               ],
                                                             ),
@@ -3740,11 +3395,10 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                   }),
                                                   Future(() async {}),
                                                 ]);
-                                                              
+
                                                 safeSetState(() {});
                                               },
-                                              text: FFLocalizations.of(
-                                                      context)
+                                              text: FFLocalizations.of(context)
                                                   .getText(
                                                 '4pp7yghj' /* Book now */,
                                               ),
@@ -3756,45 +3410,43 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                 height: 25.3,
                                                 padding:
                                                     const EdgeInsetsDirectional
-                                                        .fromSTEB(24.0,
-                                                        0.0, 24.0, 0.0),
+                                                        .fromSTEB(
+                                                        24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
                                                     const EdgeInsetsDirectional
-                                                        .fromSTEB(0.0,
-                                                        0.0, 0.0, 0.0),
-                                                color: FlutterFlowTheme
-                                                        .of(context)
-                                                    .secondaryBackground,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily: FlutterFlowTheme.of(
+                                                        .fromSTEB(
+                                                        0.0, 0.0, 0.0, 0.0),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily:
+                                                          FlutterFlowTheme.of(
                                                                   context)
                                                               .titleSmallFamily,
-                                                          color: FlutterFlowTheme.of(
+                                                      color:
+                                                          FlutterFlowTheme.of(
                                                                   context)
                                                               .primary,
-                                                          fontSize: 22.0,
-                                                          letterSpacing:
-                                                              0.0,
-                                                          useGoogleFonts:
-                                                              !FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmallIsCustom,
-                                                        ),
+                                                      fontSize: 22.0,
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts:
+                                                          !FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallIsCustom,
+                                                    ),
                                                 elevation: 3.0,
                                                 borderSide: BorderSide(
-                                                  color:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primary,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
                                                   width: 1.0,
                                                 ),
                                                 borderRadius:
-                                                    BorderRadius.circular(
-                                                        8.0),
+                                                    BorderRadius.circular(8.0),
                                               ),
                                             ),
                                           ),
@@ -3803,14 +3455,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                     ),
                                   ),
                                 if ((valueOrDefault(
-                                                currentUserDocument
-                                                    ?.phoneN,
-                                                0)
+                                                currentUserDocument?.phoneN, 0)
                                             .toString() !=
                                         '') &&
                                     (FFAppState().payth == 'نقدآ') &&
-                                    (FFAppState().DriverGuideState ==
-                                        false))
+                                    (FFAppState().DriverGuideState == false))
                                   AuthUserStreamWidget(
                                     builder: (context) => Row(
                                       mainAxisAlignment:
@@ -3819,8 +3468,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                         Container(
                                           height: 64.1,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(
-                                                    context)
+                                            color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
                                           ),
                                           child: Visibility(
@@ -3830,14 +3478,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                             0)
                                                         .toString() !=
                                                     '') &&
-                                                (FFAppState().payth ==
-                                                    'نقدآ'),
+                                                (FFAppState().payth == 'نقدآ'),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 await Future.wait([
                                                   Future(() async {
-                                                    if ((FFAppState()
-                                                                .tebycar !=
+                                                    if ((FFAppState().tebycar !=
                                                             '') &&
                                                         (FFAppState()
                                                                 .mkanuserorder !=
@@ -3857,10 +3503,9 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           'id',
                                                           isNotEqualTo: 1,
                                                         ),
-                                                        singleRecord:
-                                                            true,
-                                                      ).then((s) => s
-                                                              .firstOrNull);
+                                                        singleRecord: true,
+                                                      ).then((s) =>
+                                                              s.firstOrNull);
                                                       if (FFAppState()
                                                               .DriverGuideState ==
                                                           true) {
@@ -3873,9 +3518,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                 .totalAllnow3,
                                                             user:
                                                                 currentUserReference,
-                                                            lokeshn:
-                                                                FFAppState()
-                                                                    .mkanuserorder,
+                                                            lokeshn: FFAppState()
+                                                                .mkanuserorder,
                                                             dataOrder:
                                                                 getCurrentTimestamp,
                                                             cartext:
@@ -3904,15 +3548,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .totalsaat,
                                                             vill: FFAppState()
                                                                 .villnow,
-                                                            iDorder: ((_model
-                                                                        .conOrder!) +
-                                                                    1)
-                                                                .toString(),
-                                                            halhOrder: Halh
-                                                                .Pending,
-                                                            schedule:
-                                                                FFAppState()
-                                                                    .dataSchedule,
+                                                            iDorder:
+                                                                ((_model.conOrder!) +
+                                                                        1)
+                                                                    .toString(),
+                                                            halhOrder:
+                                                                Halh.Pending,
+                                                            schedule: FFAppState()
+                                                                .dataSchedule,
                                                             fullSchedule:
                                                                 FFAppState()
                                                                     .fulltextSchedule,
@@ -3933,24 +3576,23 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .mkanuserorder
                                                                     ?.toString(),
                                                             allnow: true,
-                                                            activeOrder:
-                                                                false,
+                                                            activeOrder: false,
                                                             totalMndob2:
                                                                 FFAppState()
                                                                     .totalmndob3,
                                                             ksm: FFAppState()
                                                                 .totalKsm2,
-                                                            driverGuide:
-                                                                true,
+                                                            driverGuide: true,
                                                             reviewMndonsend:
                                                                 false,
                                                             retengUser:
                                                                 valueOrDefault<
                                                                     double>(
                                                               functions
-                                                                  .averageRating((currentUserDocument?.reteng.toList() ??
-                                                                          [])
-                                                                      .toList())
+                                                                  .averageRating(
+                                                                      (currentUserDocument?.reteng.toList() ??
+                                                                              [])
+                                                                          .toList())
                                                                   ?.toDouble(),
                                                               0.0,
                                                             ),
@@ -3981,9 +3623,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                 .totalAllnow3,
                                                             user:
                                                                 currentUserReference,
-                                                            lokeshn:
-                                                                FFAppState()
-                                                                    .mkanuserorder,
+                                                            lokeshn: FFAppState()
+                                                                .mkanuserorder,
                                                             dataOrder:
                                                                 getCurrentTimestamp,
                                                             cartext:
@@ -4012,15 +3653,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .totalsaat,
                                                             vill: FFAppState()
                                                                 .villnow,
-                                                            iDorder: ((_model
-                                                                        .conOrder2!) +
-                                                                    1)
-                                                                .toString(),
-                                                            halhOrder: Halh
-                                                                .Pending,
-                                                            schedule:
-                                                                FFAppState()
-                                                                    .dataSchedule,
+                                                            iDorder:
+                                                                ((_model.conOrder2!) +
+                                                                        1)
+                                                                    .toString(),
+                                                            halhOrder:
+                                                                Halh.Pending,
+                                                            schedule: FFAppState()
+                                                                .dataSchedule,
                                                             fullSchedule:
                                                                 FFAppState()
                                                                     .fulltextSchedule,
@@ -4041,15 +3681,13 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .mkanuserorder
                                                                     ?.toString(),
                                                             allnow: true,
-                                                            activeOrder:
-                                                                false,
+                                                            activeOrder: false,
                                                             totalMndob2:
                                                                 FFAppState()
                                                                     .totalmndob3,
                                                             ksm: FFAppState()
                                                                 .totalKsm2,
-                                                            driverGuide:
-                                                                false,
+                                                            driverGuide: false,
                                                             reviewMndonsend:
                                                                 false,
                                                             srSAAH: FFAppState()
@@ -4070,7 +3708,7 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           ),
                                                         });
                                                       }
-                          
+
                                                       _model.mnadebList2 =
                                                           await queryUserRecordOnce(
                                                         queryBuilder:
@@ -4079,7 +3717,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_vill',
                                                                       isEqualTo:
-                                                                          FFAppState().villnow,
+                                                                          FFAppState()
+                                                                              .villnow,
                                                                     )
                                                                     .where(
                                                                       'actev_mndob',
@@ -4099,12 +3738,14 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_type_car',
                                                                       isEqualTo:
-                                                                          FFAppState().typecarRev,
+                                                                          FFAppState()
+                                                                              .typecarRev,
                                                                     )
                                                                     .where(
                                                                       'ngl',
-                                                                      isEqualTo:
-                                                                          _model.ngl2?.ngl,
+                                                                      isEqualTo: _model
+                                                                          .ngl2
+                                                                          ?.ngl,
                                                                     ),
                                                       );
                                                       _model.mnadebListcon2 =
@@ -4115,7 +3756,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_vill',
                                                                       isEqualTo:
-                                                                          FFAppState().villnow,
+                                                                          FFAppState()
+                                                                              .villnow,
                                                                     )
                                                                     .where(
                                                                       'actev_mndob',
@@ -4135,67 +3777,58 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                                     .where(
                                                                       'mndob_type_car',
                                                                       isEqualTo:
-                                                                          FFAppState().typecarRev,
+                                                                          FFAppState()
+                                                                              .typecarRev,
                                                                     )
                                                                     .where(
                                                                       'ngl',
-                                                                      isEqualTo:
-                                                                          _model.ngl2?.ngl,
+                                                                      isEqualTo: _model
+                                                                          .ngl2
+                                                                          ?.ngl,
                                                                     ),
                                                       );
-                                                      _model.nmndob = _model
-                                                          .mnadebListcon2;
+                                                      _model.nmndob =
+                                                          _model.mnadebListcon2;
                                                       safeSetState(() {});
                                                       // مسح الخصومات
+                                                      FFAppState().typeHgz = 0;
                                                       FFAppState()
-                                                          .typeHgz = 0;
-                                                      FFAppState()
-                                                              .AllowBooking =
-                                                          false;
+                                                          .AllowBooking = false;
                                                       FFAppState()
                                                               .DriverGuideState =
                                                           false;
-                                                      FFAppState()
-                                                          .NsbhKsm = 0.0;
-                                                      FFAppState()
-                                                          .totalKsm = 0;
-                                                      FFAppState().UbKsm =
-                                                          0;
-                                                      FFAppState()
-                                                              .totalKsm2 =
+                                                      FFAppState().NsbhKsm =
+                                                          0.0;
+                                                      FFAppState().totalKsm = 0;
+                                                      FFAppState().UbKsm = 0;
+                                                      FFAppState().totalKsm2 =
                                                           0.0;
                                                       FFAppState()
-                                                              .totalAllnow3 =
-                                                          0.0;
+                                                          .totalAllnow3 = 0.0;
                                                       safeSetState(() {});
-                          
+
                                                       context.pushNamed(
                                                           OksendWidget
                                                               .routeName);
-                          
-                                                      FFAppState()
-                                                              .typecarRev =
+
+                                                      FFAppState().typecarRev =
                                                           null;
-                                                      FFAppState()
-                                                          .addcart = 0;
-                                                      FFAppState()
-                                                          .cartItems = [];
-                                                      FFAppState()
-                                                          .cartmkss = [];
+                                                      FFAppState().addcart = 0;
+                                                      FFAppState().cartItems =
+                                                          [];
+                                                      FFAppState().cartmkss =
+                                                          [];
                                                       FFAppState()
                                                           .cartPriceSummary = [];
-                                                      FFAppState()
-                                                          .saatcar = 0;
+                                                      FFAppState().saatcar = 0;
                                                       FFAppState()
                                                           .totalsaatandcar = 0;
-                                                      FFAppState()
-                                                          .srtypecar = 0;
-                                                      FFAppState()
-                                                          .tebycar = '';
-                                                      FFAppState()
-                                                          .notcar = '';
-                                                      FFAppState()
-                                                          .adressNaim = '';
+                                                      FFAppState().srtypecar =
+                                                          0;
+                                                      FFAppState().tebycar = '';
+                                                      FFAppState().notcar = '';
+                                                      FFAppState().adressNaim =
+                                                          '';
                                                       FFAppState()
                                                               .adressSelection =
                                                           null;
@@ -4203,33 +3836,29 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           .fulltextSchedule = '';
                                                       FFAppState()
                                                           .taimSchedule = '';
-                                                      FFAppState()
-                                                          .TOTALmndob2 = 0;
-                                                      FFAppState()
-                                                          .totalapp2 = 0;
-                                                      FFAppState().vat2 =
+                                                      FFAppState().TOTALmndob2 =
                                                           0;
+                                                      FFAppState().totalapp2 =
+                                                          0;
+                                                      FFAppState().vat2 = 0;
                                                       FFAppState()
                                                           .totalAllNow2 = 0;
                                                       safeSetState(() {});
-                                                      FFAppState()
-                                                              .totalmndob3 =
+                                                      FFAppState().totalmndob3 =
                                                           0.0;
                                                       safeSetState(() {});
-                                                      for (int loop1Index =
-                                                              0;
+                                                      for (int loop1Index = 0;
                                                           loop1Index <=
                                                               _model
                                                                   .mnadebList2!
                                                                   .length;
                                                           loop1Index++) {
-                                                        final currentLoop1Item = _model
-                                                                .mnadebList2!
-                                                                .map((e) => e)
-                                                                .toList()[
-                                                            loop1Index];
-                                                        if (_model
-                                                                .nmndob ==
+                                                        final currentLoop1Item =
+                                                            _model.mnadebList2!
+                                                                    .map((e) => e)
+                                                                    .toList()[
+                                                                loop1Index];
+                                                        if (_model.nmndob ==
                                                             0) {
                                                           break;
                                                         } else {
@@ -4241,12 +3870,11 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                             msg:
                                                                 'السلام عليكم أ/ ${currentLoop1Item.displayName}نفيدكم بوجود طلب جديد في تطبيق \"توري تاكسي\" لمدة *${FFAppState().totalsaat.toString()}ساعات  *مع عائد مالي قدره *${FFAppState().totalmndob3.toString()}${FFAppState().RMZCurrency}*                    نرجو منكم التكرم بقبول الطلب من خلال الدخول إلى التطبيق في أقرب وقت ممكن.مع خالص التحية والتقدير،\"                              فريق دعم تطبيق \"توري تاكسي( هذه الرسالة تمت بشكل ألي من خلال التطبيق (يمكنك الدخول الى تطبيق المندوب',
                                                           );
-                          
+
                                                           _model.nmndob =
                                                               (_model.nmndob!) -
                                                                   1;
-                                                          safeSetState(
-                                                              () {});
+                                                          safeSetState(() {});
                                                           triggerPushNotification(
                                                             notificationTitle:
                                                                 'طلب جديد',
@@ -4262,13 +3890,12 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                           );
                                                         }
                                                       }
-                                                      FFAppState()
-                                                              .totalmndob3 =
+                                                      FFAppState().totalmndob3 =
                                                           0.0;
                                                       safeSetState(() {});
                                                     } else {
-                                                      ScaffoldMessenger
-                                                              .of(context)
+                                                      ScaffoldMessenger.of(
+                                                              context)
                                                           .showSnackBar(
                                                         SnackBar(
                                                           content: Text(
@@ -4292,18 +3919,18 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                               kaText:
                                                                   'Please select all options or add extra hours to match the trip requirements.',
                                                             ),
-                                                            style:
-                                                                TextStyle(
+                                                            style: TextStyle(
                                                               fontFamily:
                                                                   'cairo',
-                                                              color: FlutterFlowTheme.of(
-                                                                      context)
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
                                                                   .secondaryBackground,
                                                             ),
                                                           ),
-                                                          duration: const Duration(
-                                                              milliseconds:
-                                                                  4000),
+                                                          duration:
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      4000),
                                                           backgroundColor:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -4314,11 +3941,10 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                   }),
                                                   Future(() async {}),
                                                 ]);
-                          
+
                                                 safeSetState(() {});
                                               },
-                                              text: FFLocalizations.of(
-                                                      context)
+                                              text: FFLocalizations.of(context)
                                                   .getText(
                                                 '6o9re56s' /* Book now */,
                                               ),
@@ -4330,45 +3956,43 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                                                 height: 25.3,
                                                 padding:
                                                     const EdgeInsetsDirectional
-                                                        .fromSTEB(24.0,
-                                                        0.0, 24.0, 0.0),
+                                                        .fromSTEB(
+                                                        24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
                                                     const EdgeInsetsDirectional
-                                                        .fromSTEB(0.0,
-                                                        0.0, 0.0, 0.0),
-                                                color: FlutterFlowTheme
-                                                        .of(context)
-                                                    .secondaryBackground,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily: FlutterFlowTheme.of(
+                                                        .fromSTEB(
+                                                        0.0, 0.0, 0.0, 0.0),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily:
+                                                          FlutterFlowTheme.of(
                                                                   context)
                                                               .titleSmallFamily,
-                                                          color: FlutterFlowTheme.of(
+                                                      color:
+                                                          FlutterFlowTheme.of(
                                                                   context)
                                                               .primary,
-                                                          fontSize: 22.0,
-                                                          letterSpacing:
-                                                              0.0,
-                                                          useGoogleFonts:
-                                                              !FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmallIsCustom,
-                                                        ),
+                                                      fontSize: 22.0,
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts:
+                                                          !FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallIsCustom,
+                                                    ),
                                                 elevation: 3.0,
                                                 borderSide: BorderSide(
-                                                  color:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primary,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
                                                   width: 1.0,
                                                 ),
                                                 borderRadius:
-                                                    BorderRadius.circular(
-                                                        8.0),
+                                                    BorderRadius.circular(8.0),
                                               ),
                                             ),
                                           ),
@@ -4379,8 +4003,8 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
                               ].divide(const SizedBox(height: 12.0)),
                             ),
                           ),
-                        ).animateOnPageLoad(animationsMap[
-                            'containerOnPageLoadAnimation2']!),
+                        ).animateOnPageLoad(
+                            animationsMap['containerOnPageLoadAnimation2']!),
                       ),
                   ],
                 ),

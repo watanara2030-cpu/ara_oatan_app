@@ -137,7 +137,7 @@ class _ListViCopyCopyWidgetState extends State<ListViCopyCopyWidget>
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'lmf69ptn' /* تتصفح الآن */,
+                                  'lmf69ptn' /* YOU ARE BROWSING NOW */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

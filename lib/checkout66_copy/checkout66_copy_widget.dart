@@ -90,7 +90,7 @@ class _Checkout66CopyWidgetState extends State<Checkout66CopyWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'annspca1' /* تتصفح الآن */,
+                                  'annspca1' /* YOU ARE BROWSING NOW */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

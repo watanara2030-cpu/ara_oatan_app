@@ -1,3 +1,5 @@
+import 'package:ara_oatan_app/core/custom_text_tr.dart';
+
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -64,19 +66,16 @@ class _AaaaaWidgetState extends State<AaaaaWidget> {
               context.pop();
             },
           ),
-          title: Text(
-            FFLocalizations.of(context).getText(
-              't6ijq3s1' /* Page Title */,
-            ),
-            style: FlutterFlowTheme.of(context).labelMedium.override(
+          title: 
+          AppText('Page Title', style: FlutterFlowTheme.of(context).labelMedium.override(
                   fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                   useGoogleFonts:
                       !FlutterFlowTheme.of(context).labelMediumIsCustom,
-                ),
-          ),
+                ),),
+         
           actions: const [],
           centerTitle: true,
           elevation: 2.0,

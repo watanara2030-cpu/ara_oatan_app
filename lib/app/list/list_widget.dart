@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -232,9 +234,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '0sjg3s6j' /* تتصفح الآن */,
-                                ),
+                                "YOU ARE BROWSING NOW".tr(),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -281,9 +281,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                       context.pushNamed(AldolWidget.routeName);
                                     },
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '7n6gicf4' /* Change country */,
-                                      ),
+                                     "Change country".tr(),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -380,9 +378,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                       ),
                                 ),
                                 subtitle: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'w3xxjtrm' /* Change region */,
-                                  ),
+                                 "Change region".tr(),
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
@@ -452,9 +448,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                       ),
                                 ),
                                 subtitle: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '2rhhw5bo' /* Added destinations */,
-                                  ),
+                                 "Added destinations".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -505,9 +499,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                   size: 25.0,
                                 ),
                                 title: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'vfflesu4' /* Suggest a Place */,
-                                  ),
+                                  "Suggest a Place".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
@@ -524,9 +516,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                       ),
                                 ),
                                 subtitle: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'xu0jpgso' /* Add a Special Place */,
-                                  ),
+                                 "Add a Special Place".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -569,9 +559,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                 size: 25.0,
                               ),
                               title: Text(
-                                FFLocalizations.of(context).getText(
-                                  'ppwozr22' /* 0 */,
-                                ),
+                               "0".tr(),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
@@ -588,9 +576,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                     ),
                               ),
                               subtitle: Text(
-                                FFLocalizations.of(context).getText(
-                                  'k73almed' /* رسائل جديدة */,
-                                ),
+                                "Message...".tr(),
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -639,10 +625,9 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                       .secondaryText,
                                   size: 25.0,
                                 ),
-                                title: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '3qghstph' /* Settings */,
-                                  ),
+                                title: 
+                                Text(
+                                 "Settings".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -691,9 +676,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                   size: 25.0,
                                 ),
                                 title: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'i9ge6375' /* Help */,
-                                  ),
+                                  "Help".tr(),
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -760,9 +743,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                             size: 25.0,
                           ),
                           title: Text(
-                            FFLocalizations.of(context).getText(
-                              'po6rxehw' /* Log Out */,
-                            ),
+                           "Log Out".tr(),
                             style: FlutterFlowTheme.of(context)
                                 .labelLarge
                                 .override(
@@ -927,10 +908,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                       .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'ri4dyer5' /* Cities/provinces */,
-                                                ),
+                                               "Cities/provinces".tr(),
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .labelLarge
@@ -974,11 +952,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                     children: [
                                                       TextSpan(
                                                         text:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'vg01c6go' /* Browse cities/counties in */,
-                                                        ),
+                                                           "Browse cities/counties in".tr(),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1001,16 +975,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                           .bodyMediumIsCustom,
                                                                 ),
                                                       ),
-                                                      TextSpan(
-                                                        text:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'xm07osd1' /*   */,
-                                                        ),
-                                                        style:
-                                                            const TextStyle(),
-                                                      ),
+                                                     
                                                       TextSpan(
                                                         text: FFAppState()
                                                             .naimmdenh,
@@ -1093,11 +1058,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                               .fromSTEB(3.0,
                                                               0.0, 3.0, 0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '9was1fph' /* Change */,
-                                                        ),
+                                                       "Change".tr(),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1370,8 +1331,10 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                       );
                                                                     }
                                                                   },
-                                                                  child: SingleChildScrollView(
-                                                                    child: Column(
+                                                                  child:
+                                                                      SingleChildScrollView(
+                                                                    child:
+                                                                        Column(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
@@ -1391,17 +1354,17 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                             child:
                                                                                 Image.network(
                                                                               listViewVillagesRecord.img,
-                                                                             width: 100,
-  height: 100,
-  fit: BoxFit.cover,
-  errorBuilder: (context, error, stackTrace) {
-    return Image.asset(
-      'assets/images/avatar.jpg',
-      width: 100,
-      height: 100,
-      fit: BoxFit.cover,
-    );
-  },
+                                                                              width: 100,
+                                                                              height: 100,
+                                                                              fit: BoxFit.cover,
+                                                                              errorBuilder: (context, error, stackTrace) {
+                                                                                return Image.asset(
+                                                                                  'assets/images/avatar.jpg',
+                                                                                  width: 100,
+                                                                                  height: 100,
+                                                                                  fit: BoxFit.cover,
+                                                                                );
+                                                                              },
                                                                             ),
                                                                           ),
                                                                         ),
@@ -1414,11 +1377,8 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            listViewVillagesRecord
-                                                                                .naim,
-                                                                            style: FlutterFlowTheme.of(context)
-                                                                                .labelMedium
-                                                                                .override(
+                                                                            listViewVillagesRecord.naim,
+                                                                            style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                                                                                   fontSize: 16.0,
                                                                                   letterSpacing: 0.0,
@@ -1433,8 +1393,8 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                               4.0,
                                                                               0.0,
                                                                               0.0),
-                                                                          child: FutureBuilder<
-                                                                              int>(
+                                                                          child:
+                                                                              FutureBuilder<int>(
                                                                             future:
                                                                                 queryMkanRecordCount(
                                                                               queryBuilder: (mkanRecord) => mkanRecord
@@ -1462,9 +1422,8 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                                   ),
                                                                                 );
                                                                               }
-                                                                              int rowCount =
-                                                                                  snapshot.data!;
-                                                                    
+                                                                              int rowCount = snapshot.data!;
+
                                                                               return Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -1504,9 +1463,7 @@ class _ListWidgetState extends State<ListWidget> with TickerProviderStateMixin {
                                                                               Padding(
                                                                                 padding: const EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 0.0, 0.0),
                                                                                 child: Text(
-                                                                                  FFLocalizations.of(context).getText(
-                                                                                    'wqsntrwu' /* View Now */,
-                                                                                  ),
+                                                                                 "View Now".tr(),
                                                                                   style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                                                                                         color: FlutterFlowTheme.of(context).primary,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '/backend/backend.dart';
@@ -84,9 +85,7 @@ class _Citie2WidgetState extends State<Citie2Widget> {
             },
           ),
           title: Text(
-            FFLocalizations.of(context).getText(
-              '1pcsk1jt' /* Select region / city */,
-            ),
+           "Select region / city".tr(),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
@@ -169,9 +168,7 @@ class _Citie2WidgetState extends State<Citie2Widget> {
                 padding:
                     const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'ehjaf94j' /* List of regions */,
-                  ),
+                  "List of regions".tr(),
                   style: FlutterFlowTheme.of(context).labelLarge.override(
                         fontFamily:
                             FlutterFlowTheme.of(context).labelLargeFamily,
@@ -388,11 +385,7 @@ class _Citie2WidgetState extends State<Citie2Widget> {
                                                     children: [
                                                       TextSpan(
                                                         text:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'h8b5ydnf' /* Number of destinations:  */,
-                                                        ),
+                                                           "Number of destinations:".tr(),
                                                         style:
                                                             const TextStyle(),
                                                       ),
@@ -445,9 +438,7 @@ class _Citie2WidgetState extends State<Citie2Widget> {
                                   alignment:
                                       const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'ygopenrc' /* Specify the region */,
-                                    ),
+                                    "Specify the region".tr(),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

@@ -12,7 +12,7 @@ import GoogleMaps
   ) -> Bool {
     GMSServices.provideAPIKey("AIzaSyDRRdjUdG95Z5IjZqdwo5IP4TyFUi5Cufw")
     GeneratedPluginRegistrant.register(with: self)
-    BTAppContextSwitcher.setReturnURLScheme("com.mycompany.araoatanapp.braintree")
+    BTAppContextSwitcher.setReturnURLScheme("com.mycompany.araoatanapp2.braintree")
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
