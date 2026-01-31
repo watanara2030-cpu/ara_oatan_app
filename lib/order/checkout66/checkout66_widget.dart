@@ -827,68 +827,63 @@ class _Checkout66WidgetState extends State<Checkout66Widget>
               Padding(
                 padding:
                     const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (FFAppState().addcart >= 1)
-                      FFButtonWidget(
-                        onPressed: () async {
-                          await showModalBottomSheet(
-                            isScrollControlled: true,
-                            backgroundColor: Colors.transparent,
-                            context: context,
-                            builder: (context) {
-                              return WebViewAware(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    FocusScope.of(context).unfocus();
-                                    FocusManager.instance.primaryFocus
-                                        ?.unfocus();
-                                  },
-                                  child: Padding(
-                                    padding: MediaQuery.viewInsetsOf(context),
-                                    child: const MmaappWidget(),
-                                  ),
-                                ),
-                              );
-                            },
-                          ).then((value) => safeSetState(() {}));
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          'k3s4rdw2' /* View my trip list map */,
-                        ),
-                        icon: const Icon(
-                          Icons.map_outlined,
-                          size: 15.0,
-                        ),
-                        options: FFButtonOptions(
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconColor: FlutterFlowTheme.of(context).primary,
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .titleSmallFamily,
-                                color: FlutterFlowTheme.of(context).primary,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .titleSmallIsCustom,
-                              ),
-                          elevation: 0.0,
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).primary,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                  ],
+                child:Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    if (FFAppState().addcart >= 1)
+      Expanded(
+        child: FFButtonWidget(
+          onPressed: () async {
+            await showModalBottomSheet(
+              isScrollControlled: true,
+              backgroundColor: Colors.transparent,
+              context: context,
+              builder: (context) {
+                return GestureDetector(
+                  onTap: () => FocusScope.of(context).unfocus(),
+                  child: Padding(
+                    padding: MediaQuery.viewInsetsOf(context),
+                    child: const MmaappWidget(),
+                  ),
+                );
+              },
+            ).then((value) => safeSetState(() {}));
+          },
+          text: FFLocalizations.of(context).getText(
+            'k3s4rdw2' /* View my trip list map */,
+          ),
+          icon: const Icon(
+            Icons.map_outlined,
+            size: 18.0,
+          ),
+          options: FFButtonOptions(
+            height: 45.0,
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            iconPadding: const EdgeInsets.only(right: 8.0),
+            iconColor: FlutterFlowTheme.of(context).primary,
+            color: FlutterFlowTheme.of(context).secondaryBackground,
+            textStyle: FlutterFlowTheme.of(context)
+                .titleSmall
+                .override(
+                  fontFamily:
+                      FlutterFlowTheme.of(context).titleSmallFamily,
+                  color: FlutterFlowTheme.of(context).primary,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.w600,
+                  useGoogleFonts:
+                      !FlutterFlowTheme.of(context).titleSmallIsCustom,
                 ),
+            elevation: 2.0,
+            borderSide: BorderSide(
+              color: FlutterFlowTheme.of(context).primary,
+            ),
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+        ),
+      ),
+  ],
+)
+
               ),
               if (FFAppState().AllowBooking == true)
                 Padding(
